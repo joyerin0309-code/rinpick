@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function rem($size, $base: 16px) {
+    @if unitless($size) {
+        $size: $size * 1px;
+    }
+
+    @return math.div($size, $base) * 1rem;
+}

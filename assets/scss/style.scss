@@ -1,0 +1,27 @@
+/* 1) Utils (토큰/믹스인) */
+@use 'utils/variables' as *; // 색, bp 등 전역 토큰
+@use 'utils/mixin';
+@use 'utils/responsive';
+@use 'utils/function';
+
+/* 2) Base (리셋/공통/폰트) */
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/common';
+
+/* 3) Layout */
+@use 'layout/container';
+@use 'layout/header';
+@use 'layout/footer';
+
+/* 4) Components */
+@use 'components/button';
+@use 'components/card';
+@use 'components/field';
+
+/* 5) Pages */
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/collections';
+@use 'pages/apply';
+@use 'pages/news';

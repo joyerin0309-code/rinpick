@@ -1,0 +1,39 @@
+//컬러 변수
+$primaryColor: #2463E0;
+$whiteColor: #fff;
+$blackColor : #000;
+$surfaceAltColor :#F4F6FC;
+$capsuleColor : #FF6F5E;
+
+
+// breakpoint
+$pc : 1280px;
+$laptop : 1024px;
+$tablet : 768px;
+$mobile : 360px;
+
+//container
+$containerWidth : 1420px;
+$gutterWidth: 20px;
+
+
+$sp-d: 140px;
+$sp-p: 100px;
+$sp-l: 80px;
+$sp-t: 60px;
+$sp-m: 40px;
+
+
+
+//header
+$headerHeight: 80px;
+$headerZ: 1000;
+$logoSize: 34px;
+
+
+//menu
+$navFontSize: 22px;
+$navFontWeight: 500;
+$navGap: 0 40px;
+$navHoverColor : $primaryColor;
+$navTextHoverColor: $whiteColor;

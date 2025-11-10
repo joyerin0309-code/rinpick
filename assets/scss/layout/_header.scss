@@ -1,3 +1,4 @@
+@use '../utils/function' as *;
 @use '../utils/variables' as v;
 @use '../utils/mixin' as m;
 
@@ -6,24 +7,33 @@
     height: v.$headerHeight;
     z-index: v.$headerZ;
 
+    &__logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
     &__logo a {
+        margin: 0;
         color: v.$primaryColor;
-        font-size: v.$logoSize;
+        font-size: v.$logoDesktop;
+
+
     }
 
     &__nav {
-        @include m.flex();
+        @include m.flex(space-between, center);
     }
 
     &__menu {
-        @include m.flex(flex-start, stretch v.$navGap)
+        @include m.flex(flex-start, v.$navGap);
     }
 
 
     &__link {
         height: 100%;
         position: relative;
-        display: block;
+        display: flex;
         font-size: v.$navFontSize;
         padding: v.$navGap;
         color: v.$blackColor;
@@ -33,6 +43,8 @@
             color: v.$whiteColor;
         }
     }
+
+
 }
 
 .container {
@@ -41,8 +53,97 @@
     @include m.flex(space-between);
 }
 
-
+.hamburger-btn,
+.close-btn {
+    display: none;
+}
 
 .header-menu {
     @include m.flex($gap: v.$navGap);
 }
+
+
+
+
+//1280px
+
+@media (max-width : v.$pc) {}
+
+
+
+
+
+
+
+// 1024px
+
+@media (max-width : v.$laptop) {
+
+    // 헤더
+    .hamburger-btn {
+        width: v.$ham-laptop;
+        height: v.$ham-laptop;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .header-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(80vw, rem(360));
+        background: v.$whiteColor;
+        transform: translateX(100%);
+        transition: transform .25s cubic-bezier(.2, .8, .2, 1);
+        box-shadow: -12px 0 1.5rem rgba(0, 0, 0, .08);
+        padding: 0 v.$headerPR;
+        z-index: v.$headerZ;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        row-gap: v.$menuGapY-laptop;
+    }
+
+    .header-nav.on {
+        transform: translateX(0);
+    }
+
+    .header-nav .close-btn {
+        width: v.$clo-laptop;
+        height: v.$clo-laptop;
+        display: none;
+        position: fixed;
+        top: v.$closeTop-laptop;
+        right: v.$headerPR;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .header-nav.on .close-btn {
+        display: inline-flex;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+//768px 
+
+@media (max-width : v.$tablet) {}
+
+
+
+//360px 
+
+@media (max-width : v.$mobile) {}

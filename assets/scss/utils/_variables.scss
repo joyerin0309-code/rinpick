@@ -1,3 +1,5 @@
+@use './function' as *;
+
 //컬러 변수
 $primaryColor: #2463E0;
 $whiteColor: #fff;
@@ -16,24 +18,56 @@ $mobile : 360px;
 $containerWidth : 1420px;
 $gutterWidth: 20px;
 
-
-$sp-d: 140px;
-$sp-p: 100px;
-$sp-l: 80px;
-$sp-t: 60px;
-$sp-m: 40px;
+//섹션 패딩
+$sp-d: rem(140);
+$sp-p: rem(100);
+$sp-l: rem(80);
+$sp-t: rem(60);
+$sp-m: rem(40);
 
 
 
 //header
-$headerHeight: 80px;
+$headerHeight: rem(80);
 $headerZ: 1000;
-$logoSize: 34px;
+
+
+//logo
+$logoDesktop: rem(34);
+$logoSize-pc: rem(32);
+$logoSize-laptop: rem(30);
+$logoSize-tablet: rem(28);
+$logoSize-mobile: rem(24);
 
 
 //menu
-$navFontSize: 22px;
+$navFontSize: rem(22);
 $navFontWeight: 500;
-$navGap: 0 40px;
+$navGap: 0 35px;
 $navHoverColor : $primaryColor;
 $navTextHoverColor: $whiteColor;
+$menuGapY-laptop: rem(100);
+$menuGapY-tablet: rem(16);
+$menuGapY-mobile: rem(14);
+
+
+//hamburger-btn
+$ham-laptop : rem(35);
+$ham-tablet : rem(32);
+$ham-mobile : rem(20);
+
+
+//close-btn
+$close-btn : rem(20);
+$clo-laptop: $ham-laptop;
+$clo-pt: rem(15);
+$closeTop-laptop: math.div($headerHeight - $ham-laptop, 2);
+$closeTop-tablet: math.div($headerHeight - $ham-tablet, 2);
+$closeTop-mobile: math.div($headerHeight - $ham-mobile, 2);
+
+
+// 패널 너비
+$panelWidth-laptop: rem(360);
+$panelWidth-tablet: rem(320);
+$panelWidth-mobile: rem(280);
+$headerPR : rem(20);

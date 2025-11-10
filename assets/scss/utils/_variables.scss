@@ -1,4 +1,5 @@
 @use './function' as *;
+@use 'sass:math';
 
 //컬러 변수
 $primaryColor: #2463E0;
@@ -46,7 +47,7 @@ $navFontWeight: 500;
 $navGap: 0 35px;
 $navHoverColor : $primaryColor;
 $navTextHoverColor: $whiteColor;
-$menuGapY-laptop: rem(100);
+$menuGapY-laptop: rem(80);
 $menuGapY-tablet: rem(16);
 $menuGapY-mobile: rem(14);
 

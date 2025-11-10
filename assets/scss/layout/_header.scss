@@ -23,17 +23,21 @@
 
     &__nav {
         @include m.flex(space-between, center);
+        height: 100%;
     }
 
     &__menu {
-        @include m.flex(flex-start, v.$navGap);
+        @include m.flex(flex-start, stretch, v.$navGap);
+        height: 100%;
     }
+
 
 
     &__link {
         height: 100%;
         position: relative;
         display: flex;
+        align-items: center;
         font-size: v.$navFontSize;
         padding: v.$navGap;
         color: v.$blackColor;
@@ -90,6 +94,8 @@
     }
 
     .header-nav {
+        display: flex;
+        justify-content: center;
         position: fixed;
         top: 0;
         right: 0;
@@ -99,14 +105,23 @@
         transform: translateX(100%);
         transition: transform .25s cubic-bezier(.2, .8, .2, 1);
         box-shadow: -12px 0 1.5rem rgba(0, 0, 0, .08);
-        padding: 0 v.$headerPR;
+
         z-index: v.$headerZ;
     }
 
     .header__menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         flex-direction: column;
-        row-gap: v.$menuGapY-laptop;
+        gap: v.$menuGapY-laptop 0;
+        padding-top: rem(1);
+        margin: 0;
+        padding: 0;
+
     }
+
+
 
     .header-nav.on {
         transform: translateX(0);

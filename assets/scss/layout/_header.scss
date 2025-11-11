@@ -4,7 +4,7 @@
 
 .header {
     position: static;
-    height: v.$headerHeight;
+    height: v.$headerHeight-des;
     z-index: v.$headerZ;
 
     &__logo {
@@ -16,7 +16,7 @@
     &__logo a {
         margin: 0;
         color: v.$primaryColor;
-        font-size: v.$logoDesktop;
+        font-size: v.$logoSize-desktop;
 
 
     }
@@ -38,7 +38,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        font-size: v.$navFontSize;
+        font-size: v.$menuFontSize-des;
         padding: v.$navGap;
         color: v.$blackColor;
 
@@ -66,12 +66,40 @@
     @include m.flex($gap: v.$navGap);
 }
 
+//히어로
+.hero {
+    height: v.$heroH-des;
+    background: url("../img/hero-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 
 
 //1280px
 
-@media (max-width : v.$pc) {}
+@media (max-width : v.$pc) {
+
+    //헤더
+    .header {
+        height: v.$headerHeight-pc;
+
+        &__logo a {
+            font-size: v.$logoSize-pc;
+        }
+
+        &__link {
+            font-size: v.$menuFontSize-pc;
+        }
+    }
+
+    .hero {
+        height: v.$heroH-pc;
+    }
+}
+
 
 
 
@@ -81,9 +109,9 @@
 
 // 1024px
 
-@media (max-width : v.$laptop) {
+@media (max-width: v.$laptop) {
 
-    // 헤더
+    /* 햄버거 버튼 */
     .hamburger-btn {
         width: v.$ham-laptop;
         height: v.$ham-laptop;
@@ -93,39 +121,30 @@
         margin-left: auto;
     }
 
+    /* 패널 */
     .header-nav {
-        display: flex;
-        justify-content: center;
         position: fixed;
         top: 0;
         right: 0;
-        bottom: 0;
         width: min(80vw, rem(360));
+        height: 100vh;
         background: v.$whiteColor;
+        box-shadow: -12px 0 1.5rem rgba(0, 0, 0, .08);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding-inline: 0;
         transform: translateX(100%);
         transition: transform .25s cubic-bezier(.2, .8, .2, 1);
-        box-shadow: -12px 0 1.5rem rgba(0, 0, 0, .08);
-
         z-index: v.$headerZ;
+        overflow-y: auto;
     }
-
-    .header__menu {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: v.$menuGapY-laptop 0;
-        padding-top: rem(1);
-        margin: 0;
-        padding: 0;
-
-    }
-
-
 
     .header-nav.on {
         transform: translateX(0);
     }
+
 
     .header-nav .close-btn {
         width: v.$clo-laptop;
@@ -136,7 +155,6 @@
         right: v.$headerPR;
         align-items: center;
         justify-content: center;
-
     }
 
     .header-nav.on .close-btn {
@@ -144,10 +162,75 @@
     }
 
 
+    .header {
+
+        height: v.$headerHeight-laptop;
+
+        &__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: v.$menuGapY-laptop 0;
+            width: 100%;
+        }
+
+        &__menu>li {
+            position: relative;
+            width: 100%;
+            height: rem(80);
+        }
+
+        &__menu>li::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: v.$primaryColor;
+            transform: scaleY(0);
+            transform-origin: center;
+            transition: transform .18s ease;
+            z-index: 0;
+        }
+
+        &__menu>li:hover::before,
+        &__menu>li.is-active::before,
+        &__menu>li:focus-within::before {
+            transform: scaleY(1);
+        }
+
+        &__logo a {
+            font-size: v.$logoSize-laptop;
+        }
+
+        &__link {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 rem(24);
+            background: transparent !important;
+            color: v.$blackColor;
+            font-size: v.$menuFontSize-lap;
+        }
+
+        &__menu>li:hover &__link,
+        &__menu>li.is-active &__link {
+            color: v.$whiteColor;
+        }
+    }
 
 
 
-
+    // hero
+    .hero {
+        height: v.$heroH-lap;
+    }
 
 }
 
@@ -155,10 +238,59 @@
 
 //768px 
 
-@media (max-width : v.$tablet) {}
+@media (max-width : v.$tablet) {
+
+    //헤더
+    .header {
+        height: v.$headerHeight-tablet;
+
+        &__logo a {
+            font-size: v.$logoSize-tablet;
+        }
+
+        &__link {
+            font-size: v.$menuFontSize-tab;
+        }
+
+        &__menu>li {
+            position: relative;
+            width: 100%;
+            height: rem(60);
+        }
+    }
+
+    // hero
+    .hero {
+        height: v.$heroH-tab;
+    }
+}
 
 
 
 //360px 
 
-@media (max-width : v.$mobile) {}
+@media (max-width : v.$mobile) {
+
+    //헤더
+    .header {
+        height: v.$headerHeight-mobile;
+
+        &__logo a {
+            font-size: v.$logoSize-mobile;
+        }
+
+        &__link {
+            font-size: v.$menuFontSize-mob;
+        }
+
+        &__menu>li {
+            height: rem(40);
+        }
+    }
+
+
+    // hero
+    .hero {
+        height: v.$heroH-mob;
+    }
+}

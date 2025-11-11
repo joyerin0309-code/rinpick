@@ -29,12 +29,16 @@ $sp-m: rem(40);
 
 
 //header
-$headerHeight: rem(80);
+$headerHeight-des: rem(80);
+$headerHeight-pc: rem(70);
+$headerHeight-laptop: rem(68);
+$headerHeight-tablet: rem(65);
+$headerHeight-mobile: rem(40);
 $headerZ: 1000;
 
 
 //logo
-$logoDesktop: rem(34);
+$logoSize-desktop: rem(34);
 $logoSize-pc: rem(32);
 $logoSize-laptop: rem(30);
 $logoSize-tablet: rem(28);
@@ -42,12 +46,19 @@ $logoSize-mobile: rem(24);
 
 
 //menu
-$navFontSize: rem(22);
+$menuFontSize-des: rem(22);
+$menuFontSize-pc: rem(20);
+$menuFontSize-lap: rem(20);
+$menuFontSize-tab: rem(20);
+$menuFontSize-mob: rem(16);
+
+
+
 $navFontWeight: 500;
-$navGap: 0 35px;
+$navGap: 0 rem(35);
 $navHoverColor : $primaryColor;
 $navTextHoverColor: $whiteColor;
-$menuGapY-laptop: rem(80);
+$menuGapY-laptop: rem(60);
 $menuGapY-tablet: rem(16);
 $menuGapY-mobile: rem(14);
 
@@ -62,9 +73,9 @@ $ham-mobile : rem(20);
 $close-btn : rem(20);
 $clo-laptop: $ham-laptop;
 $clo-pt: rem(15);
-$closeTop-laptop: math.div($headerHeight - $ham-laptop, 2);
-$closeTop-tablet: math.div($headerHeight - $ham-tablet, 2);
-$closeTop-mobile: math.div($headerHeight - $ham-mobile, 2);
+$closeTop-laptop: math.div($headerHeight-laptop - $ham-laptop, 2);
+$closeTop-tablet: math.div($headerHeight-tablet - $ham-tablet, 2);
+$closeTop-mobile: math.div($headerHeight-mobile - $ham-mobile, 2);
 
 
 // 패널 너비
@@ -72,3 +83,25 @@ $panelWidth-laptop: rem(360);
 $panelWidth-tablet: rem(320);
 $panelWidth-mobile: rem(280);
 $headerPR : rem(20);
+
+
+//hero
+$heroH-des: rem(780);
+$heroH-pc :rem(650);
+$heroH-lap :rem(560);
+$heroH-tab :rem(410);
+$heroH-mob :rem(200);
+
+
+$heroTitle-des : rem(48);
+$heroTitle-pc : rem(42);
+$heroTitle-lap : rem(38);
+$heroTitle-tab : rem(32);
+$heroTitle-mob : rem(20);
+
+
+$heroDessc-des : rem(26);
+$heroDessc-pc : rem(22);
+$heroDessc-lap : rem(18);
+$heroDessc-tab : rem(16);
+$heroDessc-mob : rem(14);

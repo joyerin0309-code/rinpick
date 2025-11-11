@@ -56,9 +56,7 @@ $menuFontSize-mob: rem(16);
 
 $navFontWeight: 500;
 $navGap: 0 rem(35);
-$navHoverColor : $primaryColor;
-$navTextHoverColor: $whiteColor;
-$menuGapY-laptop: rem(60);
+
 $menuGapY-tablet: rem(16);
 $menuGapY-mobile: rem(14);
 
@@ -95,13 +93,43 @@ $heroH-mob :rem(200);
 
 $heroTitle-des : rem(48);
 $heroTitle-pc : rem(42);
-$heroTitle-lap : rem(38);
-$heroTitle-tab : rem(32);
+$heroTitle-lap : rem(32);
+$heroTitle-tab : rem(26);
 $heroTitle-mob : rem(20);
 
 
-$heroDessc-des : rem(26);
-$heroDessc-pc : rem(22);
-$heroDessc-lap : rem(18);
-$heroDessc-tab : rem(16);
-$heroDessc-mob : rem(14);
+$heroDesc-des : rem(24);
+$heroDesc-pc : rem(20);
+$heroDesc-lap : rem(16);
+$heroDesc-tab : rem(14);
+$heroDesc-mob : rem(12);
+
+$arrow-des : rem(410);
+$arrow-pc : rem(300);
+$arrow-lap : rem(250);
+$arrow-tab : rem(200);
+$arrow-mob : rem(100);
+
+
+//button
+
+$btnH-des: rem(52);
+$btnPadX-des: rem(50);
+$btnFont-des: rem(18);
+$btnRadius: rem(50);
+$btnMinW-des: rem(220);
+
+
+//히어로 패딩
+$heroTxtPad-des: rem(25);
+$heroTxtPad-pc: rem(20);
+$heroTxtPad-lap: rem(15);
+$heroTxtPad-tab: rem(10);
+$heroTxtPad-mob: rem(8);
+
+
+$heroDescPad-des: rem(60);
+$heroDescPad-pc: rem(50);
+$heroDescPad-lap: rem(40);
+$heroDescPad-tab: rem(30);
+$heroDescPad-mob: rem(20);

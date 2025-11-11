@@ -73,6 +73,35 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &__sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: v.$heroTitle-des;
+        color: v.$whiteColor;
+    }
+
+    &__desc {
+        font-size: v.$heroDesc-des;
+        color: v.$whiteColor;
+    }
+
+    &__right img {
+        width: v.$arrow-des;
+    }
+
+    &__btn {
+        height: v.$btnH-des;
+        font-size: v.$btnFont-des;
+        border: 1px solid v.$whiteColor;
+        border-radius: v.$btnRadius;
+        padding: 0 v.$btnPadX-des;
+        color: v.$whiteColor;
+    }
 }
 
 
@@ -95,8 +124,24 @@
         }
     }
 
+
+    //히어로
     .hero {
         height: v.$heroH-pc;
+
+        &__title {
+            font-size: v.$heroTitle-pc;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-pc;
+
+        }
+
+        &__right img {
+            width: v.$arrow-pc;
+        }
     }
 }
 
@@ -174,7 +219,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: stretch;
-            gap: v.$menuGapY-laptop 0;
+            gap: rem(60) 0;
             width: 100%;
         }
 
@@ -230,6 +275,22 @@
     // hero
     .hero {
         height: v.$heroH-lap;
+
+        &__title {
+            font-size: v.$heroTitle-lap;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-lap;
+
+        }
+
+        &__right img {
+            width: v.$arrow-lap;
+        }
+
+
     }
 
 }
@@ -252,16 +313,35 @@
             font-size: v.$menuFontSize-tab;
         }
 
+        &__menu {
+            gap: rem(40) 0;
+        }
+
         &__menu>li {
             position: relative;
             width: 100%;
-            height: rem(60);
+            height: rem(70);
+
         }
     }
 
     // hero
     .hero {
         height: v.$heroH-tab;
+
+        &__title {
+            font-size: v.$heroTitle-tab;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-tab;
+
+        }
+
+        &__right img {
+            width: v.$arrow-tab;
+        }
     }
 }
 
@@ -283,8 +363,12 @@
             font-size: v.$menuFontSize-mob;
         }
 
+        &__menu {
+            gap: rem(20) 0;
+        }
+
         &__menu>li {
-            height: rem(40);
+            height: rem(60);
         }
     }
 
@@ -292,5 +376,20 @@
     // hero
     .hero {
         height: v.$heroH-mob;
+
+        &__title {
+            font-size: v.$heroTitle-mob;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-mob;
+
+        }
+
+
+        &__right img {
+            width: v.$arrow-mob;
+        }
     }
 }

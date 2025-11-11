@@ -1,0 +1,163 @@
+@use '../utils/variables' as v;
+
+
+
+//히어로
+.hero {
+    height: v.$heroH-des;
+    background: url("../img/hero-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    &__title {
+        font-size: v.$heroTitle-des;
+        color: v.$whiteColor;
+        padding-bottom: v.$heroTxtPad-des;
+    }
+
+    &__desc {
+        font-size: v.$heroDesc-des;
+        color: v.$whiteColor;
+        padding-bottom: v.$heroDescPad-des;
+    }
+
+    &__right img {
+        width: v.$arrow-des;
+    }
+
+    &__btn {
+        height: v.$btnH-des;
+        font-size: v.$btnFont-des;
+        border: 1px solid v.$whiteColor;
+        border-radius: v.$btnRadius;
+        padding: 0 v.$btnPadX-des;
+        color: v.$whiteColor;
+    }
+}
+
+
+
+// 1280
+
+@media (max-width : v.$pc) {
+
+
+    //히어로
+    .hero {
+        height: v.$heroH-pc;
+
+        &__title {
+            font-size: v.$heroTitle-pc;
+            padding-bottom: v.$heroTxtPad-pc;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-pc;
+            padding-bottom: v.$heroDescPad-pc;
+
+        }
+
+        &__right img {
+            width: v.$arrow-pc;
+        }
+    }
+
+}
+
+
+
+// 1024px
+
+@media (max-width: v.$laptop) {
+
+    // hero
+    .hero {
+        height: v.$heroH-lap;
+
+        &__title {
+            font-size: v.$heroTitle-lap;
+            padding-bottom: v.$heroTxtPad-lap;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-lap;
+            padding-bottom: v.$heroDescPad-lap;
+
+        }
+
+        &__right img {
+            width: v.$arrow-lap;
+        }
+
+
+    }
+}
+
+
+//768px 
+
+@media (max-width : v.$tablet) {
+
+
+    // hero
+    .hero {
+        height: v.$heroH-tab;
+
+        &__title {
+            font-size: v.$heroTitle-tab;
+            padding-bottom: v.$heroTxtPad-tab;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-tab;
+            padding-bottom: v.$heroDescPad-tab;
+
+        }
+
+        &__right img {
+            width: v.$arrow-tab;
+        }
+    }
+}
+
+
+//360px 
+
+@media (max-width : v.$mobile) {
+
+    // hero
+    .hero {
+        height: v.$heroH-mob;
+
+        &__title {
+            font-size: v.$heroTitle-mob;
+            padding-bottom: v.$heroTxtPad-mob;
+
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-mob;
+            padding-bottom: v.$heroDescPad-mob;
+
+
+        }
+
+
+        &__right img {
+            width: v.$arrow-mob;
+        }
+    }
+}

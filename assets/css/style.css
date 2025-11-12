@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 1) Utils (토큰/믹스인) */
+/* 1) Utils */
 /* 2) Base (리셋/공통/폰트) */
 * {
   margin: 0;
@@ -109,7 +109,7 @@ body {
   font-family: "GMarketSans";
 }
 
-.font-text {
+.desc-font {
   font-family: "Pretendard";
 }
 
@@ -123,7 +123,7 @@ body {
 .header {
   position: static;
   height: 5rem;
-  z-index: 1000;
+  z-index: 10;
 }
 .header__logo {
   display: flex;
@@ -190,38 +190,6 @@ body {
   box-sizing: border-box;
 }
 
-.hero {
-  height: 48.75rem;
-  background: url("../img/hero-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.hero__sec {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.hero__title {
-  font-size: 3rem;
-  color: #fff;
-}
-.hero__desc {
-  font-size: 1.5rem;
-  color: #fff;
-}
-.hero__right img {
-  width: 25.625rem;
-}
-.hero__btn {
-  height: 3.25rem;
-  font-size: 1.125rem;
-  border: 1px solid #fff;
-  border-radius: 3.125rem;
-  padding: 0 3.125rem;
-  color: #fff;
-}
-
 @media (max-width: 1280px) {
   .header {
     height: 4.375rem;
@@ -232,28 +200,15 @@ body {
   .header__link {
     font-size: 1.25rem;
   }
-  .hero {
-    height: 40.625rem;
-  }
-  .hero__title {
-    font-size: 2.625rem;
-  }
-  .hero__desc {
-    font-size: 1.25rem;
-  }
-  .hero__right img {
-    width: 18.75rem;
-  }
 }
 @media (max-width: 1024px) {
   /* 햄버거 버튼 */
   .hamburger-btn {
     width: 2.1875rem;
     height: 2.1875rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
   }
   /* 패널 */
   .header-nav {
@@ -271,7 +226,7 @@ body {
     padding-inline: 0;
     transform: translateX(100%);
     transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    z-index: 1000;
+    z-index: 10;
     overflow-y: auto;
   }
   .header-nav.on {
@@ -294,14 +249,13 @@ body {
     height: 4.25rem;
   }
   .header__menu {
-    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    gap: 3.75rem 0;
+    gap: 1.5625rem 0;
     width: 100%;
   }
   .header__menu > li {
@@ -333,25 +287,12 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0 1.5rem;
     background: transparent !important;
     color: #000;
     font-size: 1.25rem;
   }
   .header__menu > li:hover .header__link, .header__menu > li.is-active .header__link {
     color: #fff;
-  }
-  .hero {
-    height: 35rem;
-  }
-  .hero__title {
-    font-size: 2rem;
-  }
-  .hero__desc {
-    font-size: 1rem;
-  }
-  .hero__right img {
-    width: 15.625rem;
   }
 }
 @media (max-width: 768px) {
@@ -364,57 +305,87 @@ body {
   .header__link {
     font-size: 1.25rem;
   }
-  .header__menu {
-    gap: 2.5rem 0;
-  }
   .header__menu > li {
     position: relative;
     width: 100%;
-    height: 4.375rem;
+    height: 3.75rem;
   }
-  .hero {
-    height: 25.625rem;
-  }
-  .hero__title {
-    font-size: 1.625rem;
-  }
-  .hero__desc {
-    font-size: 0.875rem;
-  }
-  .hero__right img {
-    width: 12.5rem;
+  /* 햄버거 버튼 */
+  .hamburger-btn img {
+    width: 2rem;
+    height: 2rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .header {
     height: 2.5rem;
   }
   .header__logo a {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   .header__link {
     font-size: 1rem;
   }
-  .header__menu {
-    gap: 1.25rem 0;
-  }
   .header__menu > li {
-    height: 3.75rem;
+    height: 2.5rem;
   }
-  .hero {
-    height: 12.5rem;
-  }
-  .hero__title {
-    font-size: 1.25rem;
-  }
-  .hero__desc {
-    font-size: 0.75rem;
-  }
-  .hero__right img {
-    width: 6.25rem;
+  /* 햄버거 버튼 */
+  .hamburger-btn img {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
 /* 4) Components */
+.btn {
+  height: 2.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 300;
+  border-radius: 3.125rem;
+  padding: 0 2.625rem;
+  color: #fff;
+}
+
+.hero__btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.09);
+  -webkit-backdrop-filter: saturate(140%) blur(2px);
+  backdrop-filter: saturate(140%) blur(2px);
+}
+.hero__btn:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 1280px) {
+  .btn {
+    height: 2.75rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .btn {
+    height: 2.5rem;
+    padding: 0 2.375rem;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    height: 2.25rem;
+    padding: 0 2.125rem;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    height: 1.25rem;
+    padding: 0 1.125rem;
+    font-size: 0.5rem;
+  }
+}
 /* 5) Pages */
 .hero {
   height: 48.75rem;
@@ -429,25 +400,60 @@ body {
   align-items: center;
 }
 .hero__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #fff;
   padding-bottom: 1.5625rem;
 }
 .hero__desc {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   color: #fff;
   padding-bottom: 3.75rem;
+  line-height: 1.5;
 }
 .hero__right img {
   width: 25.625rem;
 }
 .hero__btn {
-  height: 3.25rem;
-  font-size: 1.125rem;
   border: 1px solid #fff;
-  border-radius: 3.125rem;
-  padding: 0 3.125rem;
-  color: #fff;
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+.intro__txt {
+  padding: 8.75rem 0;
+  text-align: center;
+}
+.intro__title {
+  font-size: 2.375rem;
+  font-weight: 700;
+  color: #2463E0;
+  padding-bottom: 1.875rem;
+}
+.intro__sub-title {
+  font-size: 1.625rem;
+  font-weight: 500;
+  padding-bottom: 1.25rem;
+}
+.intro__desc {
+  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  padding-bottom: 3.75rem;
+}
+.intro__btn {
+  background-color: #000;
+  display: inline-flex;
+}
+.intro__btn:hover {
+  background-color: #2463E0;
+}
+
+.intro-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1280px) {
@@ -455,7 +461,7 @@ body {
     height: 40.625rem;
   }
   .hero__title {
-    font-size: 2.625rem;
+    font-size: 2.375rem;
     padding-bottom: 1.25rem;
   }
   .hero__desc {
@@ -465,21 +471,51 @@ body {
   .hero__right img {
     width: 18.75rem;
   }
+  .intro__txt {
+    padding: 6.25rem 0;
+  }
+  .intro__title {
+    font-size: 2.125rem;
+    padding-bottom: 1.5625rem;
+  }
+  .intro__sub-title {
+    font-size: 1.375rem;
+    padding-bottom: 1rem;
+  }
+  .intro__desc {
+    font-size: 1.125rem;
+    padding-bottom: 3.125rem;
+  }
 }
 @media (max-width: 1024px) {
   .hero {
     height: 35rem;
   }
   .hero__title {
-    font-size: 2rem;
+    font-size: 2.125rem;
     padding-bottom: 0.9375rem;
   }
   .hero__desc {
-    font-size: 1rem;
+    font-size: 1.125rem;
     padding-bottom: 2.5rem;
   }
   .hero__right img {
     width: 15.625rem;
+  }
+  .intro__txt {
+    padding: 5rem 0;
+  }
+  .intro__title {
+    font-size: 1.875rem;
+    padding-bottom: 1.25rem;
+  }
+  .intro__sub-title {
+    font-size: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+  .intro__desc {
+    font-size: 1rem;
+    padding-bottom: 2.5rem;
   }
 }
 @media (max-width: 768px) {
@@ -487,18 +523,33 @@ body {
     height: 25.625rem;
   }
   .hero__title {
-    font-size: 1.625rem;
+    font-size: 1.875rem;
     padding-bottom: 0.625rem;
   }
   .hero__desc {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding-bottom: 1.875rem;
   }
   .hero__right img {
     width: 12.5rem;
   }
+  .intro__txt {
+    padding: 3.75rem 0;
+  }
+  .intro__title {
+    font-size: 1.625rem;
+    padding-bottom: 0.9375rem;
+  }
+  .intro__sub-title {
+    font-size: 1.25rem;
+    padding-bottom: 0.625rem;
+  }
+  .intro__desc {
+    font-size: 0.875rem;
+    padding-bottom: 1.875rem;
+  }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .hero {
     height: 12.5rem;
   }
@@ -507,10 +558,25 @@ body {
     padding-bottom: 0.5rem;
   }
   .hero__desc {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     padding-bottom: 1.25rem;
   }
   .hero__right img {
     width: 6.25rem;
+  }
+  .intro__txt {
+    padding: 2.5rem 0;
+  }
+  .intro__title {
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+  .intro__sub-title {
+    font-size: 1rem;
+    padding-bottom: 0.375rem;
+  }
+  .intro__desc {
+    font-size: 0.625rem;
+    padding-bottom: 1.25rem;
   }
 }

@@ -1,2 +1,73 @@
 @use '../utils/variables' as v;
 @use '../utils/mixin' as m;
+
+
+.btn {
+    height: v.$btnH-des;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: v.$btnFont-des;
+    font-weight: 300;
+    border-radius: v.$btnRadius;
+    padding: 0 v.$btnPadX-des;
+    color: v.$whiteColor;
+
+}
+
+.hero__btn {
+    border: 1px solid rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .09);
+    -webkit-backdrop-filter: saturate(140%) blur(2px);
+    backdrop-filter: saturate(140%) blur(2px);
+
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .16);
+    }
+}
+
+
+
+
+
+// 1280
+@media (max-width: v.$pc) {
+    .btn {
+        height: v.$btnH-pc;
+        padding: 0 v.$btnPadX-pc;
+        font-size: v.$btnFont-pc;
+    }
+}
+
+
+
+// 1024
+@media (max-width: v.$laptop) {
+    .btn {
+        height: v.$btnH-lap;
+        padding: 0 v.$btnPadX-lap;
+        font-size: v.$btnFont-lap;
+    }
+}
+
+
+//768
+@media (max-width: v.$tablet) {
+    .btn {
+        height: v.$btnH-tab;
+        padding: 0 v.$btnPadX-tab;
+        font-size: v.$btnFont-tab;
+    }
+}
+
+
+
+//480
+@media (max-width: v.$mobile) {
+    .btn {
+        height: v.$btnH-mob;
+        padding: 0 v.$btnPadX-mob;
+        font-size: v.$btnFont-mob;
+    }
+}

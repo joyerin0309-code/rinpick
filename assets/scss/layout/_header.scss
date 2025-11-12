@@ -5,7 +5,7 @@
 .header {
     position: static;
     height: v.$headerHeight-des;
-    z-index: v.$headerZ;
+    z-index: 10;
 
     &__logo {
         display: flex;
@@ -66,43 +66,8 @@
     @include m.flex($gap: v.$navGap);
 }
 
-//히어로
-.hero {
-    height: v.$heroH-des;
-    background: url("../img/hero-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    &__sec {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    &__title {
-        font-size: v.$heroTitle-des;
-        color: v.$whiteColor;
-    }
-
-    &__desc {
-        font-size: v.$heroDesc-des;
-        color: v.$whiteColor;
-    }
-
-    &__right img {
-        width: v.$arrow-des;
-    }
-
-    &__btn {
-        height: v.$btnH-des;
-        font-size: v.$btnFont-des;
-        border: 1px solid v.$whiteColor;
-        border-radius: v.$btnRadius;
-        padding: 0 v.$btnPadX-des;
-        color: v.$whiteColor;
-    }
-}
 
 
 
@@ -125,24 +90,6 @@
     }
 
 
-    //히어로
-    .hero {
-        height: v.$heroH-pc;
-
-        &__title {
-            font-size: v.$heroTitle-pc;
-
-        }
-
-        &__desc {
-            font-size: v.$heroDesc-pc;
-
-        }
-
-        &__right img {
-            width: v.$arrow-pc;
-        }
-    }
 }
 
 
@@ -160,10 +107,9 @@
     .hamburger-btn {
         width: v.$ham-laptop;
         height: v.$ham-laptop;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: auto;
     }
 
     /* 패널 */
@@ -182,7 +128,7 @@
         padding-inline: 0;
         transform: translateX(100%);
         transition: transform .25s cubic-bezier(.2, .8, .2, 1);
-        z-index: v.$headerZ;
+        z-index: 10;
         overflow-y: auto;
     }
 
@@ -197,7 +143,7 @@
         display: none;
         position: fixed;
         top: v.$closeTop-laptop;
-        right: v.$headerPR;
+        right: rem(20);
         align-items: center;
         justify-content: center;
     }
@@ -212,14 +158,13 @@
         height: v.$headerHeight-laptop;
 
         &__menu {
-            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: stretch;
-            gap: rem(60) 0;
+            gap: rem(25) 0;
             width: 100%;
         }
 
@@ -258,7 +203,7 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            padding: 0 rem(24);
+            // padding: 0 rem(24);
             background: transparent !important;
             color: v.$blackColor;
             font-size: v.$menuFontSize-lap;
@@ -272,26 +217,7 @@
 
 
 
-    // hero
-    .hero {
-        height: v.$heroH-lap;
 
-        &__title {
-            font-size: v.$heroTitle-lap;
-
-        }
-
-        &__desc {
-            font-size: v.$heroDesc-lap;
-
-        }
-
-        &__right img {
-            width: v.$arrow-lap;
-        }
-
-
-    }
 
 }
 
@@ -313,36 +239,21 @@
             font-size: v.$menuFontSize-tab;
         }
 
-        &__menu {
-            gap: rem(40) 0;
-        }
-
         &__menu>li {
             position: relative;
             width: 100%;
-            height: rem(70);
-
+            height: rem(60);
         }
     }
 
-    // hero
-    .hero {
-        height: v.$heroH-tab;
+    /* 햄버거 버튼 */
+    .hamburger-btn img {
+        width: v.$ham-tablet;
+        height: v.$ham-tablet;
 
-        &__title {
-            font-size: v.$heroTitle-tab;
-
-        }
-
-        &__desc {
-            font-size: v.$heroDesc-tab;
-
-        }
-
-        &__right img {
-            width: v.$arrow-tab;
-        }
     }
+
+
 }
 
 
@@ -363,33 +274,18 @@
             font-size: v.$menuFontSize-mob;
         }
 
-        &__menu {
-            gap: rem(20) 0;
-        }
-
         &__menu>li {
-            height: rem(60);
+            height: rem(40);
         }
     }
 
+    /* 햄버거 버튼 */
+    .hamburger-btn img {
+        width: v.$ham-mobile;
+        height: v.$ham-mobile;
 
-    // hero
-    .hero {
-        height: v.$heroH-mob;
-
-        &__title {
-            font-size: v.$heroTitle-mob;
-
-        }
-
-        &__desc {
-            font-size: v.$heroDesc-mob;
-
-        }
-
-
-        &__right img {
-            width: v.$arrow-mob;
-        }
     }
+
+
+
 }

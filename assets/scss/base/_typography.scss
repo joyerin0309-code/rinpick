@@ -86,6 +86,10 @@ body {
     font-family: 'GMarketSans';
 }
 
-.font-text {
+.desc-font {
     font-family: 'Pretendard';
 }
+
+
+$font-main: 'GMarketSans', system-ui, -apple-system, sans-serif;
+$font-desc: 'Pretendard', system-ui, -apple-system, sans-serif;

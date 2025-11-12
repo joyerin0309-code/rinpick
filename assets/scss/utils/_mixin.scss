@@ -15,3 +15,16 @@
     max-width: $max;
     padding-inline: $gutter;
 }
+
+
+
+//desc폰트
+
+@mixin lh($value: v.$lh-desc) {
+    line-height: $value;
+}
+
+@mixin desc-font($family: v.$font-desc, $lh: v.$lh-desc) {
+    font-family: $family;
+    line-height: $lh;
+}

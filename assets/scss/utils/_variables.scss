@@ -8,16 +8,24 @@ $blackColor : #000;
 $surfaceAltColor :#F4F6FC;
 $capsuleColor : #FF6F5E;
 
+//폰트
+$font-main: 'GMarketSans', system-ui, -apple-system, sans-serif;
+$font-desc: 'Pretendard', system-ui, -apple-system, sans-serif;
+
 
 // breakpoint
 $pc : 1280px;
 $laptop : 1024px;
 $tablet : 768px;
-$mobile : 360px;
+$mobile : 480px;
+
+
 
 //container
 $containerWidth : 1420px;
 $gutterWidth: 20px;
+
+
 
 //섹션 패딩
 $sp-d: rem(140);
@@ -28,13 +36,23 @@ $sp-m: rem(40);
 
 
 
+//line heigth
+$lh-desc :1.5;
+// $lh-pc :1.4;
+// $lh-lap :1.3;
+// $lh-tab :1.2;
+// $lh-mob :1.1;
+
+
+
+
 //header
 $headerHeight-des: rem(80);
 $headerHeight-pc: rem(70);
 $headerHeight-laptop: rem(68);
 $headerHeight-tablet: rem(65);
 $headerHeight-mobile: rem(40);
-$headerZ: 1000;
+
 
 
 //logo
@@ -42,7 +60,7 @@ $logoSize-desktop: rem(34);
 $logoSize-pc: rem(32);
 $logoSize-laptop: rem(30);
 $logoSize-tablet: rem(28);
-$logoSize-mobile: rem(24);
+$logoSize-mobile: rem(18);
 
 
 //menu
@@ -53,12 +71,9 @@ $menuFontSize-tab: rem(20);
 $menuFontSize-mob: rem(16);
 
 
-
-$navFontWeight: 500;
 $navGap: 0 rem(35);
 
-$menuGapY-tablet: rem(16);
-$menuGapY-mobile: rem(14);
+
 
 
 //hamburger-btn
@@ -76,11 +91,7 @@ $closeTop-tablet: math.div($headerHeight-tablet - $ham-tablet, 2);
 $closeTop-mobile: math.div($headerHeight-mobile - $ham-mobile, 2);
 
 
-// 패널 너비
-$panelWidth-laptop: rem(360);
-$panelWidth-tablet: rem(320);
-$panelWidth-mobile: rem(280);
-$headerPR : rem(20);
+
 
 
 //hero
@@ -91,18 +102,18 @@ $heroH-tab :rem(410);
 $heroH-mob :rem(200);
 
 
-$heroTitle-des : rem(48);
-$heroTitle-pc : rem(42);
-$heroTitle-lap : rem(32);
-$heroTitle-tab : rem(26);
+$heroTitle-des : rem(40);
+$heroTitle-pc : rem(38);
+$heroTitle-lap : rem(34);
+$heroTitle-tab : rem(30);
 $heroTitle-mob : rem(20);
 
 
-$heroDesc-des : rem(24);
+$heroDesc-des : rem(22);
 $heroDesc-pc : rem(20);
-$heroDesc-lap : rem(16);
-$heroDesc-tab : rem(14);
-$heroDesc-mob : rem(12);
+$heroDesc-lap : rem(18);
+$heroDesc-tab : rem(16);
+$heroDesc-mob : rem(8);
 
 $arrow-des : rem(410);
 $arrow-pc : rem(300);
@@ -113,11 +124,28 @@ $arrow-mob : rem(100);
 
 //button
 
-$btnH-des: rem(52);
-$btnPadX-des: rem(50);
-$btnFont-des: rem(18);
 $btnRadius: rem(50);
-$btnMinW-des: rem(220);
+
+$btnH-des: rem(46);
+$btnPadX-des: rem(42);
+$btnFont-des: rem(18);
+
+$btnH-pc: rem(44);
+$btnPadX-pc: rem(40);
+$btnFont-pc: rem(16);
+
+$btnH-lap: rem(40);
+$btnPadX-lap: rem(38);
+$btnFont-lap: rem(14);
+
+$btnH-tab: rem(36);
+$btnPadX-tab: rem(34);
+$btnFont-tab: rem(12);
+
+$btnH-mob: rem(20);
+$btnPadX-mob: rem(18);
+$btnFont-mob: rem(8);
+
 
 
 //히어로 패딩
@@ -133,3 +161,6 @@ $heroDescPad-pc: rem(50);
 $heroDescPad-lap: rem(40);
 $heroDescPad-tab: rem(30);
 $heroDescPad-mob: rem(20);
+
+
+//intro

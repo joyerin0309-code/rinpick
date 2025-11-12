@@ -1,5 +1,5 @@
-/* 1) Utils (토큰/믹스인) */
-@use 'utils/variables' as *; // 색, bp 등 전역 토큰
+/* 1) Utils */
+@use 'utils/variables' as *;
 @use 'utils/mixin';
 @use 'utils/responsive';
 @use 'utils/function';

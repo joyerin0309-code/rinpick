@@ -104,6 +104,37 @@
 }
 
 
+//new-section
+
+.new {
+    background: v.$surfaceAltColor;
+}
+
+.new-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: v.$sp-d 0;
+    gap: v.$secGap-des;
+
+}
+
+.new__txt {
+    align-self: flex-start;
+
+}
+
+
+.mySwiper {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
 
 
 

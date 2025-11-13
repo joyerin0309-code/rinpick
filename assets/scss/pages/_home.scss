@@ -108,30 +108,93 @@
 
 .new {
     background: v.$surfaceAltColor;
+
+    &__top {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    &__txt {
+        align-self: flex-start;
+
+    }
+
+    &__title {
+        @include m.title-des;
+
+        &__point {
+            color: v.$primaryColor
+        }
+    }
+
+    &__sub-title {
+        @include m.subTitle-des;
+    }
+
+    &__more {
+        font-family: v.$font-desc;
+        position: absolute;
+        right: 0;
+        font-size: rem(18);
+        font-weight: 400;
+        bottom: rem(-45);
+        color: #5e5e5e;
+    }
+
+    &__more:hover {
+        color: v.$primaryColor;
+    }
 }
 
 .new-wrap {
     display: flex;
     flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
-    padding: v.$sp-d 0;
+    padding: v.$sp-d rem(20);
     gap: v.$secGap-des;
 
 }
 
-.new__txt {
-    align-self: flex-start;
 
-}
 
 
 .mySwiper {
     width: 100%;
-    height: 500px;
     max-width: 100%;
     overflow: hidden;
     position: relative;
+    padding-bottom: rem(50);
 }
+
+
+
+
+//pick section
+.pick {
+    background: v.$whiteColor;
+
+    &__wrap {
+        padding: v.$sp-d rem(20);
+        display: flex;
+        flex-direction: column;
+
+
+        &__txt {
+            align-self: flex-start;
+            text-align: left;
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -206,7 +269,43 @@
         }
 
     }
+
+    //new-section
+
+    .new {
+
+
+        &__title {
+            @include m.title-pc;
+        }
+
+        &__sub-title {
+            @include m.subTitle-pc;
+        }
+
+        &__more {
+            font-size: rem(16);
+            bottom: rem(-45);
+
+        }
+
+        &__more:hover {
+            color: v.$primaryColor;
+        }
+    }
+
+    .new-wrap {
+        gap: v.$secGap-pc;
+        padding: v.$sp-p rem(20);
+    }
+
 }
+
+
+
+
+
+
 
 
 
@@ -270,7 +369,42 @@
         }
 
     }
+
+    //new-section
+
+    .new {
+
+
+        &__title {
+            @include m.title-lap;
+        }
+
+        &__sub-title {
+            @include m.subTitle-lap;
+        }
+
+        &__more {
+            font-size: rem(16);
+            bottom: rem(-35);
+
+        }
+
+    }
+
+    .new-wrap {
+        gap: v.$secGap-lap;
+        padding: v.$sp-l rem(20);
+
+    }
 }
+
+
+
+
+
+
+
+
 
 
 //768px 
@@ -330,7 +464,50 @@
         }
 
     }
+
+
+    //new-section
+
+    .new {
+
+
+        &__title {
+            @include m.title-tab;
+        }
+
+        &__sub-title {
+            @include m.subTitle-tab;
+        }
+
+        &__more {
+            font-size: rem(14);
+            bottom: rem(-20);
+
+        }
+
+    }
+
+    .new-wrap {
+        gap: v.$secGap-tab;
+        padding: v.$sp-t rem(20);
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //360px 
@@ -392,6 +569,37 @@
 
         }
 
+    }
+
+    //new-section
+
+    .new {
+
+
+        &__title {
+            @include m.title-mob;
+        }
+
+        &__sub-title {
+            @include m.subTitle-mob;
+        }
+
+        &__more {
+            font-size: rem(8);
+            bottom: rem(-15);
+
+        }
+
+    }
+
+    .new-wrap {
+        gap: v.$secGap-mob;
+        padding: v.$sp-m rem(20);
+
+    }
+
+    .mySwiper {
+        padding-bottom: rem(40);
     }
 
 

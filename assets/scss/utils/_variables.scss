@@ -43,6 +43,27 @@ $secGap-tab :rem(30);
 $secGap-mob :rem(20);
 
 
+//타이틀 크기,굵기
+$titleWeight : 700;
+
+$titleSize-des : rem(34);
+$titleSize-pc : rem(28);
+$titleSize-lap : rem(24);
+$titleSize-tab : rem(20);
+$titleSize-mob : rem(14);
+
+//sub
+$subTitleWeight : 500;
+
+$subTitle-des : rem(20);
+$subTitle-pc : rem(20);
+$subTitle-lap : rem(18);
+$subTitle-tab : rem(16);
+$subTitle-mob : rem(10);
+
+
+
+
 
 //line heigth
 $lh-desc :1.5;
@@ -64,18 +85,18 @@ $headerHeight-mobile: rem(40);
 
 
 //logo
-$logoSize-desktop: rem(34);
-$logoSize-pc: rem(32);
-$logoSize-laptop: rem(30);
-$logoSize-tablet: rem(28);
+$logoSize-desktop: rem(32);
+$logoSize-pc: rem(30);
+$logoSize-laptop: rem(28);
+$logoSize-tablet: rem(26);
 $logoSize-mobile: rem(18);
 
 
 //menu
-$menuFontSize-des: rem(22);
-$menuFontSize-pc: rem(20);
+$menuFontSize-des: rem(18);
+$menuFontSize-pc: rem(16);
 $menuFontSize-lap: rem(20);
-$menuFontSize-tab: rem(20);
+$menuFontSize-tab: rem(18);
 $menuFontSize-mob: rem(16);
 
 
@@ -176,3 +197,18 @@ $heroDescPad-mob: rem(20);
 
 
 //new-section
+
+// 카드높이
+$newCardH-des: rem(480);
+$newCardH-pc: rem(460);
+$newCardH-lap: rem(430);
+$newCardH-tab: rem(300);
+$newCardH-mob: rem(200);
+
+
+// 카드 이미지 높이
+$cardImg-des: rem(390);
+$cardImg-pc: rem(370);
+$cardImg-lap: rem(350);
+$cardImg-tab: rem(240);
+$cardImg-mob: rem(160);

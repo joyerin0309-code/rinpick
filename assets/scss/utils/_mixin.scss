@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use './function' as *;
 @use './variables' as v;
 
 @mixin flex ($justifyContent: center, $alignItems: center, $gap: null, $flexDirection: row) {
@@ -27,4 +28,58 @@
 @mixin desc-font($family: v.$font-desc, $lh: v.$lh-desc) {
     font-family: $family;
     line-height: $lh;
+}
+
+
+// title 사이즈 굵기
+@mixin title-des {
+    font-size: v.$titleSize-des;
+    font-weight: v.$titleWeight;
+    padding-bottom: rem(5);
+}
+
+@mixin title-pc {
+    font-size: v.$titleSize-pc;
+    font-weight: v.$titleWeight;
+}
+
+@mixin title-lap {
+    font-size: v.$titleSize-lap;
+    font-weight: v.$titleWeight;
+}
+
+@mixin title-tab {
+    font-size: v.$titleSize-tab;
+    font-weight: v.$titleWeight;
+}
+
+@mixin title-mob {
+    font-size: v.$titleSize-mob;
+    font-weight: v.$titleWeight;
+}
+
+//sub
+@mixin subTitle-des {
+    font-size: v.$subTitle-des;
+    font-weight: v.$subTitleWeight;
+}
+
+@mixin subTitle-pc {
+    font-size: v.$subTitle-pc;
+    font-weight: v.$subTitleWeight;
+}
+
+@mixin subTitle-lap {
+    font-size: v.$subTitle-lap;
+    font-weight: v.$subTitleWeight;
+}
+
+@mixin subTitle-tab {
+    font-size: v.$subTitle-tab;
+    font-weight: v.$subTitleWeight;
+}
+
+@mixin subTitle-mob {
+    font-size: v.$subTitle-mob;
+    font-weight: v.$subTitleWeight;
 }

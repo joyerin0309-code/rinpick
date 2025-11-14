@@ -218,12 +218,18 @@
     display: flex;
     align-items: center;
     gap: rem(50);
+    overflow: hidden;
+    border-radius: rem(20);
 
 }
 
-.pick-top-card img {
+.pick-img {
     width: v.$pickImgWidth-des;
+    object-fit: cover;
     height: 100%;
+    width: 100%;
+
+
 }
 
 
@@ -244,12 +250,19 @@
     background: #000000;
 }
 
+.pick-btn:hover {
+    background: v.$primaryColor;
+}
+
+
 .pick-bottom-card {
     display: flex;
+    height: rem(375);
     align-items: center;
     justify-content: flex-start;
     gap: rem(50);
     flex-direction: row-reverse;
+    overflow: hidden;
 }
 
 .pick-bottom-txt {
@@ -257,6 +270,48 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
+}
+
+
+
+
+//pick 스타일
+.run-style {
+    background: v.$surfaceAltColor;
+
+
+    &__wraps {
+        padding: v.$sp-d rem(20);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    &__txt {
+        text-align: left;
+
+
+
+
+        &__title {
+            font-size: v.$titleSize-des;
+            font-weight: v.$titleWeight;
+        }
+
+
+        &__sub-title {
+            font-size: v.$subTitle-des;
+            font-weight: v.$subTitleWeight;
+            padding-bottom: v.$secGap-des;
+
+        }
+
+
+        &__ponit {
+            color: v.$primaryColor;
+        }
+    }
 }
 
 
@@ -368,6 +423,67 @@
         padding: v.$sp-p rem(20);
     }
 
+
+
+
+
+    //pick section
+    .pick {
+
+        &__wrap {
+            padding: v.$sp-p rem(20);
+
+
+            &__title {
+                @include m.title-pc;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-pc;
+                padding-bottom: v.$secGap-pc;
+                ;
+            }
+        }
+    }
+
+    .pick-list {
+        gap: v.$cardGap-pc ;
+    }
+
+    .pick-top-card {
+        height: rem(370);
+        gap: rem(40);
+        overflow: hidden;
+
+    }
+
+    .pick-img {
+        width: v.$pickImgWidth-pc;
+    }
+
+
+    .pick-card-title {
+        font-size: rem(28);
+        padding-bottom: rem(30);
+    }
+
+    .pick-card-desc {
+
+        font-size: rem(20);
+        padding-bottom: rem(60);
+    }
+
+
+
+
+
+    .pick-bottom-card {
+        gap: rem(40);
+        height: rem(370);
+        overflow: hidden;
+    }
+
 }
 
 
@@ -465,6 +581,65 @@
         padding: v.$sp-l rem(20);
 
     }
+
+
+
+
+
+    //pick section
+    .pick {
+
+        &__wrap {
+            padding: v.$sp-l rem(20);
+
+
+            &__title {
+                @include m.title-lap;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-lap;
+                padding-bottom: v.$secGap-lap;
+                ;
+            }
+        }
+    }
+
+    .pick-list {
+        gap: 0;
+    }
+
+    .pick-top-card {
+        height: rem(320);
+        gap: rem(40);
+
+    }
+
+    .pick-img {
+        width: v.$pickImgWidth-lap;
+    }
+
+
+    .pick-card-title {
+        font-size: rem(24);
+        padding-bottom: rem(25);
+    }
+
+    .pick-card-desc {
+
+        font-size: rem(18);
+        padding-bottom: rem(50);
+    }
+
+
+
+    .pick-bottom-card {
+        gap: rem(40);
+        height: rem(320);
+    }
+
+
 }
 
 
@@ -561,6 +736,61 @@
         padding: v.$sp-t rem(20);
 
     }
+
+
+
+    //pick section
+    .pick {
+
+        &__wrap {
+            padding: v.$sp-t rem(20);
+
+
+            &__title {
+                @include m.title-tab;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-tab;
+                padding-bottom: v.$secGap-tab;
+                ;
+            }
+        }
+    }
+
+    .pick-list {
+        gap: 0;
+    }
+
+    .pick-top-card {
+        height: rem(260);
+        gap: rem(40);
+
+    }
+
+    .pick-img {
+        width: v.$pickImgWidth-tab;
+    }
+
+
+    .pick-card-title {
+        font-size: rem(20);
+        padding-bottom: rem(25);
+    }
+
+    .pick-card-desc {
+
+        font-size: rem(16);
+        padding-bottom: rem(30);
+    }
+
+
+
+    .pick-bottom-card {
+        gap: rem(40);
+        height: rem(260);
+    }
 }
 
 
@@ -587,7 +817,7 @@
     // hero
     .hero {
         height: v.$heroH-mob;
-        // background: url("../img/hero-mob-bg.png");
+
 
         &__title {
             font-size: v.$heroTitle-mob;
@@ -670,6 +900,94 @@
     .mySwiper {
         padding-bottom: rem(40);
     }
+
+
+
+
+
+    //pick section
+    .pick {
+
+        &__wrap {
+            padding: v.$sp-m rem(20);
+
+
+            &__title {
+                @include m.title-mob;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-mob;
+                padding-bottom: v.$secGap-mob;
+                ;
+            }
+        }
+    }
+
+    .pick-list {
+        gap: v.$cardGap-mob ;
+    }
+
+
+    .pick-top-card,
+    .pick-bottom-card {
+        position: relative;
+        height: rem(200);
+        gap: rem(40);
+        border-radius: rem(15);
+        overflow: hidden;
+        display: block;
+    }
+
+
+    .pick-top-txt,
+    .pick-bottom-txt {
+        position: absolute;
+        inset: rem(25);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+
+
+
+
+    .pick-img {
+        width: v.$pickImgWidth-mob;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .pick-card-title {
+        color: v.$whiteColor;
+        padding-bottom: rem(5);
+        font-size: rem(14);
+
+    }
+
+    .pick-card-desc {
+
+        font-size: rem(10);
+        color: v.$whiteColor;
+        padding-bottom: rem(50);
+    }
+
+
+    .pick-btn {
+        font-weight: 500;
+        align-self: flex-end;
+        margin-top: auto;
+        background: v.$primaryColor;
+        color: v.$whiteColor;
+    }
+
+
+
 
 
 

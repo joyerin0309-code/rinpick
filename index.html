@@ -241,6 +241,8 @@
         </section>
 
 
+
+        <!-- 국내 해외 pick -->
         <section class="pick">
             <div class="container pick__wrap">
                 <div class="pick__wrap__txt">
@@ -249,7 +251,11 @@
                 </div>
                 <div class="pick-list">
                     <div class="pick-top-card">
-                        <img src="./assets/img/pick-img01.png" alt="국내 이미지">
+                        <picture class="pick-img-wrap">
+                            <source srcset="./assets/img/pick-img01-mob.png" media="(max-width: 480px)">
+                            <source srcset="./assets/img/pick-img01.png" media="(min-width: 769px)">
+                            <img src="./assets/img/pick-img01.png" alt="국내 RUN" class="pick-img">
+                        </picture>
 
                         <div class="pick-top-txt">
                             <p class="pick-card-title">국내 RUN</p>
@@ -261,7 +267,11 @@
 
 
                     <div class="pick-bottom-card">
-                        <img src="./assets/img/pick-img02.png" alt="해외 이미지">
+                        <picture class="pick-img-wrap">
+                            <source srcset="./assets/img/pick-img02-mob.png" media="(max-width: 480px)">
+                            <source srcset="./assets/img/pick-img02.png" media="(min-width: 769px)">
+                            <img src="./assets/img/pick-img02.png" alt="해외 RUN" class="pick-img">
+                        </picture>
 
                         <div class="pick-bottom-txt">
                             <p class="pick-card-title">해외 RUN</p>
@@ -271,6 +281,41 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- 런트립 스타일 -->
+        <section class="run-style">
+            <div class="container run-style__wraps">
+                <div class="run-style__txt">
+                    <h2 class="run-style__txt__title">런트립 <span class="run-style__txt__ponit">스타일</span></h2>
+                    <p class="run-style__txt__sub-title">나에게 맞는 런투어를 찾아보세요!</p>
+                </div>
+
+                <div class="run-style-list">
+                    <div class="run-style-card">
+                        <img src="./assets/img/style-img01.png" alt="런트립 스타일 이미지">
+
+                        <div class="run-style-overlay">
+                            <div class="overlay-txt">
+                                <h3 class="overlay-title">챌린지형</h3>
+                                <p class="overlay-sub-title">기록 갱신을 즐기는 타입</p>
+                            </div>
+                        </div>
+
+                        <div class="run-style-hover">
+                            <div class="hover-txt">
+                                <h3 class="hover-title">챌린지형</h3>
+                                <p class="hover-desc">‘챌린지형’은 기록 경신, 메달 수집, 마라톤 완주 같은 목표를 중시해요. 챌린지형에겐 도전 욕구를 불타오르게 하는
+                                    산과 숲, 계곡, 농촌을 누비며 장엄한 대자연을 만끽해보세요.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>

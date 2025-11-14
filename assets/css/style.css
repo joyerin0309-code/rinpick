@@ -740,11 +740,15 @@ body {
   display: flex;
   align-items: center;
   gap: 3.125rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
 }
 
-.pick-top-card img {
+.pick-img {
   width: 42.1875rem;
+  object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 
 .pick-card-title {
@@ -764,12 +768,18 @@ body {
   background: #000000;
 }
 
+.pick-btn:hover {
+  background: #2463E0;
+}
+
 .pick-bottom-card {
   display: flex;
+  height: 23.4375rem;
   align-items: center;
   justify-content: flex-start;
   gap: 3.125rem;
   flex-direction: row-reverse;
+  overflow: hidden;
 }
 
 .pick-bottom-txt {
@@ -777,6 +787,31 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
+}
+
+.run-style {
+  background: #F4F6FC;
+}
+.run-style__wraps {
+  padding: 8.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.run-style__txt {
+  text-align: left;
+}
+.run-style__txt__title {
+  font-size: 2.125rem;
+  font-weight: 700;
+}
+.run-style__txt__sub-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 3.75rem;
+}
+.run-style__txt__ponit {
+  color: #2463E0;
 }
 
 @media (max-width: 1280px) {
@@ -828,6 +863,42 @@ body {
     gap: 3.125rem;
     padding: 6.25rem 1.25rem;
   }
+  .pick__wrap {
+    padding: 6.25rem 1.25rem;
+  }
+  .pick__wrap__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  .pick__wrap__sub-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 3.125rem;
+  }
+  .pick-list {
+    gap: 1.875rem;
+  }
+  .pick-top-card {
+    height: 23.125rem;
+    gap: 2.5rem;
+    overflow: hidden;
+  }
+  .pick-img {
+    width: 36.25rem;
+  }
+  .pick-card-title {
+    font-size: 1.75rem;
+    padding-bottom: 1.875rem;
+  }
+  .pick-card-desc {
+    font-size: 1.25rem;
+    padding-bottom: 3.75rem;
+  }
+  .pick-bottom-card {
+    gap: 2.5rem;
+    height: 23.125rem;
+    overflow: hidden;
+  }
 }
 @media (max-width: 1024px) {
   .hero {
@@ -875,6 +946,40 @@ body {
     gap: 2.5rem;
     padding: 5rem 1.25rem;
   }
+  .pick__wrap {
+    padding: 5rem 1.25rem;
+  }
+  .pick__wrap__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .pick__wrap__sub-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-bottom: 2.5rem;
+  }
+  .pick-list {
+    gap: 0;
+  }
+  .pick-top-card {
+    height: 20rem;
+    gap: 2.5rem;
+  }
+  .pick-img {
+    width: 30rem;
+  }
+  .pick-card-title {
+    font-size: 1.5rem;
+    padding-bottom: 1.5625rem;
+  }
+  .pick-card-desc {
+    font-size: 1.125rem;
+    padding-bottom: 3.125rem;
+  }
+  .pick-bottom-card {
+    gap: 2.5rem;
+    height: 20rem;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -921,6 +1026,40 @@ body {
   .new-wrap {
     gap: 1.875rem;
     padding: 3.75rem 1.25rem;
+  }
+  .pick__wrap {
+    padding: 3.75rem 1.25rem;
+  }
+  .pick__wrap__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .pick__wrap__sub-title {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 1.875rem;
+  }
+  .pick-list {
+    gap: 0;
+  }
+  .pick-top-card {
+    height: 16.25rem;
+    gap: 2.5rem;
+  }
+  .pick-img {
+    width: 22.25rem;
+  }
+  .pick-card-title {
+    font-size: 1.25rem;
+    padding-bottom: 1.5625rem;
+  }
+  .pick-card-desc {
+    font-size: 1rem;
+    padding-bottom: 1.875rem;
+  }
+  .pick-bottom-card {
+    gap: 2.5rem;
+    height: 16.25rem;
   }
 }
 @media (max-width: 480px) {
@@ -971,5 +1110,61 @@ body {
   }
   .mySwiper {
     padding-bottom: 2.5rem;
+  }
+  .pick__wrap {
+    padding: 2.5rem 1.25rem;
+  }
+  .pick__wrap__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  .pick__wrap__sub-title {
+    font-size: 0.625rem;
+    font-weight: 500;
+    padding-bottom: 1.25rem;
+  }
+  .pick-list {
+    gap: 1.25rem;
+  }
+  .pick-top-card,
+  .pick-bottom-card {
+    position: relative;
+    height: 12.5rem;
+    gap: 2.5rem;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    display: block;
+  }
+  .pick-top-txt,
+  .pick-bottom-txt {
+    position: absolute;
+    inset: 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .pick-img {
+    width: 27.5rem;
+    width: 100%;
+    height: 100%;
+  }
+  .pick-card-title {
+    color: #fff;
+    padding-bottom: 0.3125rem;
+    font-size: 0.875rem;
+  }
+  .pick-card-desc {
+    font-size: 0.625rem;
+    color: #fff;
+    padding-bottom: 3.125rem;
+  }
+  .pick-btn {
+    font-weight: 500;
+    align-self: flex-end;
+    margin-top: auto;
+    background: #2463E0;
+    color: #fff;
   }
 }

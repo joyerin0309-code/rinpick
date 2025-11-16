@@ -202,7 +202,7 @@
         &__sub-title {
             @include m.subTitle-des;
             padding-bottom: v.$secGap-des;
-            ;
+
         }
     }
 }
@@ -219,13 +219,18 @@
     align-items: center;
     gap: rem(50);
     overflow: hidden;
-    border-radius: rem(20);
 
+
+}
+
+.pick-img-wrap {
+    height: 100%;
 }
 
 .pick-img {
     width: v.$pickImgWidth-des;
     object-fit: cover;
+    border-radius: rem(20);
     height: 100%;
     width: 100%;
 
@@ -275,10 +280,9 @@
 
 
 
-//pick 스타일
+// run-style 섹션
 .run-style {
     background: v.$surfaceAltColor;
-
 
     &__wraps {
         padding: v.$sp-d rem(20);
@@ -287,31 +291,142 @@
         align-items: flex-start;
     }
 
-
     &__txt {
         text-align: left;
 
-
-
-
         &__title {
-            font-size: v.$titleSize-des;
-            font-weight: v.$titleWeight;
+            @include m.title-des;
         }
 
-
         &__sub-title {
-            font-size: v.$subTitle-des;
-            font-weight: v.$subTitleWeight;
+            @include m.subTitle-des;
             padding-bottom: v.$secGap-des;
 
         }
-
 
         &__ponit {
             color: v.$primaryColor;
         }
     }
+}
+
+
+.run-style-list {
+    width: 100%;
+    display: flex;
+    gap: rem(20);
+}
+
+
+.run-style-card {
+    position: relative;
+    flex: 1 1 0;
+    height: v.$styleCardH-des;
+    border-radius: rem(20);
+    overflow: hidden;
+    transition: flex 0.4s ease;
+}
+
+.run-style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+.run-style-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: rem(20);
+    color: v.$whiteColor;
+    opacity: 1;
+}
+
+.overlay-txt {
+    text-align: center;
+}
+
+.overlay-title {
+    font-size: rem(24);
+    font-weight: 700;
+}
+
+.overlay-sub-title {
+    font-size: rem(18);
+    margin: rem(5) 0;
+}
+
+
+.run-style-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+
+
+.hover-txt {
+    max-width: rem(420);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(rem(50));
+    transition:
+        opacity 0.4s ease 0.08s,
+        transform 0.4s ease 0.08s;
+}
+
+
+.hover-title {
+    font-size: rem(28);
+    font-weight: 700;
+    margin-bottom: rem(20);
+    color: v.$whiteColor;
+}
+
+.hover-desc {
+    font-size: rem(20);
+    font-family: v.$font-desc;
+    line-height: v.$lh-desc;
+    color: v.$whiteColor;
+    text-align: left;
+}
+
+
+.run-style-list:hover .run-style-card {
+    flex: 0.8 1 0;
+}
+
+
+.run-style-list:hover .run-style-card:hover {
+    flex: 1.6 1 0;
+}
+
+
+.run-style-card:hover img {
+    opacity: 0.3;
+    transform: scale(1.06);
+}
+
+.run-style-card:hover .run-style-overlay {
+    opacity: 0;
+}
+
+.run-style-card:hover .run-style-hover {
+    opacity: 1;
+}
+
+.run-style-card:hover .hover-txt {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -484,6 +599,60 @@
         overflow: hidden;
     }
 
+
+
+
+    // run-style 섹션
+    .run-style {
+
+
+        &__wraps {
+            padding: v.$sp-p rem(20);
+        }
+
+        &__txt {
+
+            &__title {
+                @include m.title-pc;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-pc;
+                padding-bottom: v.$secGap-pc;
+                ;
+            }
+        }
+    }
+
+    .run-style-card {
+        height: v.$styleCardH-pc;
+    }
+
+    .overlay-title {
+        font-size: rem(20);
+    }
+
+    .overlay-sub-title {
+        font-size: rem(16);
+        margin: rem(5) 0;
+    }
+
+
+    .hover-txt {
+        max-width: rem(360);
+    }
+
+
+    .hover-title {
+        font-size: rem(26);
+        margin-bottom: rem(20);
+    }
+
+    .hover-desc {
+        font-size: rem(18);
+    }
+
 }
 
 
@@ -607,7 +776,7 @@
     }
 
     .pick-list {
-        gap: 0;
+        gap: v.$cardGap-lap;
     }
 
     .pick-top-card {
@@ -640,7 +809,75 @@
     }
 
 
+
+    //run-style 섹션
+
+    .run-style {
+
+        &__wraps {
+            padding: v.$sp-l rem(20);
+        }
+
+        &__txt {
+
+            &__title {
+                @include m.title-lap;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-lap;
+                padding-bottom: v.$secGap-lap;
+                ;
+            }
+        }
+    }
+
+
+    .overlay-title {
+        font-size: rem(24);
+    }
+
+    .overlay-sub-title {
+        font-size: rem(18);
+        margin: rem(5) 0;
+    }
+
+
+    .hover-txt {
+        max-width: rem(340);
+    }
+
+
+    .hover-title {
+        font-size: rem(24);
+        margin-bottom: rem(20);
+    }
+
+    .hover-desc {
+        font-size: rem(18);
+    }
+
+    .run-style-list {
+        flex-wrap: wrap;
+        gap: rem(20);
+    }
+
+    .run-style-card {
+        flex: 1 1 calc(50% - rem(10));
+        height: v.$styleCardH-lap;
+    }
+
+
+    .run-style-list:hover .run-style-card,
+    .run-style-list:hover .run-style-card:hover {
+        flex: 1 1 calc(50% - rem(10));
+    }
 }
+
+
+
+
 
 
 
@@ -754,13 +991,13 @@
             &__sub-title {
                 @include m.subTitle-tab;
                 padding-bottom: v.$secGap-tab;
-                ;
+
             }
         }
     }
 
     .pick-list {
-        gap: 0;
+        gap: v.$cardGap-tab;
     }
 
     .pick-top-card {
@@ -790,6 +1027,65 @@
     .pick-bottom-card {
         gap: rem(40);
         height: rem(260);
+    }
+
+
+
+
+    //run-style 섹션
+
+    .run-style {
+
+        &__wraps {
+            padding: v.$sp-t rem(20);
+        }
+
+        &__txt {
+
+            &__title {
+                @include m.title-tab;
+            }
+
+
+            &__sub-title {
+                @include m.subTitle-tab;
+                padding-bottom: v.$secGap-tab;
+
+            }
+        }
+    }
+
+
+    .overlay-title {
+        font-size: rem(20);
+    }
+
+    .overlay-sub-title {
+        font-size: rem(14);
+        margin: rem(2) 0;
+    }
+
+
+    .hover-txt {
+        max-width: rem(220);
+    }
+
+
+    .hover-title {
+        font-size: rem(20);
+        margin-bottom: rem(20);
+    }
+
+    .hover-desc {
+        font-size: rem(16);
+    }
+
+    .run-style-list {
+        gap: rem(10);
+    }
+
+    .run-style-card {
+        height: v.$styleCardH-tab;
     }
 }
 
@@ -984,6 +1280,69 @@
         margin-top: auto;
         background: v.$primaryColor;
         color: v.$whiteColor;
+    }
+
+
+
+
+
+
+
+
+
+    //run-style 섹션
+
+    .run-style {
+
+        &__wraps {
+            padding: v.$sp-m rem(20);
+        }
+
+        &__txt {
+
+            &__title {
+                @include m.title-mob;
+                padding-bottom: rem(5);
+            }
+
+            &__sub-title {
+                font-size: v.$subTitle-mob;
+                padding-bottom: v.$secGap-mob;
+            }
+        }
+    }
+
+
+    .overlay-title {
+        font-size: rem(14);
+    }
+
+    .overlay-sub-title {
+        font-size: rem(10);
+        margin: rem(2) 0;
+    }
+
+
+    .hover-txt {
+        max-width: rem(150);
+    }
+
+
+    .hover-title {
+        font-size: rem(14);
+        margin-bottom: rem(10);
+    }
+
+    .hover-desc {
+        font-size: rem(10);
+    }
+
+    .run-style-list {
+        gap: rem(10);
+    }
+
+    .run-style-card {
+        height: v.$styleCardH-mob;
     }
 
 

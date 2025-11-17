@@ -432,6 +432,121 @@
 
 
 
+//news 섹션
+
+
+.news {
+    background: v.$whiteColor;
+
+    &__top {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    &__txt {
+        align-self: flex-start;
+
+    }
+
+    &__title {
+        @include m.title-des;
+        color: v.$primaryColor;
+    }
+
+    &__sub-title {
+        @include m.subTitle-des;
+    }
+
+    &__more {
+        font-family: v.$font-desc;
+        position: absolute;
+        right: 0;
+        font-size: rem(18);
+        font-weight: 400;
+        bottom: rem(-45);
+        color: #5e5e5e;
+    }
+
+    &__more:hover {
+        color: v.$primaryColor;
+    }
+}
+
+.news-wrap {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: v.$sp-d rem(20);
+    gap: v.$secGap-des;
+
+}
+
+
+.newsSwiper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrow {
+    color: v.$whiteColor;
+}
+
+
+
+
+
+
+//partner 섹션
+.partner {
+    position: relative;
+    background-image: url("../img/partner-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: v.$whiteColor;
+}
+
+
+.partner-wrap {
+    padding: v.$sp-d rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.partner-wrap img {
+    margin-bottom: rem(30);
+}
+
+
+.partner-kicker {
+    font-size: v.$kicker-des;
+    font-weight: 500;
+    // margin-bottom: rem(5);
+}
+
+.partner-title {
+    font-size: v.$partnerTitle-des;
+    font-weight: 700;
+    margin-bottom: rem(60);
+}
+
+
+.partner-btn {
+    background: v.$whiteColor;
+    color: v.$blackColor;
+}
+
+
 
 
 
@@ -653,6 +768,69 @@
         font-size: rem(18);
     }
 
+
+
+
+
+    //news 섹션
+
+
+    .news {
+
+
+
+        &__title {
+            @include m.title-pc;
+
+        }
+
+        &__sub-title {
+            @include m.subTitle-pc;
+        }
+
+        &__more {
+            font-size: rem(16);
+            bottom: rem(-45);
+        }
+
+    }
+
+    .news-wrap {
+        padding: v.$sp-p rem(20);
+        gap: v.$secGap-pc;
+
+    }
+
+
+
+
+
+    //partner 섹션
+
+    .partner-wrap {
+        padding: v.$sp-p rem(20);
+    }
+
+    .partner-icon {
+        width: rem(70);
+        margin-bottom: rem(30);
+    }
+
+
+    .partner-kicker {
+        font-size: v.$kicker-pc;
+    }
+
+    .partner-title {
+        font-size: v.$partnerTitle-pc;
+        margin-bottom: rem(60);
+    }
+
+
+
+
+
+
 }
 
 
@@ -873,6 +1051,64 @@
     .run-style-list:hover .run-style-card:hover {
         flex: 1 1 calc(50% - rem(10));
     }
+
+
+
+
+    //news 섹션
+
+
+    .news {
+
+
+
+        &__title {
+            @include m.title-lap;
+
+        }
+
+        &__sub-title {
+            @include m.subTitle-lap;
+        }
+
+        &__more {
+            font-size: rem(16);
+            bottom: rem(-35);
+        }
+
+    }
+
+    .news-wrap {
+        padding: v.$sp-l rem(20);
+        gap: v.$secGap-lap;
+
+    }
+
+
+
+
+
+    //partner 섹션
+
+    .partner-wrap {
+        padding: v.$sp-l rem(20);
+    }
+
+    .partner-icon {
+        width: rem(40);
+        margin-bottom: rem(30);
+    }
+
+
+    .partner-kicker {
+        font-size: v.$kicker-lap;
+    }
+
+    .partner-title {
+        font-size: v.$partnerTitle-lap;
+        margin-bottom: rem(50);
+    }
+
 }
 
 
@@ -1087,6 +1323,61 @@
     .run-style-card {
         height: v.$styleCardH-tab;
     }
+
+
+
+
+
+    //news 섹션
+
+    .news {
+
+
+
+        &__title {
+            @include m.title-tab;
+
+        }
+
+        &__sub-title {
+            @include m.subTitle-tab;
+        }
+
+        &__more {
+            font-size: rem(14);
+            bottom: rem(-20);
+        }
+
+    }
+
+    .news-wrap {
+        padding: v.$sp-t rem(20);
+        gap: v.$secGap-tab;
+
+    }
+
+
+    //partner 섹션
+
+    .partner-wrap {
+        padding: v.$sp-t rem(20);
+    }
+
+    .partner-icon {
+        width: rem(50);
+        margin-bottom: rem(20);
+    }
+
+
+    .partner-kicker {
+        font-size: v.$kicker-tab;
+    }
+
+    .partner-title {
+        font-size: v.$partnerTitle-tab;
+        margin-bottom: rem(30);
+    }
+
 }
 
 
@@ -1347,6 +1638,34 @@
 
 
 
+
+    //news 섹션
+
+    .news {
+
+
+
+        &__title {
+            @include m.title-mob;
+
+        }
+
+        &__sub-title {
+            @include m.subTitle-mob;
+        }
+
+        &__more {
+            font-size: rem(8);
+            bottom: rem(-15);
+        }
+
+    }
+
+    .news-wrap {
+        padding: v.$sp-m rem(20);
+        gap: v.$secGap-mob;
+
+    }
 
 
 

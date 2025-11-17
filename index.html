@@ -383,46 +383,122 @@
 
 
         <!-- news -->
-        <section class="new">
-            <div class="container new-wrap">
-                <div class="new__top">
-                    <div class="new__txt">
-                        <p class="new__title">NEWS</p>
-                        <p class="new__sub-title">바다·야경·도시까지, 취향에 맞춘 러닝 여행을 골라 떠나보세요.</p>
+        <section class="news">
+            <div class="container news-wrap">
+                <div class="news__top">
+                    <div class="news__txt">
+                        <p class="news__title">NEWS</p>
+                        <p class="news__sub-title">러닝 & 런트립 소식을 한눈에 만나보세요.</p>
                     </div>
-                    <a href="#" class="new__more">더보기 → </a>
+                    <a href="#" class="news__more">더보기 → </a>
                 </div>
 
-                <div class="swiper mySwiper">
+                <div class="swiper newsSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide new-card">
+                        <div class="swiper-slide news-list">
 
-                            <div class="new-card__thumb">
-
+                            <div class="news-list__card">
                                 <img src="./assets/img/news-img01.png" alt="뉴스이미지">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">출처-동아일보</h3>
-                                    <!-- <p class="news-card__info__desc">빼곡한 삼나무 숲속에서 트레일런 힐링</p> -->
-                                </div>
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
                             </div>
 
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__date">2025.10.22</p>
-                                <p class="new-card__meta__title">경주국제마라톤의 이변!
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
                                     아일랜드 선수의 우승</p>
                             </div>
 
                         </div>
+                        <div class="swiper-slide news-list">
+
+                            <div class="news-list__card">
+                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
+                            </div>
+
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
+                                    아일랜드 선수의 우승</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide news-list">
+
+                            <div class="news-list__card">
+                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
+                            </div>
+
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
+                                    아일랜드 선수의 우승</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide news-list">
+
+                            <div class="news-list__card">
+                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
+                            </div>
+
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
+                                    아일랜드 선수의 우승</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide news-list">
+
+                            <div class="news-list__card">
+                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
+                            </div>
+
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
+                                    아일랜드 선수의 우승</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide news-list">
+
+                            <div class="news-list__card">
+                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
+                                <h3 class="news-list__card__source">출처-동아일보</h3>
+                            </div>
+
+                            <div class="news-list__meta">
+                                <p class="news-list__meta__date">2025.10.22</p>
+                                <p class="news-list__meta__title">경주국제마라톤의 이변!
+                                    아일랜드 선수의 우승</p>
+                            </div>
+
+                        </div>
+
+
                     </div>
+                    <div class="swiper-button-next arrow"></div>
+                    <div class="swiper-button-prev arrow"></div>
 
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
+
             </div>
         </section>
 
+        <section class="partner">
+            <div class="container partner-wrap">
+                <img src="./assets/img/map-pin.png" alt="파트너 맵핀" class="partner-icon">
+                <p class="partner-kicker">RUN TOGETHER. CURATE BETTER.</p>
+                <p class="partner-title">런픽과 파트너·제휴를 원하신다면?</p>
 
+                <button class="btn partner-btn">문의하기</button>
+            </div>
+        </section>
 
     </main>
 
@@ -460,6 +536,51 @@
                     slidesPerView: 3,
                     spaceBetween: 20,
                 },
+            }
+
+
+
+
+        });
+
+
+
+        var swiper = new Swiper(".newsSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            loop: true,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             }
 
 

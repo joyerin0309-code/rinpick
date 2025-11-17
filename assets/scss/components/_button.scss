@@ -4,11 +4,12 @@
 
 .btn {
     height: v.$btnH-des;
+    font-family: v.$font-desc;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: v.$btnFont-des;
-    font-weight: 300;
+    font-weight: 500;
     border-radius: v.$btnRadius;
     padding: 0 v.$btnPadX-des;
     color: v.$whiteColor;

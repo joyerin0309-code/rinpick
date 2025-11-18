@@ -41,6 +41,7 @@
         font-size: v.$menuFontSize-des;
         padding: v.$navGap;
         color: v.$blackColor;
+        transition: all 0.3s ease;
 
         &:hover {
             background-color: v.$primaryColor;
@@ -65,7 +66,6 @@
 .header-menu {
     @include m.flex($gap: v.$navGap);
 }
-
 
 
 
@@ -107,9 +107,10 @@
     .hamburger-btn {
         width: v.$ham-laptop;
         height: v.$ham-laptop;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+        margin-left: auto;
     }
 
     /* 패널 */
@@ -158,13 +159,14 @@
         height: v.$headerHeight-laptop;
 
         &__menu {
+            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: stretch;
-            gap: rem(25) 0;
+            gap: rem(60) 0;
             width: 100%;
         }
 
@@ -203,7 +205,7 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            // padding: 0 rem(24);
+            padding: 0 rem(24);
             background: transparent !important;
             color: v.$blackColor;
             font-size: v.$menuFontSize-lap;
@@ -239,21 +241,36 @@
             font-size: v.$menuFontSize-tab;
         }
 
+        &__menu {
+            gap: rem(40) 0;
+        }
+
         &__menu>li {
             position: relative;
             width: 100%;
-            height: rem(60);
+            height: rem(70);
+
         }
     }
 
-    /* 햄버거 버튼 */
-    .hamburger-btn img {
-        width: v.$ham-tablet;
-        height: v.$ham-tablet;
+    // hero
+    .hero {
+        height: v.$heroH-tab;
 
+        &__title {
+            font-size: v.$heroTitle-tab;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-tab;
+
+        }
+
+        &__right img {
+            width: v.$arrow-tab;
+        }
     }
-
-
 }
 
 
@@ -274,18 +291,33 @@
             font-size: v.$menuFontSize-mob;
         }
 
+        &__menu {
+            gap: rem(20) 0;
+        }
+
         &__menu>li {
-            height: rem(40);
+            height: rem(60);
         }
     }
 
-    /* 햄버거 버튼 */
-    .hamburger-btn img {
-        width: v.$ham-mobile;
-        height: v.$ham-mobile;
 
+    // hero
+    .hero {
+        height: v.$heroH-mob;
+
+        &__title {
+            font-size: v.$heroTitle-mob;
+
+        }
+
+        &__desc {
+            font-size: v.$heroDesc-mob;
+
+        }
+
+
+        &__right img {
+            width: v.$arrow-mob;
+        }
     }
-
-
-
 }

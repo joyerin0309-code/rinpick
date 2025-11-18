@@ -376,6 +376,7 @@
 
 .hover-txt {
     max-width: rem(420);
+    padding: rem(10);
     text-align: center;
     opacity: 0;
     transform: translateY(rem(50));
@@ -397,7 +398,7 @@
     font-family: v.$font-desc;
     line-height: v.$lh-desc;
     color: v.$whiteColor;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -487,6 +488,9 @@
 }
 
 
+
+
+
 .newsSwiper {
     width: 100%;
     max-width: 100%;
@@ -523,15 +527,14 @@
     flex-direction: column;
 }
 
-.partner-wrap img {
+.partner-icon {
     margin-bottom: rem(30);
+    width: rem(70);
 }
-
 
 .partner-kicker {
     font-size: v.$kicker-des;
     font-weight: 500;
-    // margin-bottom: rem(5);
 }
 
 .partner-title {
@@ -707,7 +710,7 @@
     .pick-card-desc {
 
         font-size: rem(20);
-        padding-bottom: rem(60);
+        padding-bottom: rem(50);
     }
 
 
@@ -818,8 +821,8 @@
     }
 
     .partner-icon {
-        width: rem(70);
-        margin-bottom: rem(30);
+        width: rem(60);
+        margin-bottom: rem(20);
     }
 
 
@@ -829,7 +832,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-pc;
-        margin-bottom: rem(60);
+        margin-bottom: rem(50);
     }
 
 
@@ -1101,8 +1104,8 @@
     }
 
     .partner-icon {
-        width: rem(40);
-        margin-bottom: rem(30);
+        width: rem(50);
+        margin-bottom: rem(20);
     }
 
 
@@ -1112,7 +1115,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-lap;
-        margin-bottom: rem(50);
+        margin-bottom: rem(40);
     }
 
 }
@@ -1370,7 +1373,7 @@
     }
 
     .partner-icon {
-        width: rem(50);
+        width: rem(40);
         margin-bottom: rem(20);
     }
 
@@ -1381,7 +1384,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-tab;
-        margin-bottom: rem(30);
+        margin-bottom: rem(40);
     }
 
 }
@@ -1673,6 +1676,28 @@
 
     }
 
+
+
+    //partner 섹션
+
+    .partner-wrap {
+        padding: v.$sp-m rem(20);
+    }
+
+    .partner-icon {
+        width: rem(35);
+        margin-bottom: rem(15);
+    }
+
+
+    .partner-kicker {
+        font-size: v.$kicker-mob;
+    }
+
+    .partner-title {
+        font-size: v.$partnerTitle-mob;
+        margin-bottom: rem(30);
+    }
 
 
 }

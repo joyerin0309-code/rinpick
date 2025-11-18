@@ -271,12 +271,31 @@ $newsImg-mob: rem(220);
 $kicker-des: rem(24);
 $kicker-pc: rem(20);
 $kicker-lap: rem(18);
-$kicker-tab: rem(16);
-$kicker-mob: rem(14);
+$kicker-tab: rem(14);
+$kicker-mob: rem(8);
 
 
 $partnerTitle-des: rem(46);
 $partnerTitle-pc: rem(40);
 $partnerTitle-lap: rem(30);
-$partnerTitle-tab: rem(26);
-$partnerTitle-mob: rem(24);
+$partnerTitle-tab: rem(24);
+$partnerTitle-mob: rem(16);
+
+
+
+
+
+//footer
+$infoSize-des : rem(16);
+$infoSize-pc : rem(14);
+$infoSize-lap : rem(12);
+$infoSize-tab : rem(10);
+$infoSize-mob : rem(8);
+
+
+//푸터 패딩
+$fp-d: rem(100);
+$fp-p: rem(80);
+$fp-l: rem(60);
+$fp-t: rem(40);
+$fp-m: rem(20);

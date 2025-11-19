@@ -4,6 +4,8 @@
 
 
 
+//new 섹션
+
 .new-card {
     height: v.$newCardH-des;
     background-color: v.$whiteColor;
@@ -109,8 +111,8 @@
         img {
             display: block;
             width: 100%;
-            height: 100%;
-            height: v.$newsImg-des;
+            height: auto;
+            // height: v.$newsImg-des;
             object-fit: cover;
             object-position: center;
             transition: 0.3s all ease;
@@ -534,9 +536,9 @@
             // New 캡슐
             &__capsule {
                 font-size: rem(8);
-                top: rem(15);
-                left: rem(15);
-                padding: rem(5) rem(20);
+                top: rem(10);
+                left: rem(10);
+                padding: rem(3) rem(15);
             }
 
             &__info {
@@ -571,6 +573,17 @@
                 }
             }
 
+
+        }
+
+        .mySwiper .swiper-pagination-bullet {
+            width: rem(6);
+            height: rem(6);
+            margin: 0 rem(3);
+        }
+
+        .mySwiper .swiper-pagination-bullet-active {
+            transform: scale(1.2);
         }
 
 

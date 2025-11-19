@@ -28,7 +28,7 @@ $gutterWidth: 20px;
 
 
 //섹션 패딩
-$sp-d: rem(140);
+$sp-d: rem(120);
 $sp-p: rem(100);
 $sp-l: rem(80);
 $sp-t: rem(60);
@@ -50,7 +50,7 @@ $titleSize-des : rem(34);
 $titleSize-pc : rem(28);
 $titleSize-lap : rem(24);
 $titleSize-tab : rem(20);
-$titleSize-mob : rem(14);
+$titleSize-mob : rem(20);
 
 //sub
 $subTitleWeight : 500;
@@ -59,7 +59,7 @@ $subTitle-des : rem(20);
 $subTitle-pc : rem(20);
 $subTitle-lap : rem(18);
 $subTitle-tab : rem(16);
-$subTitle-mob : rem(10);
+$subTitle-mob : rem(12);
 
 
 
@@ -80,7 +80,7 @@ $headerHeight-des: rem(80);
 $headerHeight-pc: rem(70);
 $headerHeight-laptop: rem(68);
 $headerHeight-tablet: rem(65);
-$headerHeight-mobile: rem(40);
+$headerHeight-mobile: rem(48);
 
 
 
@@ -128,7 +128,7 @@ $heroH-des: rem(780);
 $heroH-pc :rem(650);
 $heroH-lap :rem(560);
 $heroH-tab :rem(410);
-$heroH-mob :rem(200);
+$heroH-mob :rem(260);
 
 
 $heroTitle-des : rem(40);
@@ -171,9 +171,9 @@ $btnH-tab: rem(36);
 $btnPadX-tab: rem(34);
 $btnFont-tab: rem(12);
 
-$btnH-mob: rem(20);
-$btnPadX-mob: rem(18);
-$btnFont-mob: rem(8);
+$btnH-mob: rem(26);
+$btnPadX-mob: rem(24);
+$btnFont-mob: rem(12);
 
 
 
@@ -252,7 +252,7 @@ $newsCardH-des: rem(450);
 $newsCardH-pc: rem(400);
 $newsCardH-lap: rem(360);
 $newsCardH-tab: rem(300);
-$newsCardH-mob: rem(280);
+$newsCardH-mob: rem(250);
 
 
 // 카드 이미지 높이
@@ -260,7 +260,7 @@ $newsImg-des: rem(340);
 $newsImg-pc: rem(300);
 $newsImg-lap: rem(260);
 $newsImg-tab: rem(220);
-$newsImg-mob: rem(220);
+$newsImg-mob: rem(180);
 
 
 
@@ -298,4 +298,4 @@ $fp-d: rem(100);
 $fp-p: rem(80);
 $fp-l: rem(60);
 $fp-t: rem(40);
-$fp-m: rem(20);
+$fp-m: rem(30);

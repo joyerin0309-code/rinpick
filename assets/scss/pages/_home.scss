@@ -371,6 +371,7 @@
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
+
 }
 
 
@@ -403,18 +404,18 @@
 
 
 .run-style-list:hover .run-style-card {
-    flex: 0.8 1 0;
+    flex: 0.9 1 0;
 }
 
 
 .run-style-list:hover .run-style-card:hover {
-    flex: 1.6 1 0;
+    flex: 1.25 1 0;
 }
 
 
 .run-style-card:hover img {
     opacity: 0.3;
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
 
 .run-style-card:hover .run-style-overlay {
@@ -1368,6 +1369,10 @@
 
     //partner 섹션
 
+    .partner {
+        background-position: center top;
+    }
+
     .partner-wrap {
         padding: v.$sp-t rem(20);
     }
@@ -1405,7 +1410,7 @@
 
 
 
-//360px 
+//480px 
 
 @media (max-width : v.$mobile) {
 
@@ -1480,7 +1485,7 @@
         }
 
         &__more {
-            font-size: rem(8);
+            font-size: rem(10);
             bottom: rem(-15);
 
         }
@@ -1664,7 +1669,7 @@
         }
 
         &__more {
-            font-size: rem(8);
+            font-size: rem(10);
             bottom: rem(-15);
         }
 
@@ -1676,9 +1681,22 @@
 
     }
 
+    .newsSwiper .arrow {
+        width: rem(18);
+        height: rem(24);
+    }
+
+
 
 
     //partner 섹션
+
+    .partner {
+
+        background-image: url("../img/partner-img-mob.png");
+        background-position: center top;
+        background-attachment: scroll;
+    }
 
     .partner-wrap {
         padding: v.$sp-m rem(20);

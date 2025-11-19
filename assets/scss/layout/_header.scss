@@ -275,7 +275,7 @@
 
 
 
-//360px 
+//480px 
 
 @media (max-width : v.$mobile) {
 
@@ -300,6 +300,19 @@
         }
     }
 
+
+    .hamburger-btn,
+    .close-btn {
+        width: rem(25);
+        height: rem(25);
+    }
+
+    .hamburger-btn img,
+    .close-btn img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 
     // hero
     .hero {

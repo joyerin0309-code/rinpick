@@ -56,6 +56,7 @@
 @mixin title-mob {
     font-size: v.$titleSize-mob;
     font-weight: v.$titleWeight;
+    padding-bottom: 0;
 }
 
 //sub

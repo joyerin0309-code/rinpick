@@ -368,7 +368,7 @@ body {
     font-size: 1.25rem;
   }
   .hero__desc {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
   .hero__right img {
     width: 6.25rem;
@@ -866,11 +866,11 @@ body {
 }
 @media (max-width: 768px) and (max-width: 480px) {
   .new-card {
-    height: 12.5rem;
+    height: 15rem;
     border-radius: 0.625rem;
   }
   .new-card__thumb img {
-    height: 10rem;
+    height: 11.875rem;
   }
   .new-card__capsule {
     font-size: 0.5rem;
@@ -882,17 +882,16 @@ body {
     padding: 0.625rem 0.625rem;
   }
   .new-card__info__title {
-    font-size: 0.75rem;
+    font-size: 1.125rem;
   }
   .new-card__info__desc {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
   }
   .new-card__meta {
-    height: 2.5rem;
     padding: 0.5rem 0.625rem;
   }
   .new-card__meta__place {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
   .new-card__meta__date {
     font-size: 0.5rem;
@@ -906,10 +905,10 @@ body {
     transform: scale(1.2);
   }
   .news-list {
-    height: 15.625rem;
+    height: 17.5rem;
   }
   .news-list__card img {
-    height: 11.25rem;
+    height: 11.875rem;
   }
   .news-list__card__source {
     font-size: 0.625rem;
@@ -919,11 +918,11 @@ body {
     padding: 0.9375rem 1.25rem;
   }
   .news-list__meta__date {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     padding-bottom: 0.125rem;
   }
   .news-list__meta__title {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
 /* 5) Pages */
@@ -1833,7 +1832,7 @@ body {
     padding-bottom: 0.5rem;
   }
   .hero__desc {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     padding-bottom: 1.25rem;
   }
   .hero__right img {
@@ -1851,7 +1850,7 @@ body {
     padding-bottom: 0.375rem;
   }
   .intro__desc {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     padding-bottom: 1.25rem;
   }
   .new__title {
@@ -1860,11 +1859,11 @@ body {
     padding-bottom: 0;
   }
   .new__sub-title {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
   }
   .new__more {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     bottom: -0.9375rem;
   }
   .new-wrap {
@@ -1883,7 +1882,7 @@ body {
     padding-bottom: 0;
   }
   .pick__wrap__sub-title {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
     padding-bottom: 1.25rem;
   }
@@ -1902,7 +1901,8 @@ body {
   .pick-top-txt,
   .pick-bottom-txt {
     position: absolute;
-    inset: 1.5625rem;
+    inset: 0;
+    padding: 1.125rem 1.25rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1917,10 +1917,10 @@ body {
   .pick-card-title {
     color: #fff;
     padding-bottom: 0.3125rem;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
   }
   .pick-card-desc {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     color: #fff;
     padding-bottom: 3.125rem;
   }
@@ -1941,7 +1941,7 @@ body {
     padding-bottom: 0.3125rem;
   }
   .run-style__txt__sub-title {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     padding-bottom: 1.25rem;
   }
   .overlay-title {
@@ -1973,11 +1973,11 @@ body {
     padding-bottom: 0;
   }
   .news__sub-title {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
   }
   .news__more {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     bottom: -0.9375rem;
   }
   .news-wrap {

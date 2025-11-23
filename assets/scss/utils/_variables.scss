@@ -83,6 +83,10 @@ $headerHeight-tablet: rem(65);
 $headerHeight-mobile: rem(48);
 
 
+$headerBgColor: rgba(255, 255, 255, 0.86);
+$headerBorderColor: rgba(0, 0, 0, 0.04);
+
+
 
 //logo
 $logoSize-desktop: rem(32);
@@ -124,14 +128,14 @@ $closeTop-mobile: math.div($headerHeight-mobile - $ham-mobile, 2);
 
 
 //hero
-$heroH-des: rem(780);
+$heroH-des: rem(740);
 $heroH-pc :rem(650);
 $heroH-lap :rem(560);
 $heroH-tab :rem(410);
-$heroH-mob :rem(260);
+$heroH-mob :rem(300);
 
 
-$heroTitle-des : rem(40);
+$heroTitle-des : rem(48);
 $heroTitle-pc : rem(38);
 $heroTitle-lap : rem(34);
 $heroTitle-tab : rem(30);
@@ -299,3 +303,16 @@ $fp-p: rem(80);
 $fp-l: rem(60);
 $fp-t: rem(40);
 $fp-m: rem(30);
+
+
+
+
+
+//about 페이지
+
+// hero
+$aboutHeroH-des: rem(600);
+$aboutHeroH-pc :rem(650);
+$aboutHeroH-lap :rem(560);
+$aboutHeroH-tab :rem(410);
+$aboutHeroH-mob :rem(300);

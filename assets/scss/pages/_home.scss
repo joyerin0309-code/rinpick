@@ -6,16 +6,34 @@
 
 //히어로
 .hero {
+    position: relative;
     height: v.$heroH-des;
-    background: url("../img/hero-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
 
-    &__sec {
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: 1;
+    }
+
+    &__wrap {
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
     }
 
 
@@ -33,19 +51,53 @@
         line-height: v.$lh-desc;
     }
 
-    &__right img {
-        width: v.$arrow-des;
-    }
+    // &__right img {
+    //     width: v.$arrow-des;
+    // }
 
     &__btn {
         border: 1px solid v.$whiteColor;
-
-
-
     }
 
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        bottom: rem(30);
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        font-size: rem(14);
+        color: v.$whiteColor;
+        z-index: 3;
+        opacity: 0.85;
+        cursor: default;
+    }
 
+    &__scroll-text {
+        letter-spacing: rem(1.2);
+        text-transform: uppercase;
+    }
 
+    &__scroll-icon {
+        font-size: rem(16);
+        animation: hero-scroll-bounce 1.6s infinite;
+    }
+
+}
+
+@keyframes hero-scroll-bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(rem(4));
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
@@ -53,6 +105,7 @@
 .intro {
     width: 100%;
     height: 100%;
+
 
 
     &__txt {
@@ -107,7 +160,8 @@
 //new-section
 
 .new {
-    background: v.$surfaceAltColor;
+    // background: v.$surfaceAltColor;
+    // border-top: 1px solid #e5e5e5;
 
     &__top {
         display: flex;
@@ -324,7 +378,11 @@
     height: v.$styleCardH-des;
     border-radius: rem(20);
     overflow: hidden;
-    transition: flex 0.4s ease;
+    transition:
+        flex 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+
 }
 
 .run-style-card img {
@@ -511,13 +569,22 @@
 //partner 섹션
 .partner {
     position: relative;
-    background-image: url("../img/partner-img.png");
+    background-image: url("../img/ChatGPT Image 2025년 11월 22일 오후 09_55_31.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: v.$whiteColor;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0; // top:0; right:0; bottom:0; left:0;
+        background: rgba(0, 0, 0, 0.2); // 여기만 직접 색 써준 거야
+        z-index: 0;
+    }
 }
+
 
 
 .partner-wrap {
@@ -526,6 +593,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative; // 🔹이거 추가
+    z-index: 1;
 }
 
 .partner-icon {
@@ -554,6 +623,7 @@
 .partner-btn:hover {
     background: v.$primaryColor;
     color: v.$whiteColor;
+
 }
 
 
@@ -1692,12 +1762,12 @@
 
     //partner 섹션
 
-    .partner {
+    // .partner {
 
-        background-image: url("../img/partner-img-mob.png");
-        background-position: center top;
-        background-attachment: scroll;
-    }
+    //     background-image: url("../img/partner-img-mob.png");
+    //     background-position: center top;
+    //     background-attachment: scroll;
+    // }
 
     .partner-wrap {
         padding: v.$sp-m rem(20);

@@ -3,9 +3,18 @@
 @use '../utils/mixin' as m;
 
 .header {
-    position: static;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: v.$headerHeight-des;
     z-index: 10;
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(16px);
+    transition: background-color .25s ease,
+        backdrop-filter .25s ease,
+        border-color .25s ease;
+
 
     &__logo {
         display: flex;

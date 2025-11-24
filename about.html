@@ -49,17 +49,50 @@
     <main>
         <section class="about-hero">
             <div class="container about-hero-wrap">
-                <div class="hero-txt">
+                <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
                     <h2 class="hero-title">Run beyond travel</h2>
                     <p class="hero-sub-title">여행의 한계를 넘어, 새로운 러닝의 문화를 만들다</p>
                 </div>
             </div>
         </section>
+
+
+
+        <section class="about-info">
+            <div class="container about-info__txt">
+                <h2 class="about-info__title">What is a RunTrip?</h2>
+                <p class="about-info__desc">단순한 런닝이 아닌, 여행지를 달리며 여행지의 공기를 온몸으로 느끼는 러닝 여행으로, <br>
+                    해외 마라톤 참가부터 국내 러닝 투어, 현지 크루와 함께하는 커뮤니티형 러닝까지 <br>
+                    여러 형태로 이어지는 여행형 액티비티입니다. <br>
+                    단순한 운동을 넘어 <span class="point-info">여행의 감성</span>과 <span class="point-info">러닝의 에너지</span>를 동시에 느끼게
+                    합니다.</p>
+            </div>
+        </section>
+
+
+        <section></section>
     </main>
 
 
 
     <footer></footer>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,              // 스크롤 한 번 나타나고 다시 안 함
+            duration: 900,           // 기본 애니메이션 시간
+            easing: 'ease-out-quart' // 부드러운 느낌
+        });
+    </script>
+
+
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

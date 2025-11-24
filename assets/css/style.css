@@ -933,7 +933,7 @@ body {
 /* 5) Pages */
 .hero {
   position: relative;
-  height: 46.25rem;
+  height: 47.5rem;
   overflow: hidden;
 }
 .hero__bg {
@@ -1029,6 +1029,7 @@ body {
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-size: 1.25rem;
+  font-weight: 400;
   padding-bottom: 3.75rem;
 }
 .intro__btn {
@@ -1138,6 +1139,10 @@ body {
   overflow: hidden;
 }
 
+.pick-top-card .pick-img {
+  border-radius: 0 0 5rem 0;
+}
+
 .pick-img-wrap {
   height: 100%;
 }
@@ -1145,7 +1150,6 @@ body {
 .pick-img {
   width: 42.1875rem;
   object-fit: cover;
-  border-radius: 1.25rem;
   height: 100%;
   width: 100%;
 }
@@ -1179,6 +1183,10 @@ body {
   gap: 3.125rem;
   flex-direction: row-reverse;
   overflow: hidden;
+}
+
+.pick-bottom-card .pick-img {
+  border-radius: 0 0 0 5rem;
 }
 
 .pick-bottom-txt {
@@ -1376,7 +1384,7 @@ body {
 
 .partner {
   position: relative;
-  background-image: url("../img/ChatGPT Image 2025년 11월 22일 오후 09_55_31.png");
+  background-image: url("../img/partner-img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2057,37 +2065,66 @@ body {
   }
 }
 .about-hero {
-  background-image: url("../img/about-hero-img.png");
+  height: 37.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/about-hero-img.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 37.5rem;
-}
-
-.about-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-attachment: fixed;
 }
 
 .about-hero-wrap {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #fff;
 }
 
 .hero-txt {
+  position: relative;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.35);
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
 }
 
 .hero-title {
   font-size: 3rem;
+  margin-bottom: 0.625rem;
 }
 
 .hero-sub-title {
   font-size: 1.875rem;
+}
+
+.about-info {
+  width: 100%;
+  height: 100%;
+}
+.about-info__txt {
+  padding: 7.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.875rem;
+}
+.about-info__title {
+  font-size: 2.375rem;
+  font-weight: 700;
+  color: #000;
+  padding-bottom: 1.25rem;
+}
+.about-info__desc {
+  max-width: 55rem;
+  margin: 0 auto;
+  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.point-info {
+  color: #2463E0;
 }

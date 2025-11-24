@@ -4,42 +4,158 @@
 
 
 
-
+//hero 섹션
 .about-hero {
-    background-image:
+    height: v.$aboutHeroH-des;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         url("../img/about-hero-img.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: v.$aboutHeroH-des;
+    background-attachment: fixed;
 }
-
-.about-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.12);
-}
-
 
 .about-hero-wrap {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: v.$whiteColor;
 }
 
-.hero-txt {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.35);
-}
 
+.hero-txt {
+    position: relative;
+    text-align: center;
+    padding: rem(16) rem(40);
+    border-radius: rem(16);
+
+}
 
 .hero-title {
     font-size: v.$heroTitle-des;
+    margin-bottom: rem(10);
 }
 
 .hero-sub-title {
     font-size: rem(30);
 }
+
+
+
+
+
+//info 섹션
+.about-info {
+    width: 100%;
+    height: 100%;
+
+    &__txt {
+        padding: v.$sp-d 0; // 섹션 위아래 여백
+        display: flex;
+        flex-direction: column;
+        align-items: center; // 안에 있는 것들 가로 가운데
+        text-align: center;
+        gap: rem(14); // 타이틀 / 본문 사이 간격
+    }
+
+    &__title {
+        font-size: rem(38);
+        font-weight: 700;
+        color: v.$blackColor;
+        padding-bottom: rem(20); // 너무 멀면 살짝 줄여도 됨
+    }
+
+    &__desc {
+        max-width: rem(880); // 한 줄 길이 제한
+        margin: 0 auto; // 가운데 정렬
+        @include m.desc-font;
+        font-size: rem(20);
+        font-weight: 500;
+        line-height: v.$lh-desc; // 줄 간격 넉넉하게
+    }
+}
+
+.point-info {
+    color: v.$primaryColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1280xp
+
+@media (max-width : v.$pc) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1024xp
+
+@media (max-width : v.$laptop) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//768xp
+
+@media (max-width : v.$tablet) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//480xp
+
+@media (max-width : v.$mobile) {}

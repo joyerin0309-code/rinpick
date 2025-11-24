@@ -129,6 +129,7 @@
     &__desc {
         @include m.desc-font;
         font-size: rem(20);
+        font-weight: 400;
         padding-bottom: rem(60);
 
     }
@@ -267,6 +268,7 @@
     gap: v.$cardGap-des ;
 }
 
+
 .pick-top-card {
     height: rem(375);
     display: flex;
@@ -274,8 +276,12 @@
     gap: rem(50);
     overflow: hidden;
 
-
 }
+
+.pick-top-card .pick-img {
+    border-radius: 0 0 rem(80) 0;
+}
+
 
 .pick-img-wrap {
     height: 100%;
@@ -284,9 +290,10 @@
 .pick-img {
     width: v.$pickImgWidth-des;
     object-fit: cover;
-    border-radius: rem(20);
     height: 100%;
     width: 100%;
+
+
 
 
 }
@@ -322,6 +329,10 @@
     gap: rem(50);
     flex-direction: row-reverse;
     overflow: hidden;
+}
+
+.pick-bottom-card .pick-img {
+    border-radius: 0 0 0 rem(80);
 }
 
 .pick-bottom-txt {
@@ -569,7 +580,7 @@
 //partner 섹션
 .partner {
     position: relative;
-    background-image: url("../img/ChatGPT Image 2025년 11월 22일 오후 09_55_31.png");
+    background-image: url("../img/partner-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

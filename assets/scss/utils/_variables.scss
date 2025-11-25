@@ -135,10 +135,10 @@ $heroH-tab :rem(410);
 $heroH-mob :rem(300);
 
 
-$heroTitle-des : rem(48);
-$heroTitle-pc : rem(38);
-$heroTitle-lap : rem(34);
-$heroTitle-tab : rem(30);
+$heroTitle-des : rem(50);
+$heroTitle-pc : rem(42);
+$heroTitle-lap : rem(36);
+$heroTitle-tab : rem(32);
 $heroTitle-mob : rem(20);
 
 
@@ -312,7 +312,29 @@ $fp-m: rem(30);
 
 // hero
 $aboutHeroH-des: rem(600);
-$aboutHeroH-pc :rem(650);
-$aboutHeroH-lap :rem(560);
-$aboutHeroH-tab :rem(410);
+$aboutHeroH-pc :rem(560);
+$aboutHeroH-lap :rem(500);
+$aboutHeroH-tab :rem(400);
 $aboutHeroH-mob :rem(300);
+
+
+
+//sprcial
+
+
+$specialImgW-des: rem(540);
+$specialImgH-des: rem(380);
+
+
+
+
+
+
+//서브페이지 
+
+//히어로
+$subHeroH-des: rem(400);
+$subHeroH-pc :rem(350);
+$subHeroH-lap :rem(300);
+$subHeroH-tab :rem(250);
+$subHeroH-mob :rem(200);

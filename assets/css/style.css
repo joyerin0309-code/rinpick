@@ -331,7 +331,7 @@ body {
     height: 25.625rem;
   }
   .hero__title {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
   .hero__desc {
     font-size: 1rem;
@@ -959,7 +959,7 @@ body {
   height: 100%;
 }
 .hero__title {
-  font-size: 3rem;
+  font-size: 3.125rem;
   color: #fff;
   padding-bottom: 1.5625rem;
 }
@@ -1140,7 +1140,7 @@ body {
 }
 
 .pick-top-card .pick-img {
-  border-radius: 0 0 5rem 0;
+  border-radius: 0 0 2.5rem 0;
 }
 
 .pick-img-wrap {
@@ -1155,7 +1155,7 @@ body {
 }
 
 .pick-card-title {
-  font-size: 1.625rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #2463E0;
   padding-bottom: 1.875rem;
@@ -1186,7 +1186,7 @@ body {
 }
 
 .pick-bottom-card .pick-img {
-  border-radius: 0 0 0 5rem;
+  border-radius: 0 0 0 2.5rem;
 }
 
 .pick-bottom-txt {
@@ -1440,7 +1440,7 @@ body {
     height: 40.625rem;
   }
   .hero__title {
-    font-size: 2.375rem;
+    font-size: 2.625rem;
     padding-bottom: 1.25rem;
   }
   .hero__desc {
@@ -1588,7 +1588,7 @@ body {
     height: 35rem;
   }
   .hero__title {
-    font-size: 2.125rem;
+    font-size: 2.25rem;
     padding-bottom: 0.9375rem;
   }
   .hero__desc {
@@ -1740,7 +1740,7 @@ body {
     height: 25.625rem;
   }
   .hero__title {
-    font-size: 1.875rem;
+    font-size: 2rem;
     padding-bottom: 0.625rem;
   }
   .hero__desc {
@@ -2084,12 +2084,10 @@ body {
 .hero-txt {
   position: relative;
   text-align: center;
-  padding: 1rem 2.5rem;
-  border-radius: 1rem;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.125rem;
   margin-bottom: 0.625rem;
 }
 
@@ -2110,13 +2108,13 @@ body {
   gap: 0.875rem;
 }
 .about-info__title {
-  font-size: 2.375rem;
+  font-size: 2.125rem;
   font-weight: 700;
+  padding-bottom: 0.3125rem;
   color: #000;
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
 }
 .about-info__desc {
-  max-width: 55rem;
   margin: 0 auto;
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
@@ -2127,4 +2125,167 @@ body {
 
 .point-info {
   color: #2463E0;
+}
+
+.special {
+  width: 100%;
+  height: 100%;
+  padding: 7.5rem 0;
+}
+.special__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.special__txt {
+  text-align: center;
+}
+.special__eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2463E0;
+}
+.special__title {
+  font-size: 2.125rem;
+  font-weight: 700;
+  padding-bottom: 0.3125rem;
+  padding-bottom: 3.75rem;
+}
+.special__sub-title {
+  font-size: 1.25rem;
+}
+.special__card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding-bottom: 1.875rem;
+}
+.special__card-desc {
+  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #444444;
+}
+.special__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.special__card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3.125rem;
+}
+.special__card img {
+  width: 42.1875rem;
+  height: 23.75rem;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+.special__right {
+  flex-direction: row-reverse;
+}
+.special__card-right-txt {
+  text-align: right;
+}
+
+@media (max-width: 1280px) {
+  .about-hero {
+    height: 35rem;
+  }
+  .hero-title {
+    font-size: 2.625rem;
+    margin-bottom: 0.625rem;
+  }
+  .hero-sub-title {
+    font-size: 1.625rem;
+  }
+  .about-info__txt {
+    padding: 6.25rem 0;
+    gap: 0.875rem;
+  }
+  .about-info__title {
+    font-size: 2.125rem;
+    padding-bottom: 1.125rem;
+  }
+  .about-info__desc {
+    max-width: 55rem;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1024px) {
+  .about-hero {
+    height: 31.25rem;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.375rem;
+  }
+  .hero-sub-title {
+    font-size: 1.375rem;
+  }
+  .about-info__txt {
+    padding: 5rem 0;
+    gap: 0.875rem;
+  }
+  .about-info__title {
+    font-size: 2rem;
+    padding-bottom: 1.125rem;
+  }
+  .about-info__desc {
+    max-width: 55rem;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-hero {
+    height: 25rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.375rem;
+  }
+  .hero-sub-title {
+    font-size: 1.25rem;
+  }
+  .about-info__txt {
+    padding: 3.75rem 0;
+    gap: 0.875rem;
+  }
+  .about-info__title {
+    font-size: 1.875rem;
+    padding-bottom: 1.125rem;
+  }
+  .about-info__desc {
+    max-width: 31.25rem;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-hero {
+    height: 18.75rem;
+  }
+  .hero-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .hero-sub-title {
+    font-size: 1.125rem;
+  }
+  .about-info__txt {
+    padding: 5rem 0;
+    gap: 0.875rem;
+  }
+  .about-info__title {
+    font-size: 1.75rem;
+    padding-bottom: 1.125rem;
+  }
+  .about-info__desc {
+    max-width: 55rem;
+    font-size: 1rem;
+  }
 }

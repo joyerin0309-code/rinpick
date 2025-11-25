@@ -28,9 +28,6 @@
 .hero-txt {
     position: relative;
     text-align: center;
-    padding: rem(16) rem(40);
-    border-radius: rem(16);
-
 }
 
 .hero-title {
@@ -52,33 +49,128 @@
     height: 100%;
 
     &__txt {
-        padding: v.$sp-d 0; // 섹션 위아래 여백
+        padding: v.$sp-d 0;
         display: flex;
         flex-direction: column;
-        align-items: center; // 안에 있는 것들 가로 가운데
+        align-items: center;
         text-align: center;
-        gap: rem(14); // 타이틀 / 본문 사이 간격
+        gap: rem(14);
     }
 
     &__title {
-        font-size: rem(38);
-        font-weight: 700;
+        @include m.title-des;
         color: v.$blackColor;
-        padding-bottom: rem(20); // 너무 멀면 살짝 줄여도 됨
+        padding-bottom: rem(12);
     }
 
     &__desc {
-        max-width: rem(880); // 한 줄 길이 제한
-        margin: 0 auto; // 가운데 정렬
+        margin: 0 auto;
         @include m.desc-font;
         font-size: rem(20);
         font-weight: 500;
-        line-height: v.$lh-desc; // 줄 간격 넉넉하게
+        line-height: v.$lh-desc;
     }
 }
 
 .point-info {
     color: v.$primaryColor;
+}
+
+
+
+
+
+//special 섹션
+.special {
+    width: 100%;
+    height: 100%;
+    padding: v.$sp-d 0;
+
+
+
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    &__txt {
+        text-align: center
+    }
+
+    &__eyebrow {
+        font-size: rem(14);
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: v.$primaryColor;
+    }
+
+    &__title {
+        @include m.title-des;
+        padding-bottom: v.$secGap-des;
+    }
+
+
+    &__sub-title {
+
+        font-size: rem(20);
+    }
+
+
+    &__card-title {
+        font-size: rem(28);
+        font-weight: 700;
+        padding-bottom: rem(30);
+    }
+
+
+    &__card-desc {
+        font-family: v.$font-desc;
+        font-size: rem(20);
+        font-weight: 500;
+        color: #444444;
+    }
+
+
+
+    &__card-list {
+        display: flex;
+        flex-direction: column;
+        gap: v.$cardGap-des ;
+
+
+
+    }
+
+
+
+    &__card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: rem(50);
+    }
+
+
+    &__card img {
+        width: v.$pickImgWidth-des;
+        height: v.$specialImgH-des;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0;
+    }
+
+
+    &__right {
+        flex-direction: row-reverse;
+    }
+
+    &__card-right-txt {
+        text-align: right;
+    }
 }
 
 
@@ -97,7 +189,52 @@
 
 //1280xp
 
-@media (max-width : v.$pc) {}
+@media (max-width : v.$pc) {
+
+    //hero 섹션
+    .about-hero {
+        height: v.$aboutHeroH-pc;
+    }
+
+
+
+
+    .hero-title {
+        font-size: v.$heroTitle-pc;
+        margin-bottom: rem(10);
+    }
+
+    .hero-sub-title {
+        font-size: rem(26);
+    }
+
+
+
+
+
+    //info 섹션
+    .about-info {
+
+
+        &__txt {
+            padding: v.$sp-p 0;
+            gap: rem(14);
+        }
+
+        &__title {
+            font-size: rem(34);
+            padding-bottom: rem(18);
+        }
+
+        &__desc {
+            max-width: rem(880);
+            font-size: rem(18);
+        }
+    }
+
+
+
+}
 
 
 
@@ -117,7 +254,48 @@
 
 //1024xp
 
-@media (max-width : v.$laptop) {}
+@media (max-width : v.$laptop) {
+
+    //hero 섹션
+    .about-hero {
+        height: v.$aboutHeroH-lap;
+    }
+
+
+
+
+    .hero-title {
+        font-size: v.$heroTitle-lap;
+        margin-bottom: rem(6);
+    }
+
+    .hero-sub-title {
+        font-size: rem(22);
+    }
+
+
+
+    //info 섹션
+    .about-info {
+
+
+        &__txt {
+            padding: v.$sp-l 0;
+            gap: rem(14);
+        }
+
+        &__title {
+            font-size: rem(32);
+            padding-bottom: rem(18);
+        }
+
+        &__desc {
+            max-width: rem(880);
+            font-size: rem(18);
+        }
+    }
+
+}
 
 
 
@@ -138,7 +316,47 @@
 
 //768xp
 
-@media (max-width : v.$tablet) {}
+@media (max-width : v.$tablet) {
+
+    //hero 섹션
+    .about-hero {
+        height: v.$aboutHeroH-tab;
+    }
+
+
+
+
+    .hero-title {
+        font-size: v.$heroTitle-tab;
+        margin-bottom: rem(6);
+    }
+
+    .hero-sub-title {
+        font-size: rem(20);
+    }
+
+
+
+    //info 섹션
+    .about-info {
+
+
+        &__txt {
+            padding: v.$sp-t 0;
+            gap: rem(14);
+        }
+
+        &__title {
+            font-size: rem(30);
+            padding-bottom: rem(18);
+        }
+
+        &__desc {
+            max-width: rem(500);
+            font-size: rem(18);
+        }
+    }
+}
 
 
 
@@ -158,4 +376,42 @@
 
 //480xp
 
-@media (max-width : v.$mobile) {}
+@media (max-width : v.$mobile) {
+
+    //hero 섹션
+    .about-hero {
+        height: v.$aboutHeroH-mob;
+    }
+
+
+
+
+    .hero-title {
+        font-size: v.$heroTitle-mob;
+        margin-bottom: rem(4);
+    }
+
+    .hero-sub-title {
+        font-size: rem(18);
+    }
+
+    //info 섹션
+    .about-info {
+
+
+        &__txt {
+            padding: v.$sp-l 0;
+            gap: rem(14);
+        }
+
+        &__title {
+            font-size: rem(28);
+            padding-bottom: rem(18);
+        }
+
+        &__desc {
+            max-width: rem(880);
+            font-size: rem(16);
+        }
+    }
+}

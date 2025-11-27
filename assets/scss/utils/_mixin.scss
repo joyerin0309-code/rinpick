@@ -61,26 +61,31 @@
 
 //sub
 @mixin subTitle-des {
+    font-family: v.$font-desc;
     font-size: v.$subTitle-des;
     font-weight: v.$subTitleWeight;
 }
 
 @mixin subTitle-pc {
+    font-family: v.$font-desc;
     font-size: v.$subTitle-pc;
     font-weight: v.$subTitleWeight;
 }
 
 @mixin subTitle-lap {
+    font-family: v.$font-desc;
     font-size: v.$subTitle-lap;
     font-weight: v.$subTitleWeight;
 }
 
 @mixin subTitle-tab {
+    font-family: v.$font-desc;
     font-size: v.$subTitle-tab;
     font-weight: v.$subTitleWeight;
 }
 
 @mixin subTitle-mob {
+    font-family: v.$font-desc;
     font-size: v.$subTitle-mob;
     font-weight: v.$subTitleWeight;
 }

@@ -45,6 +45,7 @@
     }
 
     &__desc {
+        font-family: v.$font-desc;
         font-size: v.$heroDesc-des;
         color: v.$whiteColor;
         padding-bottom: v.$heroDescPad-des;

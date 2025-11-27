@@ -114,10 +114,10 @@
     }
 
     &__title {
-        font-size: rem(38);
+        font-size: v.$introTitle-des;
         font-weight: 700;
         color: v.$primaryColor;
-        padding-bottom: rem(30);
+        padding-bottom: rem(25);
     }
 
     &__sub-title {
@@ -695,8 +695,8 @@
         }
 
         &__title {
-            font-size: rem(34);
-            padding-bottom: rem(25);
+            font-size: v.$introTitle-pc;
+            padding-bottom: rem(20);
 
         }
 
@@ -973,8 +973,8 @@
         }
 
         &__title {
-            font-size: rem(30);
-            padding-bottom: rem(20);
+            font-size: v.$introTitle-lap;
+            padding-bottom: rem(15);
 
         }
 
@@ -1253,8 +1253,8 @@
         }
 
         &__title {
-            font-size: rem(26);
-            padding-bottom: rem(15);
+            font-size: v.$introTitle-tab;
+            padding-bottom: rem(10);
 
         }
 
@@ -1532,7 +1532,7 @@
         }
 
         &__title {
-            font-size: rem(22);
+            font-size: v.$introTitle-mob;
             padding-bottom: rem(10);
 
         }

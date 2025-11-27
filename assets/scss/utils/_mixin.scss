@@ -84,3 +84,39 @@
     font-size: v.$subTitle-mob;
     font-weight: v.$subTitleWeight;
 }
+
+
+
+
+//eyebrow
+
+@mixin eyebrow {
+    font-size: v.$eyebrowSize-des;
+    font-weight: v.$eyebrowWei;
+    letter-spacing: 0.2em;
+    color: v.$primaryColor;
+    padding-bottom: rem(8);
+
+
+
+    @media (max-width: v.$pc) {
+        font-size: v.$eyebrowSize-pc;
+        padding-bottom: rem(8);
+    }
+
+
+    @media (max-width: v.$laptop) {
+        font-size: v.$eyebrowSize-lap;
+        padding-bottom: rem(6);
+    }
+
+    @media (max-width: v.$tablet) {
+        font-size: v.$eyebrowSize-tab;
+        padding-bottom: rem(6);
+    }
+
+    @media (max-width: v.$mobile) {
+        font-size: v.$eyebrowSize-mob;
+        padding-bottom: rem(5);
+    }
+}

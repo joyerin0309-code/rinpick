@@ -48,8 +48,8 @@ $titleWeight : 700;
 
 $titleSize-des : rem(34);
 $titleSize-pc : rem(28);
-$titleSize-lap : rem(24);
-$titleSize-tab : rem(20);
+$titleSize-lap : rem(26);
+$titleSize-tab : rem(24);
 $titleSize-mob : rem(20);
 
 //sub
@@ -197,7 +197,11 @@ $heroDescPad-mob: rem(20);
 
 
 //intro
-
+$introTitle-des : rem(44);
+$introTitle-pc : rem(38);
+$introTitle-lap : rem(32);
+$introTitle-tab : rem(28);
+$introTitle-mob : rem(24);
 
 
 //new-section
@@ -322,8 +326,32 @@ $aboutHeroH-mob :rem(300);
 //sprcial
 
 
-$specialImgW-des: rem(540);
+$specialImgW-des: rem(680);
 $specialImgH-des: rem(360);
+
+$specialImgW-pc: rem(580);
+$specialImgH-pc: rem(320);
+
+$specialImgW-lap: rem(460);
+$specialImgH-lap: rem(280);
+
+$specialImgW-tab: rem(360);
+$specialImgH-tab: rem(240);
+
+$specialImgW-mob: rem(540);
+$specialImgH-mob: rem(360);
+
+
+
+//eyebrow
+
+$eyebrowSize-des: rem(14);
+$eyebrowSize-pc: rem(14);
+$eyebrowSize-lap: rem(14);
+$eyebrowSize-tab: rem(12);
+$eyebrowSize-mob: rem(12);
+$eyebrowWei: 500;
+
 
 
 

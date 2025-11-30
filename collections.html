@@ -17,7 +17,7 @@
 
     <header class="header">
         <div class="container">
-            <h1 class="header__logo"><a href="#">RUNPICK</a></h1>
+            <h1 class="header__logo"><a href="index.html">RUNPICK</a></h1>
             <button type="button" class="hamburger-btn">
                 <img src="./assets/img/hamburger-button.png" alt="햄버거버튼">
             </button>
@@ -32,7 +32,7 @@
                         <a href="about.html" class="header__link">About</a>
                     </li>
                     <li>
-                        <a href="#Collections" class="header__link">Collections</a>
+                        <a href="collections.html" class="header__link">Collections</a>
                     </li>
                     <li>
                         <a href="#News" class="header__link">News</a>
@@ -48,487 +48,101 @@
 
     <main>
 
-        <section class="hero">
-            <video class="hero__bg" src="./assets/img/hero-bg.mp4" autoplay muted loop playsinline></video>
-            <div class="hero__overlay"></div>
-            <div class="container hero__wrap">
-                <div class="hero__lift" data-aos="fade-up" data-aos-duration="1400">
-                    <h2 class="hero__title">
-                        Your next running journey
-                    </h2>
-                    <p class="hero__desc">
-                        러닝과 여행 사이, <br>
-                        RUNPICK과 나만의 러닝 트립을 시작해보세요.
-                    </p>
 
-                    <button class="btn hero__btn ">보러가기 → </button>
+        <section class="collection-hero">
+            <div class="container collection-hero-wrap">
+                <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
+                    <h2 class="hero-title">Run beyond travel</h2>
+                    <p class="hero-sub-title">여행의 한계를 넘어, 새로운 러닝의 문화를 만들다</p>
                 </div>
-
-                <!-- <div class="hero__right">
-                    <img src="./assets/img/arrow-img.png" alt="">
-                </div> -->
-
-            </div>
-
-            <div class="hero__scroll">
-                <span class="hero__scroll-text">Scroll</span>
-                <span class="hero__scroll-icon">↓</span>
-            </div>
-
-        </section>
-
-
-
-
-        <!-- intro -->
-        <section class="intro">
-            <div class="container intro-wrap" data-aos="fade-up">
-                <div class="intro__txt">
-                    <p class="intro__title" data-aos="fade-up" data-aos-delay="0">Run + Trip</p>
-                    <p class="intro__sub-title" data-aos="fade-up" data-aos-delay="100"> 여행하듯 달리고, 달리며 여행하다</p>
-                    <p class="intro__desc" data-aos="fade-up" data-aos-delay="200">낯선 도시의 공기, 바다를 따라 걷는 러닝 코스, 함께 뛰는 사람들
-                        <br> 런트립은 여행의 감성과 러닝의 즐거움을 동시에 느끼는 새로운
-                        방식입니다. <br>
-                        달리며 여행하는 새로운 문화, 런트립이 궁금하신가요?
-                    </p>
-
-                    <button class="btn  intro__btn" data-aos="fade-up" data-aos-delay="300">
-                        알아보기 →
-                    </button>
-                </div>
-
-            </div>
             </div>
         </section>
-
 
 
         <!-- 런픽new -->
 
-        <section class="new">
-            <div class="container new-wrap" data-aos="fade-up">
-                <div class="new__top">
-                    <div class="new__txt">
-                        <p class="new__title">런픽 <span class="new__title__point">NEW</span></p>
-                        <p class="new__sub-title">바다·야경·도시까지, 취향에 맞춘 러닝 여행을 골라 떠나보세요.</p>
+        <section class="collections">
+            <div class="container collections__wrap">
+
+                <!-- 상단 타이틀 영역은 new__top 그대로 써도 됨, 클래스만 살짝 변경 -->
+                <div class="collections__top">
+
+                    <!-- 여기 필터 버튼 들어갈 자리 -->
+                    <div class="collections__filter">
+                        <button class="filter-btn on" data-filter="all">최신</button>
+                        <button class="filter-btn" data-filter="domestic">국내</button>
+                        <button class="filter-btn" data-filter="abroad">해외</button>
                     </div>
-                    <a href="#" class="new__more">더보기 → </a>
                 </div>
 
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide new-card">
+                <!-- ✅ 카드 리스트 : swiper 대신 그냥 ul/grid -->
+                <ul class="collections__list">
 
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
+                    <!-- 제주 : 국내 -->
+                    <li class="collections__card new-card domestic">
+                        <div class="new-card__thumb">
+                            <span class="new-card__capsule">New</span>
 
-                                <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
+                            <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
 
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">제주 삼다수숲길</h3>
-                                    <p class="new-card__info__desc">빼곡한 삼나무 숲속에서 트레일런 힐링</p>
-                                </div>
+                            <div class="new-card__info">
+                                <h3 class="new-card__info__title">제주 삼다수숲길</h3>
+                                <p class="new-card__info__desc">빼곡한 삼나무 숲속에서 트레일런 힐링</p>
                             </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">제주 삼다수숲길</p>
-                                <p class="new-card__meta__date">2025.11.09 (토)</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide new-card">
-
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
-
-                                <img src="./assets/img/new-card02.png" alt="제주 삼다수숲길">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">경주 · 포항 비치코밍 </h3>
-                                    <p class="new-card__info__desc">달리고, 줍고, 체험하다!</p>
-                                </div>
-                            </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">경주·포항 비치코밍 </p>
-                                <p class="new-card__meta__date">2025.09.12(금) ~ 2025.09.13(토)</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide new-card">
-
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
-
-                                <img src="./assets/img/new-card03.png" alt="제주 삼다수숲길">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">싱가포르</h3>
-                                    <p class="new-card__info__desc">아름다운 도시 경관과 다양한 액티비티 체험!</p>
-                                </div>
-                            </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">싱가포르 </p>
-                                <p class="new-card__meta__date">2025.10.09(금) ~ 2025.10.12(토)</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide new-card">
-
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
-
-                                <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">제주 삼다수숲길</h3>
-                                    <p class="new-card__info__desc">빼곡한 삼나무 숲속에서 트레일런 힐링</p>
-                                </div>
-                            </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">제주 삼다수숲길</p>
-                                <p class="new-card__meta__date">2025.11.09 (토)</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide new-card">
-
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
-
-                                <img src="./assets/img/new-card02.png" alt="제주 삼다수숲길">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">경주 · 포항 비치코밍 </h3>
-                                    <p class="new-card__info__desc">달리고, 줍고, 체험하다!</p>
-                                </div>
-                            </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">경주·포항 비치코밍 </p>
-                                <p class="new-card__meta__date">2025.09.12(금) ~ 2025.09.13(토)</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide new-card">
-
-                            <div class="new-card__thumb">
-                                <span class="new-card__capsule">New</span>
-
-                                <img src="./assets/img/new-card03.png" alt="제주 삼다수숲길">
-
-                                <div class="new-card__info">
-                                    <h3 class="new-card__info__title">싱가포르</h3>
-                                    <p class="new-card__info__desc">아름다운 도시 경관과 다양한 액티비티 체험!</p>
-                                </div>
-                            </div>
-
-                            <div class="new-card__meta">
-                                <p class="new-card__meta__place">싱가포르 </p>
-                                <p class="new-card__meta__date">2025.10.09(금) ~ 2025.10.12(토)</p>
-                            </div>
-
                         </div>
 
+                        <div class="new-card__meta">
+                            <p class="new-card__meta__place">제주 삼다수숲길</p>
+                            <p class="new-card__meta__date">2025.11.09 (토)</p>
+                        </div>
+                    </li>
 
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+                    <!-- 경주·포항 : 국내 -->
+                    <li class="collections__card new-card domestic">
+                        <div class="new-card__thumb">
+                            <span class="new-card__capsule">New</span>
+
+                            <img src="./assets/img/new-card02.png" alt="경주 · 포항 비치코밍">
+
+                            <div class="new-card__info">
+                                <h3 class="new-card__info__title">경주 · 포항 비치코밍 </h3>
+                                <p class="new-card__info__desc">달리고, 줍고, 체험하다!</p>
+                            </div>
+                        </div>
+
+                        <div class="new-card__meta">
+                            <p class="new-card__meta__place">경주·포항 비치코밍 </p>
+                            <p class="new-card__meta__date">2025.09.12(금) ~ 2025.09.13(토)</p>
+                        </div>
+                    </li>
+
+                    <!-- 싱가포르 : 해외 -->
+                    <li class="collections__card new-card abroad">
+                        <div class="new-card__thumb">
+                            <span class="new-card__capsule">New</span>
+
+                            <img src="./assets/img/new-card03.png" alt="싱가포르">
+
+                            <div class="new-card__info">
+                                <h3 class="new-card__info__title">싱가포르</h3>
+                                <p class="new-card__info__desc">아름다운 도시 경관과 다양한 액티비티 체험!</p>
+                            </div>
+                        </div>
+
+                        <div class="new-card__meta">
+                            <p class="new-card__meta__place">싱가포르 </p>
+                            <p class="new-card__meta__date">2025.10.09(금) ~ 2025.10.12(토)</p>
+                        </div>
+                    </li>
+
+                    <!-- 필요하면 아래로 카드 계속 복붙해서 domestic / abroad만 바꿔주면 됨 -->
+                </ul>
+
             </div>
         </section>
 
 
 
-        <!-- 국내 해외 pick -->
-        <section class="pick">
-            <div class="container pick__wrap" data-aos="fade-up">
-                <div class="pick__wrap__txt">
-                    <p class="pick__wrap__title">국내 · 해외 <span class="pick__wrap__point">PICK</span></p>
-                    <p class="pick__wrap__sub-title">국내에서도 해외에서도 런투어를 즐겨보세요.</p>
-                </div>
-                <div class="pick-list">
-                    <div class="pick-top-card" data-aos="fade-right">
-                        <picture class="pick-img-wrap">
-                            <source srcset="./assets/img/pick-img01-mob.png" media="(max-width: 480px)">
-                            <source srcset="./assets/img/pick-img01.png" media="(min-width: 769px)">
-                            <img src="./assets/img/pick-img01.png" alt="국내 RUN" class="pick-img">
-                        </picture>
-
-                        <div class="pick-top-txt">
-                            <p class="pick-card-title">국내 RUN</p>
-                            <p class="pick-card-desc">런픽과 함께라면, 평범한 도로도 특별한 여정이 됩니다. <br>
-                                한국 곳곳의 다양한 런트립을 만나보세요.</p>
-                            <button class="btn pick-btn">보러가기 → </button>
-                        </div>
-                    </div>
-
-
-                    <div class="pick-bottom-card" data-aos="fade-left">
-                        <picture class="pick-img-wrap">
-                            <source srcset="./assets/img/pick-img02-mob.png" media="(max-width: 480px)">
-                            <source srcset="./assets/img/pick-img02.png" media="(min-width: 769px)">
-                            <img src="./assets/img/pick-img02.png" alt="해외 RUN" class="pick-img">
-                        </picture>
-
-                        <div class="pick-bottom-txt">
-                            <p class="pick-card-title">해외 RUN</p>
-                            <p class="pick-card-desc">세계의 거리 속에서 느끼는 새로운 여정 <br>
-                                이국적인 풍경 속에서 세계 각지 러너들과 뛰어보세요.</p>
-                            <button class="btn pick-btn">보러가기 → </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <!-- 런트립 스타일 -->
-        <section class="run-style">
-            <div class="container run-style__wraps" data-aos="fade-up">
-                <div class="run-style__txt">
-                    <h2 class="run-style__txt__title">런트립 <span class="run-style__txt__ponit">스타일</span></h2>
-                    <p class="run-style__txt__sub-title">나에게 맞는 런투어를 찾아보세요!</p>
-                </div>
-
-                <div class="run-style-list">
-                    <div class="run-style-card">
-                        <img src="./assets/img/style-img01.png" alt="런트립 스타일 이미지">
-
-                        <div class="run-style-overlay">
-                            <div class="overlay-txt">
-                                <h3 class="overlay-title">챌린지형</h3>
-                                <p class="overlay-sub-title">기록 갱신을 즐기는 타입</p>
-                            </div>
-                        </div>
-
-                        <div class="run-style-hover">
-                            <div class="hover-txt">
-                                <h3 class="hover-title">챌린지형</h3>
-                                <p class="hover-desc">‘챌린지형’은 기록 경신, 메달 수집, 마라톤 완주 같은 목표를 중시해요. 챌린지형에겐 도전 욕구를 불타오르게 하는
-                                    산과 숲, 계곡, 농촌을 누비며 장엄한 대자연을 만끽해보세요.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="run-style-card">
-                        <img src="./assets/img/style-img02.png" alt="런트립 스타일 이미지">
-
-                        <div class="run-style-overlay">
-                            <div class="overlay-txt">
-                                <h3 class="overlay-title">인증샷형</h3>
-                                <p class="overlay-sub-title">완주보다 SNS 중요 타입</p>
-                            </div>
-                        </div>
-
-                        <div class="run-style-hover">
-                            <div class="hover-txt">
-                                <h3 class="hover-title">인증샷형</h3>
-                                <p class="hover-desc">‘챌린지형’은 기록 경신, 메달 수집, 마라톤 완주 같은 목표를 중시해요. 챌린지형에겐 도전 욕구를 불타오르게 하는
-                                    산과 숲, 계곡, 농촌을 누비며 장엄한 대자연을 만끽해보세요.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="run-style-card">
-                        <img src="./assets/img/style-img04.png" alt="런트립 스타일 이미지">
-
-                        <div class="run-style-overlay">
-                            <div class="overlay-txt">
-                                <h3 class="overlay-title">여유형</h3>
-                                <p class="overlay-sub-title">초보자들을 위한 러닝 타입</p>
-                            </div>
-                        </div>
-
-                        <div class="run-style-hover">
-                            <div class="hover-txt">
-                                <h3 class="hover-title">여유형</h3>
-                                <p class="hover-desc">‘챌린지형’은 기록 경신, 메달 수집, 마라톤 완주 같은 목표를 중시해요. 챌린지형에겐 도전 욕구를 불타오르게 하는
-                                    산과 숲, 계곡, 농촌을 누비며 장엄한 대자연을 만끽해보세요.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="run-style-card">
-                        <img src="./assets/img/style-img03.png" alt="런트립 스타일 이미지">
-
-                        <div class="run-style-overlay">
-                            <div class="overlay-txt">
-                                <h3 class="overlay-title">네트워크형</h3>
-                                <p class="overlay-sub-title">사람들의 교류를 선호하는 타입</p>
-                            </div>
-                        </div>
-
-                        <div class="run-style-hover">
-                            <div class="hover-txt">
-                                <h3 class="hover-title">네트워크형</h3>
-                                <p class="hover-desc">‘챌린지형’은 기록 경신, 메달 수집, 마라톤 완주 같은 목표를 중시해요. 챌린지형에겐 도전 욕구를 불타오르게 하는
-                                    산과 숲, 계곡, 농촌을 누비며 장엄한 대자연을 만끽해보세요.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- news -->
-        <section class="news">
-            <div class="container news-wrap" data-aos="fade-up">
-                <div class="news__top">
-                    <div class="news__txt">
-                        <p class="news__title">NEWS</p>
-                        <p class="news__sub-title">러닝 & 런트립 소식을 한눈에 만나보세요.</p>
-                    </div>
-                    <a href="#" class="news__more">더보기 → </a>
-                </div>
-
-                <div class="swiper newsSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처-동아일보</h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.10.22</p>
-                                <p class="news-list__meta__title">경주국제마라톤의 이변!
-                                    아일랜드 선수의 우승</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img02.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- 달리기를 말할 때 내가 하고 싶은 이야기 </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">22025.09.19</p>
-                                <p class="news-list__meta__title">한여름, 아테네 마라톤을 완주한
-                                    무라카미 하루키 이야기</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img03.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- marathondessables.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.18</p>
-                                <p class="news-list__meta__title">사하라 사막에서 마라톤을</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img04.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- runnersworld.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.15</p>
-                                <p class="news-list__meta__title">빛나는 70대 러너,
-                                    지니 라이스의 러닝 이야기</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처-동아일보</h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.10.22</p>
-                                <p class="news-list__meta__title">경주국제마라톤의 이변!
-                                    아일랜드 선수의 우승</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img02.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- 달리기를 말할 때 내가 하고 싶은 이야기 </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">22025.09.19</p>
-                                <p class="news-list__meta__title">한여름, 아테네 마라톤을 완주한
-                                    무라카미 하루키 이야기</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img03.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- marathondessables.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.18</p>
-                                <p class="news-list__meta__title">사하라 사막에서 마라톤을</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img04.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- runnersworld.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.15</p>
-                                <p class="news-list__meta__title">빛나는 70대 러너,
-                                    지니 라이스의 러닝 이야기</p>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="swiper-button-next arrow"></div>
-                    <div class="swiper-button-prev arrow"></div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="partner">
-            <div class="container partner-wrap" data-aos="fade-up">
-                <img src="./assets/img/map-pin.png" alt="파트너 맵핀" class="partner-icon">
-                <p class="partner-kicker">RUN TOGETHER. CURATE BETTER.</p>
-                <p class="partner-title">런픽과 파트너·제휴를 원하신다면?</p>
-
-                <button class="btn partner-btn">문의하기</button>
-            </div>
-        </section>
 
     </main>
 
@@ -566,95 +180,58 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-
-            loop: true,
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            }
 
 
 
 
-        });
-
-
-
-        var swiper = new Swiper(".newsSwiper", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-
-            loop: true,
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            }
-
-
-        });
-    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 800,
             once: true
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.collections__filter .filter-btn');
+            const cards = document.querySelectorAll('.collections__card');
+
+            // 공통: 필터 변경 함수
+            function setFilter(filter) {
+                // 1) 버튼 on 클래스 토글
+                filterBtns.forEach(btn => {
+                    btn.classList.toggle('on', btn.dataset.filter === filter);
+                });
+
+                // 2) 카드 보여주기 / 숨기기
+                cards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = ''; // 기본 값 (보이기)
+                    } else if (card.classList.contains(filter)) {
+                        card.style.display = ''; // 필터랑 클래스가 같으면 보이기
+                    } else {
+                        card.style.display = 'none'; // 나머지는 숨기기
+                    }
+                });
+            }
+
+            // ✅ 페이지 처음 열 때: 주소에 #domestic / #abroad 있으면 거기에 맞춰서 필터
+            const hash = window.location.hash.replace('#', ''); // '' / 'domestic' / 'abroad'
+            if (hash === 'domestic' || hash === 'abroad') {
+                setFilter(hash);
+            } else {
+                setFilter('all'); // 기본은 '최신'
+            }
+
+            // ✅ 페이지 안에서 버튼 클릭할 때
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.dataset.filter; // all / domestic / abroad
+                    setFilter(filter);
+                });
+            });
         });
     </script>
 

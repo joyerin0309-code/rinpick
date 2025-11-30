@@ -382,7 +382,7 @@ body {
 }
 .footer {
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
-  padding: 6.25rem 0;
+  padding: 5rem 0;
 }
 
 .footer-dark {
@@ -451,7 +451,7 @@ body {
 
 @media (max-width: 1280px) {
   .footer {
-    padding: 5rem 0;
+    padding: 3.75rem 0;
   }
   .footer-wrap {
     padding: 2.1875rem 1.25rem 0;
@@ -476,7 +476,7 @@ body {
 }
 @media (max-width: 1024px) {
   .footer {
-    padding: 3.75rem 0;
+    padding: 3.125rem 0;
   }
   .footer-wrap {
     padding: 1.875rem 1.25rem 0;
@@ -1143,7 +1143,7 @@ body {
 }
 
 .pick-top-card .pick-img {
-  border-radius: 0 0 2.5rem 0;
+  border-radius: 0;
 }
 
 .pick-img-wrap {
@@ -1189,7 +1189,7 @@ body {
 }
 
 .pick-bottom-card .pick-img {
-  border-radius: 0 0 0 2.5rem;
+  border-radius: 0;
 }
 
 .pick-bottom-txt {
@@ -2134,19 +2134,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  padding-left: 0;
-  gap: 50px;
-}
-.about-info__img {
-  flex: 0 0 50%;
-  width: 100%;
-  height: 31.25rem;
-}
-.about-info__img img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+  justify-content: center;
 }
 .about-info__eyebrow {
   font-size: 0.875rem;
@@ -2180,18 +2168,18 @@ body {
   }
 }
 .about-info__txt {
-  flex: 0 0 50%;
+  flex: 0 0 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   gap: 0.875rem;
 }
 .about-info__title {
   font-size: 2.125rem;
   font-weight: 700;
   padding-bottom: 0.3125rem;
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
 }
 .about-info__desc {
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
@@ -2199,7 +2187,6 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.5;
-  max-width: 32.5rem;
 }
 
 .point-info {
@@ -2495,7 +2482,6 @@ body {
     font-size: 1.625rem;
   }
   .about-info__txt {
-    padding: 6.25rem 0;
     gap: 0.875rem;
   }
   .about-info__title {
@@ -2577,7 +2563,6 @@ body {
     font-size: 1.375rem;
   }
   .about-info__txt {
-    padding: 5rem 0;
     gap: 0.875rem;
   }
   .about-info__title {
@@ -2659,12 +2644,11 @@ body {
     font-size: 1.25rem;
   }
   .about-info__txt {
-    padding: 3.75rem 0;
     gap: 0.875rem;
   }
   .about-info__title {
     font-size: 1.75rem;
-    padding-bottom: 0.875rem;
+    padding-bottom: 2.25rem;
   }
   .about-info__desc {
     max-width: 37.5rem;
@@ -2752,15 +2736,22 @@ body {
     font-size: 1.125rem;
   }
   .about-info__txt {
-    padding: 5rem 0;
     gap: 0.875rem;
   }
   .about-info__title {
     font-size: 1.5rem;
-    padding-bottom: 1.125rem;
+    padding-bottom: 1.5625rem;
   }
   .about-info__desc {
     max-width: 55rem;
     font-size: 1rem;
   }
+}
+.collections__wrap {
+  display: flex;
+  flex-direction: column;
+}
+.collections__list {
+  width: 100%;
+  display: flex;
 }

@@ -1,0 +1,21 @@
+@use '../utils/variables' as v;
+@use '../utils/mixin' as m;
+@use '../utils/function' as *;
+
+
+.collections {
+
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+    &__list {
+        width: 100%;
+        display: flex
+    }
+}

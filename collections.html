@@ -35,7 +35,7 @@
                         <a href="collections.html" class="header__link">Collections</a>
                     </li>
                     <li>
-                        <a href="#News" class="header__link">News</a>
+                        <a href="news.html" class="header__link">News</a>
                     </li>
                     <li>
                         <a href="#Contact" class="header__link">Contact</a>
@@ -52,8 +52,7 @@
         <section class="collection-hero">
             <div class="container collection-hero-wrap">
                 <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
-                    <h2 class="hero-title">Run beyond travel</h2>
-                    <p class="hero-sub-title">여행의 한계를 넘어, 새로운 러닝의 문화를 만들다</p>
+                    <h2 class="hero-title">collection</h2>
                 </div>
             </div>
         </section>
@@ -63,83 +62,219 @@
 
         <section class="collections">
             <div class="container collections__wrap">
-
-                <!-- 상단 타이틀 영역은 new__top 그대로 써도 됨, 클래스만 살짝 변경 -->
                 <div class="collections__top">
-
-                    <!-- 여기 필터 버튼 들어갈 자리 -->
                     <div class="collections__filter">
                         <button class="filter-btn on" data-filter="all">최신</button>
                         <button class="filter-btn" data-filter="domestic">국내</button>
                         <button class="filter-btn" data-filter="abroad">해외</button>
                     </div>
                 </div>
-
-                <!-- ✅ 카드 리스트 : swiper 대신 그냥 ul/grid -->
                 <ul class="collections__list">
+                    <li class="collections__card collections__card-wide domestic">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
 
-                    <!-- 제주 : 국내 -->
-                    <li class="collections__card new-card domestic">
-                        <div class="new-card__thumb">
-                            <span class="new-card__capsule">New</span>
-
-                            <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
-
-                            <div class="new-card__info">
-                                <h3 class="new-card__info__title">제주 삼다수숲길</h3>
-                                <p class="new-card__info__desc">빼곡한 삼나무 숲속에서 트레일런 힐링</p>
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">제주 삼다수숲길</p>
+                                    <p class="collections__thumb-tag">삼나무 숲속에서 트레일런 힐링</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="new-card__meta">
-                            <p class="new-card__meta__place">제주 삼다수숲길</p>
-                            <p class="new-card__meta__date">2025.11.09 (토)</p>
-                        </div>
+                            <div class="collections__body">
+                                <h3 class="collections__title">제주 삼다수숲길</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">제주 삼다수숲길</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="collections__card collections__card-wide domestic">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card02.png" alt="경주 · 포항 비치코밍">
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">경주 · 포항 비치코밍</p>
+                                    <p class="collections__thumb-tag">달리고, 줍고, 체험하다!</p>
+                                </div>
+                            </div>
+
+                            <!-- 오른쪽 정보 -->
+                            <div class="collections__body">
+                                <h3 class="collections__title">경주 · 포항 비치코밍</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">경주 · 포항 비치코밍</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="collections__card collections__card-wide abroad">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card03.png" alt="싱가포르">
+
+
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">싱가포르</p>
+                                    <p class="collections__thumb-tag">아름다운 도시 경관과 다양한 액티비티 체험!</p>
+                                </div>
+                            </div>
+                            <div class="collections__body">
+                                <h3 class="collections__title">싱가포르</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">싱가포르</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="collections__card collections__card-wide domestic">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card01.jpg" alt="제주 삼다수숲길">
+
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">제주 삼다수숲길</p>
+                                    <p class="collections__thumb-tag">삼나무 숲속에서 트레일런 힐링</p>
+                                </div>
+                            </div>
+
+                            <div class="collections__body">
+                                <h3 class="collections__title">제주 삼다수숲길</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">제주 삼다수숲길</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="collections__card collections__card-wide domestic">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card02.png" alt="경주 · 포항 비치코밍">
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">경주 · 포항 비치코밍</p>
+                                    <p class="collections__thumb-tag">달리고, 줍고, 체험하다!</p>
+                                </div>
+                            </div>
+
+                            <!-- 오른쪽 정보 -->
+                            <div class="collections__body">
+                                <h3 class="collections__title">경주 · 포항 비치코밍</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">경주 · 포항 비치코밍</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="collections__card collections__card-wide abroad">
+                        <a href="#">
+                            <div class="collections__thumb">
+                                <img src="./assets/img/new-card03.png" alt="싱가포르">
+
+
+                                <div class="collections__thumb-info">
+                                    <p class="collections__thumb-title">싱가포르</p>
+                                    <p class="collections__thumb-tag">아름다운 도시 경관과 다양한 액티비티 체험!</p>
+                                </div>
+                            </div>
+                            <div class="collections__body">
+                                <h3 class="collections__title">싱가포르</h3>
+                                <p class="collections__desc">제주 삼나무 숲속에서 트레일런을 즐기는 힐링 코스</p>
+
+                                <div class="collections__meta">
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">진행 상태</span>
+                                        <span class="collections__meta-value collections__badge ">접수중</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 일정</span>
+                                        <span class="collections__meta-value">2025.11.03(월) ~ 2025.11.05(수)</span>
+                                    </p>
+                                    <p class="collections__meta-row">
+                                        <span class="collections__meta-label">대회 장소</span>
+                                        <span class="collections__meta-value">싱가포르</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
                     </li>
 
-                    <!-- 경주·포항 : 국내 -->
-                    <li class="collections__card new-card domestic">
-                        <div class="new-card__thumb">
-                            <span class="new-card__capsule">New</span>
-
-                            <img src="./assets/img/new-card02.png" alt="경주 · 포항 비치코밍">
-
-                            <div class="new-card__info">
-                                <h3 class="new-card__info__title">경주 · 포항 비치코밍 </h3>
-                                <p class="new-card__info__desc">달리고, 줍고, 체험하다!</p>
-                            </div>
-                        </div>
-
-                        <div class="new-card__meta">
-                            <p class="new-card__meta__place">경주·포항 비치코밍 </p>
-                            <p class="new-card__meta__date">2025.09.12(금) ~ 2025.09.13(토)</p>
-                        </div>
-                    </li>
-
-                    <!-- 싱가포르 : 해외 -->
-                    <li class="collections__card new-card abroad">
-                        <div class="new-card__thumb">
-                            <span class="new-card__capsule">New</span>
-
-                            <img src="./assets/img/new-card03.png" alt="싱가포르">
-
-                            <div class="new-card__info">
-                                <h3 class="new-card__info__title">싱가포르</h3>
-                                <p class="new-card__info__desc">아름다운 도시 경관과 다양한 액티비티 체험!</p>
-                            </div>
-                        </div>
-
-                        <div class="new-card__meta">
-                            <p class="new-card__meta__place">싱가포르 </p>
-                            <p class="new-card__meta__date">2025.10.09(금) ~ 2025.10.12(토)</p>
-                        </div>
-                    </li>
-
-                    <!-- 필요하면 아래로 카드 계속 복붙해서 domestic / abroad만 바꿔주면 됨 -->
                 </ul>
-
             </div>
         </section>
+
+        <nav class="pagination" aria-label="페이지 이동">
+            <button class="pagination__arrow pagination__arrow-first" type="button">|&lt;</button>
+            <button class="pagination__arrow" type="button">&lt;</button>
+            <button class="pagination__page pagination__page-active" type="button">1</button>
+            <!-- <button class="pagination__page" type="button">2</button> -->
+            <button class="pagination__arrow" type="button">&gt;</button>
+            <button class="pagination__arrow pagination__arrow-last" type="button">&gt;|</button>
+        </nav>
 
 
 
@@ -198,40 +333,100 @@
             const filterBtns = document.querySelectorAll('.collections__filter .filter-btn');
             const cards = document.querySelectorAll('.collections__card');
 
-            // 공통: 필터 변경 함수
+
             function setFilter(filter) {
-                // 1) 버튼 on 클래스 토글
+
                 filterBtns.forEach(btn => {
                     btn.classList.toggle('on', btn.dataset.filter === filter);
                 });
 
-                // 2) 카드 보여주기 / 숨기기
+
                 cards.forEach(card => {
                     if (filter === 'all') {
-                        card.style.display = ''; // 기본 값 (보이기)
+                        card.style.display = '';
                     } else if (card.classList.contains(filter)) {
-                        card.style.display = ''; // 필터랑 클래스가 같으면 보이기
+                        card.style.display = '';
                     } else {
-                        card.style.display = 'none'; // 나머지는 숨기기
+                        card.style.display = 'none';
                     }
                 });
             }
 
-            // ✅ 페이지 처음 열 때: 주소에 #domestic / #abroad 있으면 거기에 맞춰서 필터
-            const hash = window.location.hash.replace('#', ''); // '' / 'domestic' / 'abroad'
+
+            const hash = window.location.hash.replace('#', '');
             if (hash === 'domestic' || hash === 'abroad') {
                 setFilter(hash);
             } else {
-                setFilter('all'); // 기본은 '최신'
+                setFilter('all');
             }
 
-            // ✅ 페이지 안에서 버튼 클릭할 때
+
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter; // all / domestic / abroad
+                    const filter = btn.dataset.filter;
                     setFilter(filter);
                 });
             });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.collections__card');
+            const PER_PAGE = 6;
+            let currentPage = 1;
+            const totalPages = Math.ceil(cards.length / PER_PAGE);
+
+            const btnFirst = document.querySelector('.pagination__arrow--first');
+            const btnPrev = document.querySelector('.pagination__arrow--prev');
+            const btnNext = document.querySelector('.pagination__arrow--next');
+            const btnLast = document.querySelector('.pagination__arrow--last');
+            const pageBtns = document.querySelectorAll('.pagination__page');
+
+
+            function renderPage(page) {
+                currentPage = page;
+
+                cards.forEach((card, index) => {
+                    const start = (page - 1) * PER_PAGE;
+                    const end = page * PER_PAGE;
+
+                    if (index >= start && index < end) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+
+                pageBtns.forEach((btn, idx) => {
+                    const pageNum = idx + 1;
+                    btn.textContent = pageNum;
+                    btn.classList.toggle('pagination__page--active', pageNum === currentPage);
+                });
+
+                btnFirst.disabled = currentPage === 1;
+                btnPrev.disabled = currentPage === 1;
+                btnLast.disabled = currentPage === totalPages;
+                btnNext.disabled = currentPage === totalPages;
+            }
+
+
+            pageBtns.forEach((btn, idx) => {
+                btn.addEventListener('click', () => {
+                    const pageNum = idx + 1;
+                    renderPage(pageNum);
+                });
+            });
+
+
+            btnFirst.addEventListener('click', () => renderPage(1));
+            btnPrev.addEventListener('click', () => renderPage(Math.max(1, currentPage - 1)));
+            btnNext.addEventListener('click', () => renderPage(Math.min(totalPages, currentPage + 1)));
+            btnLast.addEventListener('click', () => renderPage(totalPages));
+
+            renderPage(1);
         });
     </script>
 

@@ -34,7 +34,7 @@
     // New 캡슐
     &__capsule {
         position: absolute;
-        // top: rem(20);
+        top: 0;
         left: rem(20);
         padding: rem(10) rem(20);
         background-color: #FF7A45;
@@ -281,6 +281,32 @@
 
         }
     }
+
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(42);
+    padding-bottom: rem(120);
+
+
+    &__page,
+    &__arrow {
+        color: #555;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(18);
+        transition: 0.2s all ease;
+    }
+
+    &__page-active {
+        font-weight: 400;
+        color: #222;
+    }
+
 
 }
 

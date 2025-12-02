@@ -2,29 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Runpick</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
-            <h1 class="header__logo"><a href="#">RUNPICK</a></h1>
+            <h1 class="header__logo"><a href="index.html">RUNPICK</a></h1>
             <button type="button" class="hamburger-btn">
-                <img src="./assets/img/hamburger-button.png" alt="햄버거버튼">
+                <img src="./assets/img/hamburger-button.png" alt="햄버거버튼" />
             </button>
             <nav class="header__nav header-nav">
-
                 <button class="close-btn">
-                    <img src="./assets/img/close-button.png" alt="">
+                    <img src="./assets/img/close-button.png" alt="" />
                 </button>
 
                 <ul class="header__menu">
@@ -43,11 +38,10 @@
                 </ul>
             </nav>
         </div>
-
     </header>
 
     <main>
-
+        <!-- 상단 히어로 -->
         <section class="collection-hero">
             <div class="container collection-hero-wrap">
                 <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
@@ -56,156 +50,126 @@
             </div>
         </section>
 
-
-        <!-- news -->
+        <!-- NEWS 리스트 -->
         <section class="news">
-            <div class="container news-wrap" data-aos="fade-up">
+            <div class="container news-wrap news-page" data-aos="fade-up">
 
+                <!-- 그리드 컨테이너 -->
+                <div class="news-grid">
 
-                <div class="swiper newsSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처-동아일보</h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.10.22</p>
-                                <p class="news-list__meta__title">경주국제마라톤의 이변!
-                                    아일랜드 선수의 우승</p>
-                            </div>
-
+                    <!-- 1 -->
+                    <div class="news-list news-list--page">
+                        <div class="news-list__card">
+                            <img src="./assets/img/news-img01.png" alt="뉴스이미지" />
+                            <span class="news-list__badge">뉴스</span>
+                            <h3 class="news-list__title-main">
+                                경주국제마라톤의 이변! 아일랜드 선수의 우승
+                            </h3>
                         </div>
-
-
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img02.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- 달리기를 말할 때 내가 하고 싶은 이야기 </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">22025.09.19</p>
-                                <p class="news-list__meta__title">한여름, 아테네 마라톤을 완주한
-                                    무라카미 하루키 이야기</p>
-                            </div>
-
+                        <div class="news-list__meta">
+                            <p class="news-list__meta-row">
+                                <span class="news-list__meta__date">2025.10.22.</span>
+                                <span class="news-list__meta__dot">|</span>
+                                <span class="news-list__meta__view">조회수 11</span>
+                            </p>
+                            <p class="news-list__meta__title">
+                                경주국제마라톤의 이변! 아일랜드 선수의 우승
+                            </p>
                         </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img03.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- marathondessables.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.18</p>
-                                <p class="news-list__meta__title">사하라 사막에서 마라톤을</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img04.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- runnersworld.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.15</p>
-                                <p class="news-list__meta__title">빛나는 70대 러너,
-                                    지니 라이스의 러닝 이야기</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img01.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처-동아일보</h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.10.22</p>
-                                <p class="news-list__meta__title">경주국제마라톤의 이변!
-                                    아일랜드 선수의 우승</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img02.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- 달리기를 말할 때 내가 하고 싶은 이야기 </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">22025.09.19</p>
-                                <p class="news-list__meta__title">한여름, 아테네 마라톤을 완주한
-                                    무라카미 하루키 이야기</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img03.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- marathondessables.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.18</p>
-                                <p class="news-list__meta__title">사하라 사막에서 마라톤을</p>
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide news-list">
-
-                            <div class="news-list__card">
-                                <img src="./assets/img/news-img04.png" alt="뉴스이미지">
-                                <h3 class="news-list__card__source">출처- runnersworld.com </h3>
-                            </div>
-
-                            <div class="news-list__meta">
-                                <p class="news-list__meta__date">2025.09.15</p>
-                                <p class="news-list__meta__title">빛나는 70대 러너,
-                                    지니 라이스의 러닝 이야기</p>
-                            </div>
-
-                        </div>
-
-
                     </div>
 
+                    <!-- 2 -->
+                    <div class="news-list news-list--page">
+                        <div class="news-list__card">
+                            <img src="./assets/img/news-img02.png" alt="뉴스이미지" />
+                            <span class="news-list__badge">칼럼</span>
+                            <h3 class="news-list__title-main">
+                                한여름, 아테네 마라톤을 완주한 무라카미 하루키 이야기
+                            </h3>
+                        </div>
+                        <div class="news-list__meta">
+                            <p class="news-list__meta-row">
+                                <span class="news-list__meta__date">2025.09.19.</span>
+                                <span class="news-list__meta__dot">|</span>
+                                <span class="news-list__meta__view">조회수 23</span>
+                            </p>
+                            <p class="news-list__meta__title">
+                                한여름, 아테네 마라톤을 완주한 무라카미 하루키 이야기
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="news-list news-list--page">
+                        <div class="news-list__card">
+                            <img src="./assets/img/news-img03.png" alt="뉴스이미지" />
+                            <span class="news-list__badge">스페셜</span>
+                            <h3 class="news-list__title-main">
+                                사하라 사막에서 마라톤을, 극한의 러닝 도전기
+                            </h3>
+                        </div>
+                        <div class="news-list__meta">
+                            <p class="news-list__meta-row">
+                                <span class="news-list__meta__date">2025.09.18.</span>
+                                <span class="news-list__meta__dot">|</span>
+                                <span class="news-list__meta__view">조회수 37</span>
+                            </p>
+                            <p class="news-list__meta__title">
+                                사하라 사막에서 마라톤을, 극한의 러닝 도전기
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="news-list news-list--page">
+                        <div class="news-list__card">
+                            <img src="./assets/img/news-img04.png" alt="뉴스이미지" />
+                            <span class="news-list__badge">인터뷰</span>
+                            <h3 class="news-list__title-main">
+                                빛나는 70대 러너, 지니 라이스의 러닝 이야기
+                            </h3>
+                        </div>
+                        <div class="news-list__meta">
+                            <p class="news-list__meta-row">
+                                <span class="news-list__meta__date">2025.09.15.</span>
+                                <span class="news-list__meta__dot">|</span>
+                                <span class="news-list__meta__view">조회수 19</span>
+                            </p>
+                            <p class="news-list__meta__title">
+                                빛나는 70대 러너, 지니 라이스의 러닝 이야기
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
-
+                <!-- /.news-grid -->
             </div>
         </section>
 
-
+        <!-- 페이지네이션 -->
         <nav class="pagination" aria-label="페이지 이동">
-            <button class="pagination__arrow pagination__arrow-first" type="button">|&lt;</button>
-            <button class="pagination__arrow" type="button">&lt;</button>
-            <button class="pagination__page pagination__page-active" type="button">1</button>
-            <!-- <button class="pagination__page" type="button">2</button> -->
-            <button class="pagination__arrow" type="button">&gt;</button>
-            <button class="pagination__arrow pagination__arrow-last" type="button">&gt;|</button>
+            <button class="pagination__arrow pagination__arrow-first" type="button">
+                |&lt;
+            </button>
+            <button class="pagination__arrow pagination__arrow-prev" type="button">
+                &lt;
+            </button>
+            <div class="pagination__pages"></div>
+            <button class="pagination__arrow pagination__arrow-next" type="button">
+                &gt;
+            </button>
+            <button class="pagination__arrow pagination__arrow-last" type="button">
+                &gt;|
+            </button>
         </nav>
     </main>
-
 
     <footer class="footer footer-dark">
         <div class="container footer-wrap">
             <div class="footer-left">
                 <h1 class="footer-logo">RUNPICK</h1>
                 <div class="footer-info">
-                    <p>런픽 주식회사 대표이사 : 홍길동 | 사업자등록번호 : 123-45-67890 </p>
+                    <p>런픽 주식회사 대표이사 : 홍길동 | 사업자등록번호 : 123-45-67890</p>
                     <p>사업장주소 : 인천광역시 남동구 인주대로 593 | 대표번호 : 010-1234-5678</p>
                     <p>#Runpick 문의 : 1234-5678</p>
                     <ul class="footer-links">
@@ -215,119 +179,112 @@
                         <li><a href="#">이용안내</a></li>
                     </ul>
                 </div>
-
             </div>
             <div class="footer-sns">
                 <a href="#" class="sns-img">
-                    <img src="./assets/img/instagram.png" alt="인스타그램">
+                    <img src="./assets/img/instagram.png" alt="인스타그램" />
                 </a>
                 <a href="#" class="sns-img">
-                    <img src="./assets/img/youtube.png" alt="유튜브">
+                    <img src="./assets/img/youtube.png" alt="유튜브" />
                 </a>
                 <a href="#" class="sns-img">
-                    <img src="./assets/img/kakaotalk.png" alt="카카오톡">
+                    <img src="./assets/img/kakaotalk.png" alt="카카오톡" />
                 </a>
             </div>
         </div>
     </footer>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-
-            loop: true,
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            }
-
-
-
-
-        });
-
-
-
-        var swiper = new Swiper(".newsSwiper", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-
-            loop: true,
-
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            }
-
-
-        });
-    </script>
-
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 800,
-            once: true
+            once: true,
         });
     </script>
 
+    <!-- jQuery & 공통 스크립트 -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
+    <!-- ✅ 뉴스 카드 페이지네이션 -->
+    <script>
+        const PAGE_SIZE = 12; // 한 페이지 카드 12개 (4x3)
+
+        const cards = Array.from(document.querySelectorAll(".news-list"));
+        const pagesContainer = document.querySelector(".pagination__pages");
+        const prevBtn = document.querySelector(".pagination__arrow-prev");
+        const nextBtn = document.querySelector(".pagination__arrow-next");
+        const firstBtn = document.querySelector(".pagination__arrow-first");
+        const lastBtn = document.querySelector(".pagination__arrow-last");
+
+        const totalPages = Math.ceil(cards.length / PAGE_SIZE);
+        let currentPage = 1;
+
+        // 카드가 아예 없으면 그냥 리턴
+        if (cards.length > 0) {
+            // 페이지 버튼 생성
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className =
+                    "pagination__page" + (i === 1 ? " pagination__page-active" : "");
+                btn.dataset.page = i;
+                btn.textContent = i;
+                pagesContainer.appendChild(btn);
+            }
+
+            const pageButtons = document.querySelectorAll(".pagination__page");
+
+            function showPage(page) {
+                if (page < 1 || page > totalPages) return;
+                currentPage = page;
+
+                const start = (page - 1) * PAGE_SIZE;
+                const end = start + PAGE_SIZE;
+
+                cards.forEach((card, index) => {
+                    card.style.display =
+                        index >= start && index < end ? "" : "none";
+                });
+
+                pageButtons.forEach((btn) => {
+                    btn.classList.toggle(
+                        "pagination__page-active",
+                        Number(btn.dataset.page) === page
+                    );
+                });
+            }
+
+            // 페이지 번호 클릭
+            pageButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const page = Number(btn.dataset.page);
+                    showPage(page);
+                });
+            });
+
+            // 화살표들
+            prevBtn.addEventListener("click", () => {
+                showPage(currentPage - 1);
+            });
+
+            nextBtn.addEventListener("click", () => {
+                showPage(currentPage + 1);
+            });
+
+            firstBtn.addEventListener("click", () => {
+                showPage(1);
+            });
+
+            lastBtn.addEventListener("click", () => {
+                showPage(totalPages);
+            });
+
+            // 처음 로드시 1페이지만 보이게
+            showPage(1);
+        }
+    </script>
 </body>
 
 </html>

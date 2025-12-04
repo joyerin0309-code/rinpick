@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runpick</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header__logo"><a href="index.html">RUNPICK</a></h1>
+            <button type="button" class="hamburger-btn">
+                <img src="./assets/img/hamburger-button.png" alt="햄버거버튼">
+            </button>
+            <nav class="header__nav header-nav">
+
+                <button class="close-btn">
+                    <img src="./assets/img/close-button.png" alt="">
+                </button>
+
+                <ul class="header__menu">
+                    <li>
+                        <a href="about.html" class="header__link">About</a>
+                    </li>
+                    <li>
+                        <a href="collections.html" class="header__link">Collections</a>
+                    </li>
+                    <li>
+                        <a href="news.html" class="header__link">News</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="header__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main>
+        <section class="collection-hero">
+            <div class="container collection-hero-wrap">
+                <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
+                    <h2 class="hero-title">RunPick Partnership</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-sec">
+            <div class="container">
+                <form class="contact-form">
+
+                    <!-- 1줄 : 업체 이름 / 연락처 -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__field">
+                            <label for="company" class="contact-form__label">
+                                <span class="contact-form__required">*</span>
+                                <span>업체 이름</span>
+                            </label>
+                            <input type="text" id="company" class="contact-form__input" placeholder="업체 이름을 입력해주세요.">
+                        </div>
+
+                        <div class="contact-form__field">
+                            <label for="phone" class="contact-form__label">
+                                <span class="contact-form__required">*</span>
+                                <span>연락처</span>
+                            </label>
+                            <input type="text" id="phone" class="contact-form__input" placeholder="전화번호를 입력해주세요.">
+                        </div>
+                    </div>
+
+                    <!-- 2줄 : 제안 유형 / 운영 지역 -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__field">
+                            <label for="proposal" class="contact-form__label">
+                                <span class="contact-form__required">*</span>
+                                <span>제안 유형</span>
+                            </label>
+                            <div class="contact-form__select-wrap">
+                                <select id="proposal" class="contact-form__select">
+                                    <option value="" selected disabled>제안 유형을 선택해주세요.</option>
+                                    <option value="travel">여행사 / 런트립 상품 제휴</option>
+                                    <option value="brand">브랜드 콜라보 / 스폰서십</option>
+                                    <option value="event">러닝 이벤트 / 대회</option>
+                                    <option value="etc">기타 제안</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="contact-form__field">
+                            <label for="region" class="contact-form__label">
+                                <span>운영 지역</span>
+                            </label>
+                            <input type="text" id="region" class="contact-form__input" placeholder="지역을 입력해주세요.">
+                        </div>
+                    </div>
+
+                    <!-- 내용 -->
+                    <div class="contact-form__field">
+                        <label for="content" class="contact-form__label">
+                            <span>내용</span>
+                        </label>
+                        <textarea id="content" class="contact-form__textarea" placeholder="내용을 입력해주세요."></textarea>
+                    </div>
+
+                    <!-- 체크박스 -->
+                    <div class="contact-form__bottom">
+                        <label class="contact-form__agree">
+                            <input type="checkbox">
+                            <span>개인정보 수집·이용 동의 체크</span>
+                        </label>
+                    </div>
+
+                    <!-- 버튼 -->
+                    <div class="contact-form__submit-wrap">
+                        <button type="submit" class="contact-form__btn">제출하기</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <footer class="footer footer-dark">
+        <div class="container footer-wrap">
+            <div class="footer-left">
+                <h1 class="footer-logo">RUNPICK</h1>
+                <div class="footer-info">
+                    <p>런픽 주식회사 대표이사 : 홍길동 | 사업자등록번호 : 123-45-67890 </p>
+                    <p>사업장주소 : 인천광역시 남동구 인주대로 593 | 대표번호 : 010-1234-5678</p>
+                    <p>#Runpick 문의 : 1234-5678</p>
+                    <ul class="footer-links">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-sns">
+                <a href="#" class="sns-img">
+                    <img src="./assets/img/instagram.png" alt="인스타그램">
+                </a>
+                <a href="#" class="sns-img">
+                    <img src="./assets/img/youtube.png" alt="유튜브">
+                </a>
+                <a href="#" class="sns-img">
+                    <img src="./assets/img/kakaotalk.png" alt="카카오톡">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            loop: true,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }
+
+
+
+
+        });
+
+
+
+        var swiper = new Swiper(".newsSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
+
+            loop: true,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+
+
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

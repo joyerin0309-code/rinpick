@@ -96,7 +96,8 @@
         margin-top: rem(16);
         margin-bottom: rem(8);
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     &__agree {
@@ -114,19 +115,84 @@
 
     &__submit-wrap {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         margin-top: rem(4);
     }
 
     &__btn {
         min-width: rem(220);
         height: rem(44);
-        border-radius: rem(6);
-        border: none;
-        background-color: v.$primaryColor;
+        border-radius: rem(50);
+        background-color: v.$blackColor;
         color: #fff;
         font-size: rem(16);
         font-weight: 600;
-        cursor: pointer;
+        font-family: v.$font-desc;
+        transition: background-color .25s ease, box-shadow .25s ease, opacity .25s ease;
+
+        &:hover {
+            background-color: v.$primaryColor;
+            color: #fff;
+        }
     }
+}
+
+.privacy-open {
+    cursor: pointer;
+}
+
+.privacy-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    &__box {
+        width: min(520px, 90vw);
+        background: #fff;
+        border-radius: rem(12);
+        padding: rem(24);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 rem(10) rem(30) rgba(0, 0, 0, 0.15);
+        font-family: v.$font-desc;
+    }
+
+    &__title {
+        margin-bottom: rem(12);
+
+    }
+
+    &__content {
+        ul {
+            margin-top: rem(10);
+
+        }
+    }
+
+    &__btns {
+        margin-top: rem(16);
+        text-align: right;
+    }
+
+    &__close {
+        height: rem(40);
+        padding: 0 rem(16);
+        border-radius: rem(10);
+        border: 1px solid #e3e5ea;
+        background: transparent;
+        font-size: rem(16);
+        font-weight: 600;
+        color: #111;
+        cursor: pointer;
+        transition: background-color .2s ease, border-color .2s ease, opacity .2s ease;
+
+        &:hover {
+            background-color: v.$primaryColor;
+            color: #fff;
+        }
+    }
+
 }

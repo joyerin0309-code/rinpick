@@ -53,8 +53,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-            background-color: v.$primaryColor;
-            color: v.$whiteColor;
+            color: v.$primaryColor;
         }
     }
 

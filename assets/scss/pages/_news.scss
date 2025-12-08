@@ -2,6 +2,11 @@
 @use '../utils/mixin' as m;
 @use '../utils/function' as *;
 
+// =========================================
+// NEWS SUB PAGE (완전 고정형 버전)
+// 카드 높이 / 이미지 높이 / 텍스트 높이 분리
+// =========================================
+
 .news-page {
     padding: v.$sp-d rem(20);
 
@@ -11,17 +16,15 @@
         gap: rem(40) rem(20);
     }
 
-
+    // ✅ 카드 전체 높이 고정
     .news-list-page {
         background-color: v.$whiteColor;
         border-radius: rem(20);
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        height: v.$newsPageCardH-des;
     }
-
-
-
 
     .news-list-page:hover .news-list__card img {
         transform: scale(1.05);
@@ -29,9 +32,10 @@
 
     .news-list {
 
+
         &__card {
             position: relative;
-            height: rem(360);
+            height: v.$newsPageImgH-des;
             overflow: hidden;
 
             img {
@@ -53,33 +57,35 @@
             }
         }
 
-
-
         &__title-main {
             position: absolute;
             left: rem(20);
             right: rem(20);
-            bottom: rem(10);
+            bottom: rem(14);
             font-size: rem(20);
             line-height: 1.4;
             font-weight: 500;
             color: v.$whiteColor;
             z-index: 2;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
-
         &__meta {
-            padding: rem(15) rem(20);
+            height: v.$newsPageMetaH-des;
+            padding: rem(16) rem(20);
             display: flex;
             flex-direction: column;
-            min-height: rem(40);
-
-
+            justify-content: center;
+            gap: rem(2);
         }
 
         &__meta-row {
             display: flex;
             font-size: rem(12);
+            line-height: 1.2;
             color: #666;
         }
 
@@ -87,7 +93,131 @@
             font-size: rem(16);
             font-family: v.$font-desc;
             font-weight: 500;
+            line-height: 1.35;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     }
+}
 
+
+
+// 1280 이하: 3열
+
+@media (max-width: v.$pc) {
+    .news-page {
+        padding: v.$sp-p rem(20);
+
+        .news-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: rem(36) rem(18);
+        }
+
+        .news-list-page {
+            height: v.$newsPageCardH-pc;
+        }
+
+        .news-list {
+            &__card {
+                height: v.$newsPageImgH-pc;
+            }
+
+            &__meta {
+                height: v.$newsPageMetaH-pc;
+            }
+        }
+    }
+}
+
+
+
+// 1024 이하: 3열
+
+@media (max-width: v.$laptop) {
+    .news-page {
+        padding: v.$sp-l rem(20);
+
+        .news-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: rem(32) rem(16);
+        }
+
+        .news-list-page {
+            height: v.$newsPageCardH-lap;
+        }
+
+        .news-list {
+            &__card {
+                height: v.$newsPageImgH-lap;
+            }
+
+            &__meta {
+                height: v.$newsPageMetaH-lap;
+            }
+        }
+    }
+}
+
+
+
+// 768 이하: 2열
+
+@media (max-width: v.$tablet) {
+    .news-page {
+        padding: v.$sp-t rem(20);
+
+        .news-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: rem(28) rem(14);
+        }
+
+        .news-list-page {
+            height: v.$newsPageCardH-tab;
+            border-radius: rem(18);
+        }
+
+        .news-list {
+            &__card {
+                height: v.$newsPageImgH-tab;
+            }
+
+            &__meta {
+                height: v.$newsPageMetaH-tab;
+            }
+        }
+    }
+}
+
+
+
+// 480 이하: 1열
+
+@media (max-width: v.$mobile) {
+    .news-page {
+        padding: v.$sp-m rem(20);
+
+        .news-grid {
+            grid-template-columns: 1fr;
+            gap: rem(22);
+        }
+
+        .news-list-page {
+            height: v.$newsPageCardH-mob;
+            border-radius: rem(16);
+        }
+
+        .news-list {
+            &__card {
+                height: v.$newsPageImgH-mob;
+            }
+
+            &__meta {
+                height: v.$newsPageMetaH-mob;
+                padding: rem(10) rem(18);
+            }
+        }
+    }
 }

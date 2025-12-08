@@ -3,7 +3,7 @@
 @use '../utils/function' as *;
 
 .contact-sec {
-    padding: v.$sp-d;
+    padding: v.$sp-d rem(20);
 }
 
 .contact-form {
@@ -20,15 +20,15 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        margin-bottom: rem(4); // row 간 간격은 위에서 주니까 조금만
+        margin-bottom: rem(4);
     }
 
     &__label {
         margin-bottom: rem(10);
         font-size: rem(18);
         font-weight: 500;
-        display: flex; // * + 텍스트 한 줄
-        align-items: center; // 세로 가운데 정렬
+        display: flex;
+        align-items: center;
         gap: rem(5);
         line-height: 1;
     }
@@ -50,6 +50,7 @@
         background-color: #f5f5f5;
         box-sizing: border-box;
         font-size: rem(16);
+        font-family: v.$font-desc;
 
         &::placeholder {
             color: #b1b4bd;
@@ -94,7 +95,7 @@
 
     &__bottom {
         margin-top: rem(16);
-        margin-bottom: rem(8);
+        margin-bottom: rem(20);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -116,7 +117,7 @@
     &__submit-wrap {
         display: flex;
         justify-content: center;
-        margin-top: rem(4);
+
     }
 
     &__btn {
@@ -139,13 +140,22 @@
 
 .privacy-open {
     cursor: pointer;
+    font-family: v.$font-desc;
+    font-size: rem(16);
+    color: #7a7a7a;
+}
+
+.privacy-open:hover {
+    color: #1f3f8a;
+    text-decoration: underline;
+    text-underline-offset: rem(3);
 }
 
 .privacy-popup {
     display: none;
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 100;
 
     &__box {
         width: min(520px, 90vw);
@@ -195,4 +205,318 @@
         }
     }
 
+}
+
+
+// 1280
+@media (max-width: v.$pc) {
+    .contact-sec {
+        padding: v.$sp-p rem(20);
+    }
+
+    .contact-form {
+        &__row {
+            gap: rem(18);
+            margin-bottom: rem(24);
+        }
+
+        &__label {
+            font-size: rem(16);
+            margin-bottom: rem(9);
+        }
+
+        &__required {
+            font-size: rem(16);
+        }
+
+        &__input,
+        &__select {
+            height: rem(44);
+            font-size: rem(16);
+
+            &::placeholder {
+                font-size: rem(16);
+            }
+        }
+
+        &__textarea {
+            height: rem(210);
+            font-size: rem(16);
+
+            &::placeholder {
+                font-size: rem(16);
+            }
+        }
+
+        &__bottom {
+            margin-top: rem(18);
+            margin-bottom: rem(16);
+            justify-content: center;
+        }
+
+
+
+        &__submit-wrap {
+            margin-top: 0;
+        }
+
+        &__btn {
+            min-width: rem(210);
+            height: rem(44);
+            font-size: rem(16);
+        }
+    }
+
+    .privacy-popup {
+        &__box {
+            width: min(500px, 90vw);
+        }
+    }
+
+    .privacy-open {
+        font-size: rem(16);
+    }
+}
+
+// 1024
+@media (max-width: v.$laptop) {
+    .contact-sec {
+        padding: v.$sp-l rem(20);
+    }
+
+    .contact-form {
+        &__row {
+            gap: rem(16);
+            margin-bottom: rem(22);
+        }
+
+        &__label {
+            font-size: rem(16);
+            margin-bottom: rem(8);
+        }
+
+        &__required {
+            font-size: rem(16);
+        }
+
+        &__input,
+        &__select {
+            height: rem(44);
+            padding: 0 rem(14);
+            font-size: rem(16);
+
+            &::placeholder {
+                font-size: rem(16);
+            }
+        }
+
+        &__textarea {
+            height: rem(200);
+            font-size: rem(16);
+
+            &::placeholder {
+                font-size: rem(16);
+            }
+        }
+
+        &__agree {
+            font-size: rem(14);
+        }
+
+        &__bottom {
+            margin-top: rem(18);
+            margin-bottom: rem(16);
+        }
+
+        &__submit-wrap {
+            margin-top: 0;
+        }
+
+        &__btn {
+            min-width: rem(200);
+            height: rem(42);
+            font-size: rem(14);
+        }
+    }
+
+    .privacy-popup {
+        &__box {
+            width: min(500px, 90vw);
+            padding: rem(22);
+        }
+    }
+
+    .privacy-open {
+        font-size: rem(14);
+    }
+}
+
+// 768
+@media (max-width: v.$tablet) {
+    .contact-sec {
+        padding: v.$sp-t rem(20);
+    }
+
+    .contact-form {
+        &__row {
+            flex-direction: column;
+            gap: rem(18);
+            margin-bottom: rem(20);
+        }
+
+        &__label {
+            font-size: rem(14);
+            margin-bottom: rem(8);
+        }
+
+        &__required {
+            font-size: rem(14);
+        }
+
+        &__input,
+        &__select {
+            height: rem(42);
+            padding: 0 rem(12);
+            font-size: rem(14);
+
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
+
+        &__textarea {
+            height: rem(180);
+            padding: rem(12);
+            font-size: rem(14);
+
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
+
+        &__bottom {
+            justify-content: flex-start;
+            margin-top: rem(20);
+            margin-bottom: rem(18);
+        }
+
+        &__agree {
+            font-size: rem(12);
+
+            input[type='checkbox'] {
+                width: rem(15);
+                height: rem(15);
+            }
+        }
+
+        &__submit-wrap {
+            margin-top: 0;
+        }
+
+        &__btn {
+            min-width: 100%;
+            height: rem(40);
+            font-size: rem(14);
+        }
+    }
+
+    .privacy-popup {
+        &__box {
+            width: min(520px, 92vw);
+            padding: rem(22);
+        }
+    }
+
+    .privacy-open {
+        font-size: rem(14);
+    }
+}
+
+
+// 480
+@media (max-width: v.$mobile) {
+    .contact-sec {
+        padding: v.$sp-m rem(20);
+    }
+
+    .contact-form {
+        &__row {
+            gap: rem(16);
+            margin-bottom: rem(18);
+        }
+
+        &__label {
+            font-size: rem(14);
+            margin-bottom: rem(7);
+        }
+
+        &__required {
+            font-size: rem(14);
+        }
+
+        &__input,
+        &__select {
+            height: rem(40);
+            padding: 0 rem(12);
+            font-size: rem(14);
+
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
+
+        &__textarea {
+            height: rem(160);
+            padding: rem(10);
+            font-size: rem(14);
+
+            &::placeholder {
+                font-size: rem(14);
+            }
+        }
+
+        &__bottom {
+            justify-content: flex-start;
+            margin-top: rem(18);
+            margin-bottom: rem(18);
+        }
+
+        &__agree {
+            font-size: rem(12);
+            gap: rem(6);
+
+            input[type='checkbox'] {
+                width: rem(15);
+                height: rem(15);
+            }
+        }
+
+        &__submit-wrap {
+            margin-top: 0;
+        }
+
+        &__btn {
+            width: 100%;
+            min-width: 100%;
+            height: rem(30);
+            font-size: rem(14);
+        }
+    }
+
+    .privacy-popup {
+        &__box {
+            width: min(520px, 94vw);
+            padding: rem(20);
+            border-radius: rem(10);
+        }
+
+        &__close {
+            height: rem(38);
+            font-size: rem(14);
+        }
+    }
+
+    .privacy-open {
+        font-size: rem(12);
+    }
 }

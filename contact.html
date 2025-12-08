@@ -65,7 +65,10 @@
                                 <span class="contact-form__required">*</span>
                                 <span>업체 이름</span>
                             </label>
-                            <input type="text" id="company" class="contact-form__input" placeholder="업체 이름을 입력해주세요.">
+                            <input type="text" id="company" name="company" class="contact-form__input"
+                                placeholder="업체 이름을 입력해주세요." required
+                                oninvalid="this.setCustomValidity('업체 이름을 작성해주세요.')"
+                                oninput="this.setCustomValidity('')">
                         </div>
 
                         <div class="contact-form__field">
@@ -73,7 +76,9 @@
                                 <span class="contact-form__required">*</span>
                                 <span>연락처</span>
                             </label>
-                            <input type="text" id="phone" class="contact-form__input" placeholder="전화번호를 입력해주세요.">
+                            <input type="text" id="phone" name="phone" class="contact-form__input"
+                                placeholder="전화번호를 입력해주세요." required oninvalid="this.setCustomValidity('연락처를 작성해주세요.')"
+                                oninput="this.setCustomValidity('')">
                         </div>
                     </div>
 
@@ -85,7 +90,9 @@
                                 <span>제안 유형</span>
                             </label>
                             <div class="contact-form__select-wrap">
-                                <select id="proposal" class="contact-form__select">
+                                <select id="proposal" name="proposal" class="contact-form__select" required
+                                    oninvalid="this.setCustomValidity('제안 유형을 선택해주세요.')"
+                                    onchange="this.setCustomValidity('')">
                                     <option value="" selected disabled>제안 유형을 선택해주세요.</option>
                                     <option value="travel">여행사 / 런트립 상품 제휴</option>
                                     <option value="brand">브랜드 콜라보 / 스폰서십</option>
@@ -114,8 +121,10 @@
 
                     <div class="contact-form__bottom">
                         <label class="contact-form__agree">
-                            <input type="checkbox">
-                            <span class="privacy-open">개인정보 수집·이용 동의 체크</span>
+                            <input type="checkbox" name="consent" required
+                                oninvalid="this.setCustomValidity('개인정보 수집·이용 동의는 필수입니다.')"
+                                onchange="this.setCustomValidity('')">
+                            <span class="privacy-open">개인정보 수집·이용 동의</span>
                         </label>
                     </div>
 

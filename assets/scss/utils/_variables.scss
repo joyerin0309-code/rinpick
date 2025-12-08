@@ -159,11 +159,11 @@ $arrow-mob : rem(100);
 
 $btnRadius: rem(50);
 
-$btnH-des: rem(46);
+$btnH-des: rem(42);
 $btnPadX-des: rem(42);
-$btnFont-des: rem(18);
+$btnFont-des: rem(16);
 
-$btnH-pc: rem(44);
+$btnH-pc: rem(42);
 $btnPadX-pc: rem(40);
 $btnFont-pc: rem(16);
 
@@ -366,3 +366,29 @@ $subHeroH-pc :rem(350);
 $subHeroH-lap :rem(300);
 $subHeroH-tab :rem(250);
 $subHeroH-mob :rem(200);
+
+
+
+
+//뉴스페이지
+
+// 뉴스 페이지 카드 높이
+$newsPageCardH-des: rem(400);
+$newsPageCardH-pc: rem(384);
+$newsPageCardH-lap: rem(368);
+$newsPageCardH-tab: rem(352);
+$newsPageCardH-mob: rem(325);
+
+
+$newsPageImgH-des: rem(300);
+$newsPageImgH-pc: rem(288);
+$newsPageImgH-lap: rem(276);
+$newsPageImgH-tab: rem(264);
+$newsPageImgH-mob: rem(240);
+
+
+$newsPageMetaH-des: rem(100);
+$newsPageMetaH-pc: rem(96);
+$newsPageMetaH-lap: rem(92);
+$newsPageMetaH-tab: rem(88);
+$newsPageMetaH-mob: rem(85);

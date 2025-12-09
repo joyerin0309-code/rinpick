@@ -3,12 +3,12 @@
 @use '../utils/function' as *;
 
 
-
 //hero 섹션
+
 .about-hero {
     height: v.$aboutHeroH-des;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("../img/about-hero-img.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,6 @@
     align-items: center;
     color: v.$whiteColor;
 }
-
 
 .hero-txt {
     position: relative;
@@ -41,10 +40,8 @@
 }
 
 
+//about 섹션
 
-
-
-//info 섹션
 .about-info {
     width: 100%;
     height: 100%;
@@ -53,7 +50,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-
     }
 
     &__head {
@@ -62,17 +58,12 @@
         flex-direction: column;
     }
 
-
     &__wrap {
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: center // padding-left: 0;
-            // gap: 50px;
-
+        justify-content: center;
     }
-
-
 
     &__eyebrow {
         @include m.eyebrow;
@@ -90,15 +81,22 @@
     &__title {
         @include m.title-des;
         padding-bottom: rem(40);
-
     }
 
     &__desc {
-
         @include m.desc-font;
         font-size: rem(20);
         font-weight: 500;
         line-height: v.$lh-desc;
+    }
+
+
+    &__desc-full {
+        display: block;
+    }
+
+    &__desc-short {
+        display: none;
     }
 }
 
@@ -108,15 +106,13 @@
 
 
 
-
-
 //special 섹션
+
+
 .special {
     width: 100%;
     height: 100%;
     padding: v.$sp-d rem(20);
-
-
 
 
     &__wrap {
@@ -127,7 +123,7 @@
     }
 
     &__txt {
-        text-align: center
+        text-align: center;
     }
 
     &__eyebrow {
@@ -139,6 +135,34 @@
         padding-bottom: v.$secGap-des;
     }
 
+    &__card-list {
+        display: flex;
+        flex-direction: column;
+        gap: v.$cardGap-des;
+    }
+
+    &__card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: rem(50);
+    }
+
+    &__card img {
+        width: v.$specialImgW-des;
+        height: v.$specialImgH-des;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    &__right {
+        flex-direction: row-reverse;
+    }
+
+    &__card-right-txt {
+        text-align: right;
+    }
 
     &__card-title {
         font-size: rem(28);
@@ -156,50 +180,17 @@
         font-weight: 500;
         color: #444444;
     }
-
-
-
-    &__card-list {
-        display: flex;
-        flex-direction: column;
-        gap: v.$cardGap-des ;
-
-    }
-
-
-
-    &__card {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: rem(50);
-    }
-
-
-    &__card img {
-        width: v.$specialImgW-des;
-        height: v.$specialImgH-des;
-        object-fit: cover;
-        display: block;
-        flex-shrink: 0;
-    }
-
-
-    &__right {
-        flex-direction: row-reverse;
-    }
-
-    &__card-right-txt {
-        text-align: right;
-    }
 }
 
+
+
+
+//role 섹션
 
 .role {
     width: 100%;
     height: 100%;
     padding: v.$sp-d rem(20);
-
 
     &__wrap {
         display: flex;
@@ -221,13 +212,11 @@
         padding-bottom: v.$secGap-des;
     }
 
-
     &__list {
         display: flex;
         align-items: center;
         gap: rem(20);
     }
-
 
     &__card {
         display: flex;
@@ -237,27 +226,24 @@
         text-align: center;
         background: linear-gradient(135deg, #3A78F5, #5A93FF);
         color: #fff;
-        border-radius: 24px;
-        padding: 50px 50px;
+        border-radius: rem(24);
+        padding: rem(50) rem(50);
         width: 100%;
         height: rem(360);
-
     }
-
 
     &__icon {
         width: rem(180);
         height: rem(180);
-        margin: 0 auto 5px;
+        margin: 0 auto rem(6);
     }
-
 
     &__card-title {
         font-size: rem(26);
+        font-family: v.$font-desc;
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: rem(10);
     }
-
 
     &__card-desc {
         font-size: rem(20);
@@ -267,11 +253,12 @@
 }
 
 
+//vision 섹션
+
 .vision {
     width: 100%;
     height: 100%;
     padding: v.$sp-d rem(20);
-
 
     &__wrap {
         display: flex;
@@ -281,23 +268,18 @@
         text-align: center;
     }
 
-
     &__txt {
         text-align: center;
     }
-
-
 
     &__eyebrow {
         @include m.eyebrow;
     }
 
-
     &__title {
         @include m.title-des;
         padding-bottom: v.$secGap-des;
     }
-
 
     &__card-wrap {
         width: 100%;
@@ -308,10 +290,7 @@
         gap: rem(20);
     }
 
-
     &__vision-crad {
-        flex: 1;
-        // background-color: antiquewhite;
         padding: rem(100);
     }
 
@@ -336,7 +315,6 @@
         animation: visionAxisGrow 0.7s ease-out forwards;
     }
 
-
     &__vision-title {
         font-family: v.$font-desc;
         font-size: rem(34);
@@ -344,12 +322,10 @@
         padding-bottom: rem(30);
     }
 
-
     &__vision-desc {
         font-family: v.$font-desc;
         font-size: rem(22);
     }
-
 }
 
 @keyframes visionAxisGrow {
@@ -366,32 +342,12 @@
 
 
 
+//1280
+@media (max-width: v.$pc) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//1280xp
-
-@media (max-width : v.$pc) {
-
-    //hero 섹션
     .about-hero {
         height: v.$aboutHeroH-pc;
     }
-
-
-
 
     .hero-title {
         font-size: v.$heroTitle-pc;
@@ -403,21 +359,12 @@
     }
 
 
-
-
-
-    //info 섹션
     .about-info {
-
-
-        &__txt {
-
-            gap: rem(14);
-        }
+        padding: v.$sp-p rem(20);
 
         &__title {
-            font-size: v.$introTitle-pc;
-            padding-bottom: rem(18);
+            font-size: rem(32);
+            padding-bottom: rem(28);
         }
 
         &__desc {
@@ -427,83 +374,110 @@
     }
 
 
-    //special 섹션
     .special {
-
-        padding: v.$sp-p 0;
-
-
-        &__eyebrow {
-            @include m.eyebrow;
-        }
+        padding: v.$sp-p rem(20);
 
         &__title {
             @include m.title-pc;
             padding-bottom: v.$secGap-pc;
         }
 
-
-        &__card-title {
-            font-size: rem(28);
-            padding-bottom: rem(30);
-        }
-
-
-        &__card-desc {
-            font-size: rem(20);
-        }
-
-
-
         &__card-list {
-            gap: v.$cardGap-pc ;
-
+            gap: v.$cardGap-pc;
         }
-
-
 
         &__card {
             gap: rem(40);
         }
 
-
         &__card img {
             width: v.$specialImgW-pc;
             height: v.$specialImgH-pc;
-
         }
 
+        &__card-title {
+            font-size: rem(26);
+            padding-bottom: rem(24);
+        }
+
+        &__card-desc {
+            font-size: rem(20);
+        }
     }
 
+
+    .role {
+        padding: v.$sp-p rem(20);
+
+        &__title {
+            @include m.title-pc;
+            padding-bottom: v.$secGap-pc;
+        }
+
+        &__list {
+            gap: rem(16);
+        }
+
+        &__card {
+            height: rem(340);
+            padding: rem(44) rem(34);
+            border-radius: rem(22);
+        }
+
+        &__icon {
+            width: rem(160);
+            height: rem(160);
+        }
+
+        &__card-title {
+            font-size: rem(24);
+        }
+
+        &__card-desc {
+            font-size: rem(18);
+        }
+    }
+
+
+    .vision {
+        padding: v.$sp-p rem(20);
+
+        &__title {
+            @include m.title-pc;
+            padding-bottom: v.$secGap-pc;
+        }
+
+        &__card-wrap {
+            gap: rem(16);
+        }
+
+        &__vision-crad {
+            padding: rem(80);
+        }
+
+        &__axis {
+            height: rem(160);
+            margin: rem(100) auto;
+        }
+
+        &__vision-title {
+            font-size: rem(30);
+            padding-bottom: rem(24);
+        }
+
+        &__vision-desc {
+            font-size: rem(20);
+        }
+    }
 }
 
 
+//1024
+@media (max-width: v.$laptop) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//1024xp
-
-@media (max-width : v.$laptop) {
-
-    //hero 섹션
     .about-hero {
         height: v.$aboutHeroH-lap;
     }
-
-
-
 
     .hero-title {
         font-size: v.$heroTitle-lap;
@@ -515,19 +489,12 @@
     }
 
 
-
-    //info 섹션
     .about-info {
-
-
-        &__txt {
-
-            gap: rem(14);
-        }
+        padding: v.$sp-l rem(20);
 
         &__title {
-            font-size: v.$introTitle-lap;
-            padding-bottom: rem(18);
+            font-size: rem(28);
+            padding-bottom: rem(24);
         }
 
         &__desc {
@@ -537,85 +504,110 @@
     }
 
 
-
-    //special 섹션
     .special {
-
-        padding: v.$sp-l 0;
-
-
-        &__eyebrow {
-            @include m.eyebrow;
-        }
+        padding: v.$sp-l rem(20);
 
         &__title {
             @include m.title-lap;
             padding-bottom: v.$secGap-lap;
         }
 
-
-        &__card-title {
-            font-size: rem(26);
-            padding-bottom: rem(30);
-        }
-
-
-        &__card-desc {
-            font-size: rem(18);
-        }
-
-
-
         &__card-list {
-            gap: v.$cardGap-lap ;
-
+            gap: v.$cardGap-lap;
         }
-
-
 
         &__card {
             gap: rem(30);
         }
 
-
         &__card img {
             width: v.$specialImgW-lap;
             height: v.$specialImgH-lap;
-
         }
 
+        &__card-title {
+            font-size: rem(24);
+            padding-bottom: rem(20);
+        }
+
+        &__card-desc {
+            font-size: rem(18);
+        }
     }
 
+
+    .role {
+        padding: v.$sp-l rem(20);
+
+        &__title {
+            @include m.title-lap;
+            padding-bottom: v.$secGap-lap;
+        }
+
+        &__list {
+            gap: rem(14);
+        }
+
+        &__card {
+            height: rem(320);
+            padding: rem(40) rem(28);
+            border-radius: rem(20);
+        }
+
+        &__icon {
+            width: rem(140);
+            height: rem(140);
+        }
+
+        &__card-title {
+            font-size: rem(22);
+        }
+
+        &__card-desc {
+            font-size: rem(18);
+        }
+    }
+
+
+    .vision {
+        padding: v.$sp-l rem(20);
+
+        &__title {
+            @include m.title-lap;
+            padding-bottom: v.$secGap-lap;
+        }
+
+        &__card-wrap {
+            gap: rem(14);
+        }
+
+        &__vision-crad {
+            padding: rem(60);
+        }
+
+        &__axis {
+            height: rem(140);
+            margin: rem(90) auto;
+        }
+
+        &__vision-title {
+            font-size: rem(28);
+        }
+
+        &__vision-desc {
+            font-size: rem(18);
+        }
+    }
 }
 
 
+//768
+@media (max-width: v.$tablet) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//768xp
-
-@media (max-width : v.$tablet) {
-
-    //hero 섹션
     .about-hero {
         height: v.$aboutHeroH-tab;
+        background-attachment: scroll;
     }
-
-
-
 
     .hero-title {
         font-size: v.$heroTitle-tab;
@@ -627,78 +619,52 @@
     }
 
 
-
-    //info 섹션
     .about-info {
+        padding: v.$sp-t rem(20);
 
+        &__wrap {
+            flex-direction: column;
+        }
 
         &__txt {
-
-            gap: rem(14);
+            flex: 1 1 auto;
+            max-width: rem(600);
         }
 
         &__title {
-            font-size: v.$introTitle-tab;
-            padding-bottom: rem(36);
+            font-size: rem(24);
+            padding-bottom: rem(28);
         }
 
         &__desc {
             max-width: rem(600);
             font-size: rem(18);
         }
+
+
+        &__desc-full {
+            display: none;
+        }
+
+        &__desc-short {
+            display: block;
+        }
     }
 
 
-
-
-    //special 섹션
     .special {
-
-        padding: v.$sp-t 0;
-
-
-
-
-        &__eyebrow {
-            @include m.eyebrow;
-        }
+        padding: v.$sp-t rem(20);
 
         &__title {
             @include m.title-tab;
             padding-bottom: v.$secGap-tab;
         }
 
-
-
-
-
-        &__card-title {
-            font-size: rem(20);
-            line-height: 1.4;
-            padding-bottom: rem(10);
-            text-align: left;
-        }
-
-
-        &__card-desc {
-            font-size: rem(15);
-            line-height: 1.7;
-            max-width: rem(420);
-            margin: 0 auto;
-            text-align: left;
-        }
-
-
-
         &__card-list {
-            gap: v.$cardGap-tab ;
-
+            gap: v.$cardGap-tab;
         }
-
-
 
         &__card {
-            display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -706,43 +672,115 @@
             padding-inline: rem(20);
         }
 
-
-
         &__card img {
+            width: 100%;
+            max-width: rem(540);
+            height: auto;
+        }
+
+        &__right {
+            flex-direction: column;
+        }
+
+        &__card-right-txt {
+            text-align: left;
+        }
+
+        &__card-title {
+            font-size: rem(20);
+            line-height: 1.4;
+            padding-bottom: rem(10);
+            text-align: left;
             width: 100%;
             max-width: rem(540);
         }
 
+        &__card-desc {
+            font-size: rem(16);
+            line-height: 1.7;
+            text-align: left;
+            width: 100%;
+            max-width: rem(540);
+            margin: 0 auto;
+        }
+    }
+
+
+    .role {
+        padding: v.$sp-t rem(20);
+
+        &__title {
+            @include m.title-tab;
+            padding-bottom: v.$secGap-tab;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(14);
+        }
+
+        &__card {
+            height: rem(280);
+            padding: rem(34) rem(22);
+            border-radius: rem(18);
+        }
+
+        &__icon {
+            width: rem(120);
+            height: rem(120);
+        }
+
+        &__card-title {
+            font-size: rem(20);
+        }
+
+        &__card-desc {
+            font-size: rem(16);
+        }
+    }
+
+
+    .vision {
+        padding: v.$sp-t rem(20);
+
+        &__title {
+            @include m.title-tab;
+            padding-bottom: v.$secGap-tab;
+        }
+
+        &__card-wrap {
+            grid-template-columns: 1fr;
+            gap: rem(20);
+        }
+
+        &__vision-crad {
+            padding: rem(36) rem(24);
+        }
+
+        &__axis {
+            display: none;
+        }
+
+        &__vision-title {
+            font-size: rem(24);
+            padding-bottom: rem(18);
+        }
+
+        &__vision-desc {
+            font-size: rem(16);
+            line-height: 1.6;
+        }
     }
 }
 
 
+//480
+@media (max-width: v.$mobile) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//480xp
-
-@media (max-width : v.$mobile) {
-
-    //hero 섹션
     .about-hero {
         height: v.$aboutHeroH-mob;
     }
-
-
-
 
     .hero-title {
         font-size: v.$heroTitle-mob;
@@ -753,22 +791,110 @@
         font-size: rem(18);
     }
 
-    //info 섹션
+
     .about-info {
-
-
-        &__txt {
-
-            gap: rem(14);
-        }
+        padding: v.$sp-m rem(16);
 
         &__title {
-            font-size: v.$introTitle-mob;
-            padding-bottom: rem(25);
+            font-size: rem(22);
+            padding-bottom: rem(22);
         }
 
         &__desc {
-            max-width: rem(880);
+            max-width: rem(520);
+            font-size: rem(16);
+        }
+
+        &__desc-full {
+            display: none;
+        }
+
+        &__desc-short {
+            display: block;
+        }
+    }
+
+
+    .special {
+        padding: v.$sp-m rem(16);
+
+        &__title {
+            font-size: rem(22);
+            padding-bottom: rem(22);
+        }
+
+        &__card-list {
+            gap: rem(22);
+        }
+
+        &__card {
+            padding-inline: rem(10);
+        }
+
+        &__card-title {
+            font-size: rem(20);
+            padding-bottom: rem(8);
+        }
+
+        &__card-desc {
+            font-size: rem(14);
+        }
+    }
+
+
+    .role {
+        padding: v.$sp-m rem(16);
+
+        &__title {
+            font-size: rem(22);
+            padding-bottom: rem(22);
+        }
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap: rem(12);
+        }
+
+        &__card {
+            height: auto;
+            padding: rem(26) rem(20);
+            border-radius: rem(16);
+        }
+
+        &__icon {
+            width: rem(100);
+            height: rem(100);
+            margin-bottom: rem(8);
+        }
+
+        &__card-title {
+            font-size: rem(20);
+        }
+
+        &__card-desc {
+            font-size: rem(16);
+            line-height: 1.6;
+        }
+    }
+
+
+    .vision {
+        padding: v.$sp-m rem(16);
+
+        &__title {
+            font-size: rem(22);
+            padding-bottom: rem(22);
+        }
+
+        &__vision-crad {
+            padding: rem(28) rem(20);
+        }
+
+        &__vision-title {
+            font-size: rem(22);
+        }
+
+        &__vision-desc {
             font-size: rem(16);
         }
     }

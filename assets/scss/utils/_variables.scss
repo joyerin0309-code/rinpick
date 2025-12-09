@@ -28,7 +28,7 @@ $gutterWidth: 20px;
 
 
 //섹션 패딩
-$sp-d: rem(100);
+$sp-d: rem(80);
 $sp-p: rem(80);
 $sp-l: rem(80);
 $sp-t: rem(60);
@@ -131,22 +131,22 @@ $closeTop-mobile: math.div($headerHeight-mobile - $ham-mobile, 2);
 $heroH-des: rem(760);
 $heroH-pc :rem(650);
 $heroH-lap :rem(560);
-$heroH-tab :rem(410);
-$heroH-mob :rem(300);
+$heroH-tab :rem(480);
+$heroH-mob :rem(420);
 
 
 $heroTitle-des : rem(50);
 $heroTitle-pc : rem(46);
 $heroTitle-lap : rem(38);
-$heroTitle-tab : rem(34);
+$heroTitle-tab : rem(32);
 $heroTitle-mob : rem(26);
 
 
 $heroDesc-des : rem(30);
 $heroDesc-pc : rem(28);
 $heroDesc-lap : rem(24);
-$heroDesc-tab : rem(20);
-$heroDesc-mob : rem(18);
+$heroDesc-tab : rem(18);
+$heroDesc-mob : rem(14);
 
 $arrow-des : rem(410);
 $arrow-pc : rem(300);
@@ -193,7 +193,7 @@ $heroDescPad-des: rem(60);
 $heroDescPad-pc: rem(50);
 $heroDescPad-lap: rem(40);
 $heroDescPad-tab: rem(30);
-$heroDescPad-mob: rem(20);
+$heroDescPad-mob: rem(12);
 
 
 //intro

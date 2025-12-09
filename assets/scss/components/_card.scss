@@ -6,41 +6,44 @@
 
 //new 섹션
 
+
 .new-card {
-    height: v.$newCardH-des;
     background-color: v.$whiteColor;
-    border-radius: rem(20);
+    border-radius: rem(20); // -> $newCardRadius 추천
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 
     &__thumb {
         position: relative;
+        height: v.$cardImg-des; // ✅ 썸네일 높이 기준
         overflow: hidden;
+    }
 
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            height: v.$cardImg-des;
-            object-fit: cover;
-            object-position: center;
-            transition: 0.3s all ease;
-        }
+    &__thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: 0.3s all ease;
     }
 
     &:hover &__thumb img {
         transform: scale(1.05);
     }
 
-    // New 캡슐
+    // ✅ 캡슐: "탭처럼 걸쳐진 느낌" 유지
     &__capsule {
         position: absolute;
         top: 0;
         left: rem(20);
         padding: rem(10) rem(20);
-        background-color: #FF7A45;
+        background-color: #FF7A45; // -> $newCapsuleBg 추천
         color: v.$whiteColor;
         border-radius: 0 0 rem(12) rem(12);
-        box-shadow: 0 rem(3) rem(8) rgba(0, 0, 0, 0.18);
+        box-shadow: 0 rem(3) rem(8) rgba(0, 0, 0, 0.18); // -> 변수 추천
         font-size: rem(16);
         font-weight: 500;
         z-index: 2;
@@ -51,15 +54,13 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        padding: rem(20) rem(20);
+        padding: rem(20);
         color: v.$whiteColor;
-
 
         &__title {
             font-size: rem(28);
             font-weight: 700;
         }
-
 
         &__desc {
             font-size: rem(18);
@@ -68,23 +69,18 @@
         }
     }
 
-
     &__meta {
-        height: rem(80);
         padding: rem(20) rem(25);
-
 
         &__place {
             font-size: rem(20);
         }
-
 
         &__date {
             font-size: rem(16);
             color: #616161;
         }
     }
-
 }
 
 
@@ -174,68 +170,43 @@
 
 //1280
 @media (max-width : v.$pc) {
-
     .new-card {
-        height: v.$newCardH-pc;
-
-
         &__thumb {
-
-
-
-            img {
-
-                height: v.$cardImg-pc;
-
-            }
+            height: v.$cardImg-pc;
         }
 
-
-
-        // New 캡슐
         &__capsule {
-            top: rem(18);
             left: rem(18);
-            padding: rem(5) rem(24);
+            padding: rem(8) rem(18);
             font-size: rem(14);
-
         }
 
         &__info {
-            padding: rem(18) rem(18);
-
+            padding: rem(18);
 
             &__title {
                 font-size: rem(24);
-
             }
-
 
             &__desc {
                 font-size: rem(16);
-
-
             }
         }
 
-
         &__meta {
-            height: rem(80);
-            padding: rem(20) rem(18);
-
+            padding: rem(18);
 
             &__place {
                 font-size: rem(18);
             }
 
-
             &__date {
                 font-size: rem(14);
             }
         }
-
     }
 }
+
 
 
 

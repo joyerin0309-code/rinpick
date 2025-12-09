@@ -52,9 +52,10 @@
         line-height: v.$lh-desc;
     }
 
-    // &__right img {
-    //     width: v.$arrow-des;
-    // }
+    &__title-mob,
+    &__desc-mob {
+        display: none;
+    }
 
     &__btn {
         border: 1px solid v.$whiteColor;
@@ -162,8 +163,7 @@
 //new-section
 
 .new {
-    // background: v.$surfaceAltColor;
-    // border-top: 1px solid #e5e5e5;
+
 
     &__top {
         display: flex;
@@ -280,7 +280,7 @@
 }
 
 .pick-top-card .pick-img {
-    border-radius: 0;
+    border-radius: rem(0);
 }
 
 
@@ -289,6 +289,7 @@
 }
 
 .pick-img {
+
     width: v.$pickImgWidth-des;
     object-fit: cover;
     height: 100%;
@@ -591,8 +592,8 @@
     &::before {
         content: "";
         position: absolute;
-        inset: 0; // top:0; right:0; bottom:0; left:0;
-        background: rgba(0, 0, 0, 0.2); // 여기만 직접 색 써준 거야
+        inset: 0;
+        background: rgba(0, 0, 0, 0.2);
         z-index: 0;
     }
 }
@@ -605,7 +606,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative; // 🔹이거 추가
+    position: relative;
     z-index: 1;
 }
 
@@ -637,19 +638,6 @@
     color: v.$whiteColor;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1501,7 +1489,6 @@
     .hero {
         height: v.$heroH-mob;
 
-
         &__title {
             font-size: v.$heroTitle-mob;
             padding-bottom: v.$heroTxtPad-mob;
@@ -1514,6 +1501,44 @@
             padding-bottom: v.$heroDescPad-mob;
 
 
+        }
+
+        &__wrap {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__lift {
+            width: 100%;
+            max-width: rem(320);
+            padding: rem(12) rem(10);
+        }
+
+        &__title,
+        &__desc {
+            text-align: center;
+        }
+
+        &__btn {
+            margin: 0 auto;
+            display: inline-flex;
+        }
+
+        &__scroll {
+            display: none;
+        }
+
+
+
+        &__title-pc,
+        &__desc-pc {
+            display: none;
+        }
+
+        &__title-mob,
+        &__desc-mob {
+            display: inline;
         }
 
 
@@ -1774,12 +1799,6 @@
 
     //partner 섹션
 
-    // .partner {
-
-    //     background-image: url("../img/partner-img-mob.png");
-    //     background-position: center top;
-    //     background-attachment: scroll;
-    // }
 
     .partner-wrap {
         padding: v.$sp-m rem(20);

@@ -602,8 +602,8 @@ body {
 }
 @media (max-width: 480px) {
   .btn {
-    height: 1.625rem;
-    padding: 0 1.5rem;
+    height: 1.875rem;
+    padding: 0 1.625rem;
     font-size: 0.75rem;
   }
 }
@@ -633,13 +633,13 @@ body {
 .new-card__capsule {
   position: absolute;
   top: 0;
-  left: 1.25rem;
-  padding: 0.625rem 1.25rem;
+  left: 1.125rem;
+  padding: 0.5rem 1rem;
   background-color: #FF7A45;
   color: #fff;
   border-radius: 0 0 0.75rem 0.75rem;
   box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.18);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   z-index: 2;
 }
@@ -648,26 +648,26 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 1.25rem;
+  padding: 1.125rem;
   color: #fff;
 }
 .new-card__info__title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .new-card__info__desc {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
   font-weight: 400;
 }
 .new-card__meta {
-  padding: 1.25rem 1.5625rem;
+  padding: 1.125rem 1.375rem;
 }
 .new-card__meta__place {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .new-card__meta__date {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #616161;
 }
 
@@ -891,6 +891,16 @@ body {
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
+  .new__top {
+    align-items: center;
+  }
+  .new__sub-title {
+    padding-bottom: 0.5rem;
+  }
+  .new__more {
+    font-size: 1rem;
+    bottom: -2rem;
+  }
   .new-card {
     height: 15rem;
     border-radius: 0.625rem;
@@ -900,12 +910,12 @@ body {
   }
   .new-card__capsule {
     font-size: 0.5rem;
-    top: 0.625rem;
-    left: 0.625rem;
-    padding: 0.1875rem 0.9375rem;
+    top: 0;
+    left: 0.75rem;
+    padding: 0.375rem 0.75rem;
   }
   .new-card__info {
-    padding: 0.625rem 0.625rem;
+    padding: 0.75rem;
   }
   .new-card__info__title {
     font-size: 1.125rem;
@@ -914,13 +924,13 @@ body {
     font-size: 0.75rem;
   }
   .new-card__meta {
-    padding: 0.5rem 0.625rem;
+    padding: 0.625rem 0.75rem;
   }
   .new-card__meta__place {
     font-size: 0.75rem;
   }
   .new-card__meta__date {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
   }
   .mySwiper .swiper-pagination-bullet {
     width: 0.375rem;
@@ -982,20 +992,26 @@ body {
 .hero__title {
   font-size: 3.125rem;
   color: #fff;
-  padding-bottom: 1.5625rem;
+  padding-bottom: 1.5rem;
 }
 .hero__desc {
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
   font-size: 1.875rem;
   color: #fff;
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
   line-height: 1.5;
 }
 .hero__title-mob, .hero__desc-mob {
   display: none;
 }
 .hero__btn {
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: saturate(140%) blur(2px);
+  backdrop-filter: saturate(140%) blur(2px);
+}
+.hero__btn:hover {
+  border-color: rgba(255, 255, 255, 0.24);
 }
 .hero__scroll {
   position: absolute;
@@ -1043,19 +1059,22 @@ body {
   font-size: 2.75rem;
   font-weight: 700;
   color: #2463E0;
-  padding-bottom: 1.5625rem;
+  padding-bottom: 1.25rem;
 }
 .intro__sub-title {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.875rem;
 }
 .intro__desc {
   font-family: "Pretendard", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
+}
+.intro__desc-mob {
+  display: none;
 }
 .intro__btn {
   background-color: #000;
@@ -1155,7 +1174,7 @@ body {
 .pick-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .pick-top-card {
@@ -1175,7 +1194,7 @@ body {
 }
 
 .pick-img {
-  width: 42.1875rem;
+  width: 38.75rem;
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -1451,7 +1470,7 @@ body {
 .partner-title {
   font-size: 2.875rem;
   font-weight: 700;
-  margin-bottom: 3.75rem;
+  margin-bottom: 2.5rem;
 }
 
 .partner-btn {
@@ -1474,17 +1493,17 @@ body {
   }
   .hero__desc {
     font-size: 1.75rem;
-    padding-bottom: 3.125rem;
+    padding-bottom: 2.25rem;
   }
   .hero__right img {
     width: 18.75rem;
   }
   .intro__txt {
-    padding: 5rem 0;
+    padding: 4.5rem 0;
   }
   .intro__title {
-    font-size: 2.375rem;
-    padding-bottom: 1.25rem;
+    font-size: 2.5rem;
+    padding-bottom: 0.875rem;
   }
   .intro__sub-title {
     font-size: 1.375rem;
@@ -1492,7 +1511,7 @@ body {
   }
   .intro__desc {
     font-size: 1.125rem;
-    padding-bottom: 3.125rem;
+    padding-bottom: 2.25rem;
   }
   .new__title {
     font-size: 1.75rem;
@@ -1512,10 +1531,10 @@ body {
   }
   .new-wrap {
     gap: 3.125rem;
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .pick__wrap {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .pick__wrap__title {
     font-size: 1.75rem;
@@ -1528,7 +1547,7 @@ body {
     padding-bottom: 3.125rem;
   }
   .pick-list {
-    gap: 1.875rem;
+    gap: 1.625rem;
   }
   .pick-top-card {
     height: 23.125rem;
@@ -1536,7 +1555,7 @@ body {
     overflow: hidden;
   }
   .pick-img {
-    width: 36.25rem;
+    width: 33.75rem;
   }
   .pick-card-title {
     font-size: 1.75rem;
@@ -1552,7 +1571,7 @@ body {
     overflow: hidden;
   }
   .run-style__wraps {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .run-style__txt__title {
     font-size: 1.75rem;
@@ -1598,11 +1617,11 @@ body {
     bottom: -2.8125rem;
   }
   .news-wrap {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
     gap: 3.125rem;
   }
   .partner-wrap {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .partner-icon {
     width: 3.75rem;
@@ -1613,7 +1632,7 @@ body {
   }
   .partner-title {
     font-size: 2.5rem;
-    margin-bottom: 3.125rem;
+    margin-bottom: 2.25rem;
   }
 }
 @media (max-width: 1024px) {
@@ -1622,21 +1641,21 @@ body {
   }
   .hero__title {
     font-size: 2.375rem;
-    padding-bottom: 0.9375rem;
+    padding-bottom: 1.125rem;
   }
   .hero__desc {
     font-size: 1.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
   .hero__right img {
     width: 15.625rem;
   }
   .intro__txt {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
   .intro__title {
-    font-size: 2rem;
-    padding-bottom: 0.9375rem;
+    font-size: 2.125rem;
+    padding-bottom: 1rem;
   }
   .intro__sub-title {
     font-size: 1.25rem;
@@ -1644,7 +1663,7 @@ body {
   }
   .intro__desc {
     font-size: 1rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
   .new__title {
     font-size: 1.625rem;
@@ -1661,10 +1680,10 @@ body {
   }
   .new-wrap {
     gap: 2.5rem;
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .pick__wrap {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .pick__wrap__title {
     font-size: 1.625rem;
@@ -1677,14 +1696,14 @@ body {
     padding-bottom: 2.5rem;
   }
   .pick-list {
-    gap: 1.5625rem;
+    gap: 1.375rem;
   }
   .pick-top-card {
     height: 20rem;
     gap: 2.5rem;
   }
   .pick-img {
-    width: 30rem;
+    width: 28.75rem;
   }
   .pick-card-title {
     font-size: 1.5rem;
@@ -1699,7 +1718,7 @@ body {
     height: 20rem;
   }
   .run-style__wraps {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .run-style__txt__title {
     font-size: 1.625rem;
@@ -1754,11 +1773,11 @@ body {
     bottom: -2.1875rem;
   }
   .news-wrap {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
     gap: 2.5rem;
   }
   .partner-wrap {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .partner-icon {
     width: 3.125rem;
@@ -1769,7 +1788,7 @@ body {
   }
   .partner-title {
     font-size: 1.875rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -1778,29 +1797,29 @@ body {
   }
   .hero__title {
     font-size: 2rem;
-    padding-bottom: 0.625rem;
+    padding-bottom: 0.875rem;
   }
   .hero__desc {
     font-size: 1.125rem;
-    padding-bottom: 1.875rem;
+    padding-bottom: 1.5rem;
   }
   .hero__right img {
     width: 12.5rem;
   }
   .intro__txt {
-    padding: 3.75rem 0;
+    padding: 3.5rem 0;
   }
   .intro__title {
-    font-size: 1.75rem;
-    padding-bottom: 0.625rem;
+    font-size: 1.875rem;
+    padding-bottom: 0.75rem;
   }
   .intro__sub-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     padding-bottom: 0.625rem;
   }
   .intro__desc {
     font-size: 0.875rem;
-    padding-bottom: 1.875rem;
+    padding-bottom: 1.5rem;
   }
   .new__title {
     font-size: 1.5rem;
@@ -1817,10 +1836,10 @@ body {
   }
   .new-wrap {
     gap: 1.875rem;
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .pick__wrap {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .pick__wrap__title {
     font-size: 1.5rem;
@@ -1833,29 +1852,66 @@ body {
     padding-bottom: 1.875rem;
   }
   .pick-list {
-    gap: 0.9375rem;
+    gap: 0.875rem;
   }
-  .pick-top-card {
-    height: 16.25rem;
-    gap: 2.5rem;
+  .pick-top-card,
+  .pick-bottom-card {
+    position: relative;
+    height: 15rem;
+    gap: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: block;
+  }
+  .pick-top-card::after,
+  .pick-bottom-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
   }
   .pick-img {
-    width: 22.25rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pick-top-txt,
+  .pick-bottom-txt {
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+    z-index: 2;
   }
   .pick-card-title {
     font-size: 1.25rem;
-    padding-bottom: 1.5625rem;
+    color: #fff;
+    padding-bottom: 0.375rem;
   }
   .pick-card-desc {
-    font-size: 1rem;
-    padding-bottom: 1.875rem;
+    font-size: 0.875rem;
+    color: #fff;
+    padding-bottom: 2.25rem;
   }
-  .pick-bottom-card {
-    gap: 2.5rem;
-    height: 16.25rem;
+  .pick-btn {
+    background: #fff;
+    color: #000;
+    align-self: flex-end;
+    font-weight: 500;
+    margin-top: auto;
+    z-index: 2;
+  }
+  .pick-btn:hover {
+    color: #fff;
   }
   .run-style__wraps {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .run-style__txt__title {
     font-size: 1.5rem;
@@ -1904,14 +1960,14 @@ body {
     bottom: -1.25rem;
   }
   .news-wrap {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
     gap: 1.875rem;
   }
   .partner {
     background-position: center top;
   }
   .partner-wrap {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .partner-icon {
     width: 2.5rem;
@@ -1922,7 +1978,7 @@ body {
   }
   .partner-title {
     font-size: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media (max-width: 480px) {
@@ -1935,7 +1991,7 @@ body {
   }
   .hero__desc {
     font-size: 0.875rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1.25rem;
   }
   .hero__wrap {
     justify-content: center;
@@ -1967,19 +2023,25 @@ body {
     width: 6.25rem;
   }
   .intro__txt {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
   }
   .intro__title {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     padding-bottom: 0.625rem;
   }
   .intro__sub-title {
-    font-size: 1rem;
-    padding-bottom: 0.375rem;
+    font-size: 1.125rem;
+    padding-bottom: 0.5rem;
   }
   .intro__desc {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     padding-bottom: 1.25rem;
+  }
+  .intro__desc-pc {
+    display: none;
+  }
+  .intro__desc-mob {
+    display: block;
   }
   .new__title {
     font-size: 1.25rem;
@@ -1988,7 +2050,7 @@ body {
   }
   .new__sub-title {
     font-family: "Pretendard", system-ui, -apple-system, sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
   }
   .new__more {
@@ -1997,13 +2059,13 @@ body {
   }
   .new-wrap {
     gap: 1.25rem;
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .mySwiper {
     padding-bottom: 2.5rem;
   }
   .pick__wrap {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .pick__wrap__title {
     font-size: 1.25rem;
@@ -2012,90 +2074,169 @@ body {
   }
   .pick__wrap__sub-title {
     font-family: "Pretendard", system-ui, -apple-system, sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     padding-bottom: 1.25rem;
   }
   .pick-list {
-    gap: 1.25rem;
+    gap: 1.125rem;
   }
   .pick-top-card,
   .pick-bottom-card {
     position: relative;
-    height: 12.5rem;
-    gap: 2.5rem;
-    border-radius: 0.9375rem;
-    overflow: hidden;
-    display: block;
+    height: 11.875rem;
+    gap: 0;
+    border-radius: 0.875rem;
   }
   .pick-top-txt,
   .pick-bottom-txt {
-    position: absolute;
-    inset: 0;
-    padding: 1.125rem 1.25rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .pick-img {
-    width: 27.5rem;
-    width: 100%;
-    height: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
   }
   .pick-card-title {
-    color: #fff;
-    padding-bottom: 0.3125rem;
     font-size: 1.125rem;
+    padding-bottom: 0;
   }
   .pick-card-desc {
     font-size: 0.75rem;
+    font-family: "Pretendard", system-ui, -apple-system, sans-serif;
     color: #fff;
-    padding-bottom: 3.125rem;
-  }
-  .pick-btn {
-    font-weight: 500;
-    align-self: flex-end;
-    margin-top: auto;
-    background: #2463E0;
-    color: #fff;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
   }
   .run-style__wraps {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .run-style__txt__title {
     font-size: 1.25rem;
     font-weight: 700;
     padding-bottom: 0;
-    padding-bottom: 0.3125rem;
+    text-align: left;
   }
   .run-style__txt__sub-title {
-    font-size: 0.875rem;
+    font-size: 1rem;
     padding-bottom: 1.25rem;
-  }
-  .overlay-title {
-    font-size: 0.875rem;
-  }
-  .overlay-sub-title {
-    font-size: 0.625rem;
-    margin: 0.125rem 0;
-  }
-  .hover-txt {
-    max-width: 9.375rem;
-  }
-  .hover-title {
-    font-size: 0.875rem;
-    margin-bottom: 0.625rem;
-  }
-  .hover-desc {
-    font-size: 0.625rem;
+    text-align: left;
   }
   .run-style-list {
-    gap: 0.625rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
   }
   .run-style-card {
-    height: 12.5rem;
+    position: relative;
+    height: 13.75rem;
+    max-height: 13.75rem;
+    flex: 0 0 auto;
+    border-radius: 1.125rem;
+    overflow: hidden;
+  }
+  .run-style-card:active {
+    transform: scale(0.99);
+  }
+  .run-style-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .run-style-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.625rem;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 0.25rem;
+    border-radius: 62.4375rem;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 3;
+    opacity: 0.9;
+    animation: hint-pulse 1.6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .run-style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .run-style-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.125rem 1.125rem 1.375rem;
+    color: #fff;
+    z-index: 2;
+    opacity: 1;
+  }
+  .overlay-txt {
+    text-align: center;
+  }
+  .overlay-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .overlay-sub-title {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    line-height: 1.35;
+    opacity: 0.95;
+  }
+  .run-style-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.68);
+    opacity: 0;
+    z-index: 4;
+    transition: opacity 0.25s ease;
+  }
+  .hover-txt {
+    max-width: 16.25rem;
+    padding: 0.875rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(3.125rem);
+    transition: opacity 0.4s ease 0.08s, transform 0.4s ease 0.08s;
+  }
+  .hover-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  .hover-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0.95;
+  }
+  .run-style-list:hover .run-style-card,
+  .run-style-list:hover .run-style-card:hover {
+    flex: 0 0 auto;
+  }
+  .run-style-card.is-open {
+    height: 13.75rem;
+    max-height: 13.75rem;
+  }
+  @keyframes hint-pulse {
+    0%, 100% {
+      opacity: 0.55;
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(-50%) scale(1.08);
+    }
   }
   .news__title {
     font-size: 1.25rem;
@@ -2104,7 +2245,7 @@ body {
   }
   .news__sub-title {
     font-family: "Pretendard", system-ui, -apple-system, sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
   }
   .news__more {
@@ -2112,7 +2253,7 @@ body {
     bottom: -0.9375rem;
   }
   .news-wrap {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
     gap: 1.25rem;
   }
   .newsSwiper .arrow {
@@ -2120,7 +2261,7 @@ body {
     height: 1.5rem;
   }
   .partner-wrap {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .partner-icon {
     width: 2.1875rem;
@@ -2131,7 +2272,7 @@ body {
   }
   .partner-title {
     font-size: 1rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 .about-hero {
@@ -2303,7 +2444,7 @@ body {
 .special__card-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 .special__card {
   width: 100%;
@@ -2538,7 +2679,7 @@ body {
     font-size: 1.625rem;
   }
   .about-info {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .about-info__title {
     font-size: 2rem;
@@ -2549,7 +2690,7 @@ body {
     font-size: 1.25rem;
   }
   .special {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .special__title {
     font-size: 1.75rem;
@@ -2557,7 +2698,7 @@ body {
     padding-bottom: 3.125rem;
   }
   .special__card-list {
-    gap: 1.875rem;
+    gap: 1.625rem;
   }
   .special__card {
     gap: 2.5rem;
@@ -2574,7 +2715,7 @@ body {
     font-size: 1.25rem;
   }
   .role {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .role__title {
     font-size: 1.75rem;
@@ -2600,7 +2741,7 @@ body {
     font-size: 1.125rem;
   }
   .vision {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .vision__title {
     font-size: 1.75rem;
@@ -2637,7 +2778,7 @@ body {
     font-size: 1.375rem;
   }
   .about-info {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .about-info__title {
     font-size: 1.75rem;
@@ -2648,7 +2789,7 @@ body {
     font-size: 1.125rem;
   }
   .special {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .special__title {
     font-size: 1.625rem;
@@ -2656,7 +2797,7 @@ body {
     padding-bottom: 2.5rem;
   }
   .special__card-list {
-    gap: 1.5625rem;
+    gap: 1.375rem;
   }
   .special__card {
     gap: 1.875rem;
@@ -2673,7 +2814,7 @@ body {
     font-size: 1.125rem;
   }
   .role {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .role__title {
     font-size: 1.625rem;
@@ -2699,7 +2840,7 @@ body {
     font-size: 1.125rem;
   }
   .vision {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .vision__title {
     font-size: 1.625rem;
@@ -2736,7 +2877,7 @@ body {
     font-size: 1.25rem;
   }
   .about-info {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .about-info__wrap {
     flex-direction: column;
@@ -2760,7 +2901,7 @@ body {
     display: block;
   }
   .special {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .special__title {
     font-size: 1.5rem;
@@ -2768,7 +2909,7 @@ body {
     padding-bottom: 1.875rem;
   }
   .special__card-list {
-    gap: 0.9375rem;
+    gap: 0.875rem;
   }
   .special__card {
     flex-direction: column;
@@ -2805,7 +2946,7 @@ body {
     margin: 0 auto;
   }
   .role {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .role__title {
     font-size: 1.5rem;
@@ -2833,7 +2974,7 @@ body {
     font-size: 1rem;
   }
   .vision {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .vision__title {
     font-size: 1.5rem;
@@ -2871,7 +3012,7 @@ body {
     font-size: 1.125rem;
   }
   .about-info {
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
   }
   .about-info__title {
     font-size: 1.375rem;
@@ -2888,7 +3029,7 @@ body {
     display: block;
   }
   .special {
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
   }
   .special__title {
     font-size: 1.375rem;
@@ -2908,7 +3049,7 @@ body {
     font-size: 0.875rem;
   }
   .role {
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
   }
   .role__title {
     font-size: 1.375rem;
@@ -2936,7 +3077,7 @@ body {
     line-height: 1.6;
   }
   .vision {
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
   }
   .vision__title {
     font-size: 1.375rem;
@@ -3415,7 +3556,7 @@ body {
 
 @media (max-width: 1280px) {
   .contact-sec {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .contact-form__row {
     gap: 1.125rem;
@@ -3464,7 +3605,7 @@ body {
 }
 @media (max-width: 1024px) {
   .contact-sec {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .contact-form__row {
     gap: 1rem;
@@ -3517,7 +3658,7 @@ body {
 }
 @media (max-width: 768px) {
   .contact-sec {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .contact-form__row {
     flex-direction: column;
@@ -3577,7 +3718,7 @@ body {
 }
 @media (max-width: 480px) {
   .contact-sec {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .contact-form__row {
     gap: 1rem;
@@ -3721,7 +3862,7 @@ body {
 
 @media (max-width: 1280px) {
   .news-page {
-    padding: 5rem 1.25rem;
+    padding: 4.5rem 1.25rem;
   }
   .news-page .news-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3739,7 +3880,7 @@ body {
 }
 @media (max-width: 1024px) {
   .news-page {
-    padding: 5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
   .news-page .news-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3757,7 +3898,7 @@ body {
 }
 @media (max-width: 768px) {
   .news-page {
-    padding: 3.75rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .news-page .news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3776,7 +3917,7 @@ body {
 }
 @media (max-width: 480px) {
   .news-page {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
   .news-page .news-grid {
     grid-template-columns: 1fr;

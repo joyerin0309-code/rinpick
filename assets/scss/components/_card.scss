@@ -9,7 +9,7 @@
 
 .new-card {
     background-color: v.$whiteColor;
-    border-radius: rem(20); // -> $newCardRadius 추천
+    border-radius: rem(20);
     overflow: hidden;
 
     display: flex;
@@ -17,7 +17,7 @@
 
     &__thumb {
         position: relative;
-        height: v.$cardImg-des; // ✅ 썸네일 높이 기준
+        height: v.$cardImg-des;
         overflow: hidden;
     }
 
@@ -34,17 +34,17 @@
         transform: scale(1.05);
     }
 
-    // ✅ 캡슐: "탭처럼 걸쳐진 느낌" 유지
+
     &__capsule {
         position: absolute;
         top: 0;
-        left: rem(20);
-        padding: rem(10) rem(20);
-        background-color: #FF7A45; // -> $newCapsuleBg 추천
+        left: rem(18);
+        padding: rem(8) rem(16);
+        background-color: #FF7A45;
         color: v.$whiteColor;
         border-radius: 0 0 rem(12) rem(12);
-        box-shadow: 0 rem(3) rem(8) rgba(0, 0, 0, 0.18); // -> 변수 추천
-        font-size: rem(16);
+        box-shadow: 0 rem(3) rem(8) rgba(0, 0, 0, 0.18);
+        font-size: rem(14);
         font-weight: 500;
         z-index: 2;
     }
@@ -54,30 +54,30 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        padding: rem(20);
+        padding: rem(18);
         color: v.$whiteColor;
 
         &__title {
-            font-size: rem(28);
+            font-size: rem(24);
             font-weight: 700;
         }
 
         &__desc {
-            font-size: rem(18);
+            font-size: rem(16);
             font-family: v.$font-desc;
             font-weight: 400;
         }
     }
 
     &__meta {
-        padding: rem(20) rem(25);
+        padding: rem(18) rem(22);
 
         &__place {
-            font-size: rem(20);
+            font-size: rem(18);
         }
 
         &__date {
-            font-size: rem(16);
+            font-size: rem(14);
             color: #616161;
         }
     }
@@ -512,6 +512,23 @@
     //480
     @media (max-width : v.$mobile) {
 
+
+        .new {
+            &__top {
+                align-items: center;
+            }
+
+            &__sub-title {
+
+                padding-bottom: rem(8);
+            }
+
+            &__more {
+                font-size: rem(16); // ✅ 18 → 16로 가볍게
+                bottom: rem(-32); // ✅ -45/-35/-20 이런 값이면 약간 과함
+            }
+        }
+
         .new-card {
             height: v.$newCardH-mob;
             border-radius: rem(10);
@@ -532,13 +549,13 @@
             // New 캡슐
             &__capsule {
                 font-size: rem(8);
-                top: rem(10);
-                left: rem(10);
-                padding: rem(3) rem(15);
+                top: 0;
+                left: rem(12);
+                padding: rem(6) rem(12);
             }
 
             &__info {
-                padding: rem(10) rem(10);
+                padding: rem(12);
 
 
                 &__title {
@@ -555,8 +572,8 @@
 
 
             &__meta {
-                // height: rem(40);
-                padding: rem(8) rem(10);
+
+                padding: rem(10) rem(12);
 
 
                 &__place {
@@ -565,7 +582,7 @@
 
 
                 &__date {
-                    font-size: rem(8);
+                    font-size: rem(10);
                 }
             }
 

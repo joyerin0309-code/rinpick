@@ -58,8 +58,16 @@
     }
 
     &__btn {
-        border: 1px solid v.$whiteColor;
+        border: 1px solid rgba(255, 255, 255, .22);
+        background-color: rgba(255, 255, 255, .10);
+        -webkit-backdrop-filter: saturate(140%) blur(2px);
+        backdrop-filter: saturate(140%) blur(2px);
+
+        &:hover {
+            border-color: rgba(255, 255, 255, .24);
+        }
     }
+
 
     &__scroll {
         position: absolute;
@@ -119,21 +127,25 @@
         font-size: v.$introTitle-des;
         font-weight: 700;
         color: v.$primaryColor;
-        padding-bottom: rem(25);
+        padding-bottom: rem(20);
     }
 
     &__sub-title {
-        font-size: rem(26);
+        font-size: rem(24);
         font-weight: 500;
-        padding-bottom: rem(20);
+        padding-bottom: rem(14);
     }
 
     &__desc {
         @include m.desc-font;
-        font-size: rem(20);
+        font-size: rem(18);
         font-weight: 400;
-        padding-bottom: rem(60);
+        padding-bottom: rem(40);
 
+    }
+
+    &__desc-mob {
+        display: none;
     }
 
 
@@ -623,7 +635,7 @@
 .partner-title {
     font-size: v.$partnerTitle-des;
     font-weight: 700;
-    margin-bottom: rem(60);
+    margin-bottom: rem(40);
 }
 
 
@@ -685,7 +697,7 @@
 
         &__title {
             font-size: v.$introTitle-pc;
-            padding-bottom: rem(20);
+            padding-bottom: rem(14);
 
         }
 
@@ -697,7 +709,7 @@
 
         &__desc {
             font-size: rem(18);
-            padding-bottom: rem(50);
+            padding-bottom: rem(36);
 
 
         }
@@ -903,7 +915,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-pc;
-        margin-bottom: rem(50);
+        margin-bottom: rem(36);
     }
 
 
@@ -963,7 +975,7 @@
 
         &__title {
             font-size: v.$introTitle-lap;
-            padding-bottom: rem(15);
+            padding-bottom: rem(16);
 
         }
 
@@ -975,7 +987,7 @@
 
         &__desc {
             font-size: rem(16);
-            padding-bottom: rem(40);
+            padding-bottom: rem(32);
 
 
         }
@@ -1186,7 +1198,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-lap;
-        margin-bottom: rem(40);
+        margin-bottom: rem(32);
     }
 
 }
@@ -1243,19 +1255,19 @@
 
         &__title {
             font-size: v.$introTitle-tab;
-            padding-bottom: rem(10);
+            padding-bottom: rem(12);
 
         }
 
         &__sub-title {
-            font-size: rem(20);
+            font-size: rem(18);
             padding-bottom: rem(10);
 
         }
 
         &__desc {
             font-size: rem(14);
-            padding-bottom: rem(30);
+            padding-bottom: rem(24);
 
 
         }
@@ -1292,22 +1304,17 @@
 
 
 
-    //pick section
     .pick {
-
         &__wrap {
             padding: v.$sp-t rem(20);
-
 
             &__title {
                 @include m.title-tab;
             }
 
-
             &__sub-title {
                 @include m.subTitle-tab;
                 padding-bottom: v.$secGap-tab;
-
             }
         }
     }
@@ -1316,35 +1323,72 @@
         gap: v.$cardGap-tab;
     }
 
-    .pick-top-card {
-        height: rem(260);
-        gap: rem(40);
+    .pick-top-card,
+    .pick-bottom-card {
+        position: relative;
+        height: rem(240);
+        gap: 0;
+        border-radius: rem(16);
+        overflow: hidden;
+        display: block;
 
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.55) 0%,
+                    rgba(0, 0, 0, 0.35) 35%,
+                    rgba(0, 0, 0, 0.0) 70%);
+            z-index: 1;
+        }
     }
 
     .pick-img {
-        width: v.$pickImgWidth-tab;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
+    .pick-top-txt,
+    .pick-bottom-txt {
+        position: absolute;
+        inset: 0;
+        padding: rem(20);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: rem(12);
+        text-align: left;
+        z-index: 2;
+    }
 
     .pick-card-title {
         font-size: rem(20);
-        padding-bottom: rem(25);
+        color: v.$whiteColor;
+        padding-bottom: rem(6);
+
     }
 
     .pick-card-desc {
-
-        font-size: rem(16);
-        padding-bottom: rem(30);
+        font-size: rem(14);
+        color: v.$whiteColor;
+        padding-bottom: rem(36);
     }
 
-
-
-    .pick-bottom-card {
-        gap: rem(40);
-        height: rem(260);
+    .pick-btn {
+        background: v.$whiteColor;
+        color: v.$blackColor;
+        align-self: flex-end;
+        font-weight: 500;
+        margin-top: auto;
+        z-index: 2;
     }
 
+    .pick-btn:hover {
+        color: v.$whiteColor;
+    }
 
 
 
@@ -1459,7 +1503,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-tab;
-        margin-bottom: rem(40);
+        margin-bottom: rem(24);
     }
 
 }
@@ -1564,16 +1608,24 @@
         }
 
         &__sub-title {
-            font-size: rem(16);
-            padding-bottom: rem(6);
+            font-size: rem(18);
+            padding-bottom: rem(8);
 
         }
 
         &__desc {
-            font-size: rem(12);
+            font-size: rem(14);
             padding-bottom: rem(20);
 
 
+        }
+
+        &__desc-pc {
+            display: none;
+        }
+
+        &__desc-mob {
+            display: block;
         }
 
     }
@@ -1615,85 +1667,58 @@
 
     //pick section
     .pick {
-
         &__wrap {
             padding: v.$sp-m rem(20);
-
 
             &__title {
                 @include m.title-mob;
             }
 
-
             &__sub-title {
                 @include m.subTitle-mob;
                 padding-bottom: v.$secGap-mob;
-                ;
             }
         }
     }
 
     .pick-list {
-        gap: v.$cardGap-mob ;
+        gap: v.$cardGap-mob;
     }
-
 
     .pick-top-card,
     .pick-bottom-card {
         position: relative;
-        height: rem(200);
-        gap: rem(40);
-        border-radius: rem(15);
-        overflow: hidden;
-        display: block;
+        height: rem(190);
+        gap: 0;
+        border-radius: rem(14);
+
     }
 
 
     .pick-top-txt,
     .pick-bottom-txt {
-        position: absolute;
-        inset: 0;
-        padding: rem(18) rem(20) rem(20);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        text-align: left;
+        padding: rem(16);
+        gap: rem(8);
+
     }
-
-
-
-
-
-    .pick-img {
-        width: v.$pickImgWidth-mob;
-        width: 100%;
-        height: 100%;
-    }
-
 
     .pick-card-title {
-        color: v.$whiteColor;
-        padding-bottom: rem(5);
         font-size: rem(18);
-
+        padding-bottom: 0;
     }
 
     .pick-card-desc {
-
         font-size: rem(12);
+        font-family: v.$font-desc;
         color: v.$whiteColor;
-        padding-bottom: rem(50);
+        line-height: v.$lh-desc;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+
     }
 
 
-    .pick-btn {
-        font-weight: 500;
-        align-self: flex-end;
-        margin-top: auto;
-        background: v.$primaryColor;
-        color: v.$whiteColor;
-    }
+
 
 
 
@@ -1715,49 +1740,172 @@
 
             &__title {
                 @include m.title-mob;
-                padding-bottom: rem(5);
+                // 왼쪽 정렬
+                text-align: left;
             }
 
             &__sub-title {
                 font-size: v.$subTitle-mob;
                 padding-bottom: v.$secGap-mob;
+                // 왼쪽 정렬
+                text-align: left;
             }
         }
     }
 
+    // ✅ 1열 세로 카드
+    .run-style-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(14);
+    }
+
+    // ✅ 카드 높이 고정 + 클릭해도 안 늘어나게 락
+    .run-style-card {
+        position: relative;
+        height: rem(220);
+        max-height: rem(220);
+        flex: 0 0 auto; // ✅ flex로 늘어나는 거 방지
+        border-radius: rem(18);
+        overflow: hidden;
+
+        &:active {
+            transform: scale(0.99);
+        }
+
+        // ✅ 하단 가독성용 소프트 그라데이션
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.0) 0%,
+                    rgba(0, 0, 0, 0.25) 45%,
+                    rgba(0, 0, 0, 0.55) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        // ✅ “눌러보세요” 텍스트 없이 선 힌트
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: rem(10);
+            transform: translateX(-50%);
+            width: rem(48);
+            height: rem(4);
+            border-radius: rem(999);
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 3;
+            opacity: 0.9;
+            animation: hint-pulse 1.6s ease-in-out infinite;
+            pointer-events: none;
+        }
+    }
+
+    // ✅ 이미지는 꽉 채우기
+    .run-style-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // ✅ 기본 텍스트(하단 노출)
+    .run-style-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: rem(18) rem(18) rem(22);
+        color: v.$whiteColor;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .overlay-txt {
+        text-align: center;
+    }
 
     .overlay-title {
-        font-size: rem(14);
+        font-size: rem(20);
+        font-weight: 700;
+        line-height: 1.2;
     }
 
     .overlay-sub-title {
-        font-size: rem(10);
-        margin: rem(2) 0;
+        font-size: rem(14);
+        margin-top: rem(4);
+        line-height: 1.35;
+        opacity: 0.95;
     }
 
+    // ✅ “텍스트 올라오는” 기존 효과 구조 유지(hover 텍스트)
+    .run-style-hover {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.68);
+        opacity: 0;
+        z-index: 4;
+        transition: opacity 0.25s ease;
+    }
 
     .hover-txt {
-        max-width: rem(150);
+        max-width: rem(260);
+        padding: rem(14);
+        text-align: center;
+        opacity: 0;
+        transform: translateY(rem(50)); // ✅ 데스크톱과 동일한 “올라오는 시작점”
+        transition:
+            opacity 0.4s ease 0.08s,
+            transform 0.4s ease 0.08s;
     }
 
-
     .hover-title {
-        font-size: rem(14);
-        margin-bottom: rem(10);
+        font-size: rem(18);
+        font-weight: 700;
+        margin-bottom: rem(8);
+        color: v.$whiteColor;
     }
 
     .hover-desc {
-        font-size: rem(10);
+        font-size: rem(12);
+        line-height: 1.5;
+        color: v.$whiteColor;
+        opacity: 0.95;
     }
 
-    .run-style-list {
-        gap: rem(10);
+    // ✅ 모바일에서 “탭하면 hover처럼 고정되는 문제” 원천 차단
+    .run-style-list:hover .run-style-card,
+    .run-style-list:hover .run-style-card:hover {
+        flex: 0 0 auto;
     }
 
-    .run-style-card {
-        height: v.$styleCardH-mob;
+    // ✅ 혹시 is-open 같은 클래스가 붙어도 높이 절대 변하지 않게 락
+    .run-style-card.is-open {
+        height: rem(220);
+        max-height: rem(220);
     }
 
+    // ✅ 힌트 애니메이션
+    @keyframes hint-pulse {
+
+        0%,
+        100% {
+            opacity: .55;
+            transform: translateX(-50%) scale(1);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.08);
+        }
+    }
 
 
 
@@ -1816,7 +1964,7 @@
 
     .partner-title {
         font-size: v.$partnerTitle-mob;
-        margin-bottom: rem(30);
+        margin-bottom: rem(20);
     }
 
 

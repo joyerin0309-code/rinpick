@@ -29,10 +29,10 @@ $gutterWidth: 20px;
 
 //섹션 패딩
 $sp-d: rem(80);
-$sp-p: rem(80);
-$sp-l: rem(80);
-$sp-t: rem(60);
-$sp-m: rem(40);
+$sp-p: rem(72);
+$sp-l: rem(64);
+$sp-t: rem(56);
+$sp-m: rem(48);
 
 
 //타이틀-바디 사이 간격
@@ -59,7 +59,7 @@ $subTitle-des : rem(24);
 $subTitle-pc : rem(22);
 $subTitle-lap : rem(20);
 $subTitle-tab : rem(18);
-$subTitle-mob : rem(14);
+$subTitle-mob : rem(16);
 
 
 
@@ -175,33 +175,33 @@ $btnH-tab: rem(36);
 $btnPadX-tab: rem(34);
 $btnFont-tab: rem(12);
 
-$btnH-mob: rem(26);
-$btnPadX-mob: rem(24);
+$btnH-mob: rem(30);
+$btnPadX-mob: rem(26);
 $btnFont-mob: rem(12);
 
 
 
 //히어로 패딩
-$heroTxtPad-des: rem(25);
-$heroTxtPad-pc: rem(20);
-$heroTxtPad-lap: rem(15);
-$heroTxtPad-tab: rem(10);
+$heroTxtPad-des: rem(24);
+$heroTxtPad-pc : rem(20);
+$heroTxtPad-lap: rem(18);
+$heroTxtPad-tab: rem(14);
 $heroTxtPad-mob: rem(8);
 
 
-$heroDescPad-des: rem(60);
-$heroDescPad-pc: rem(50);
-$heroDescPad-lap: rem(40);
-$heroDescPad-tab: rem(30);
-$heroDescPad-mob: rem(12);
+$heroDescPad-des: rem(40);
+$heroDescPad-pc : rem(36);
+$heroDescPad-lap: rem(32);
+$heroDescPad-tab: rem(24);
+$heroDescPad-mob: rem(20);
 
 
 //intro
 $introTitle-des : rem(44);
-$introTitle-pc : rem(38);
-$introTitle-lap : rem(32);
-$introTitle-tab : rem(28);
-$introTitle-mob : rem(24);
+$introTitle-pc : rem(40);
+$introTitle-lap : rem(34);
+$introTitle-tab : rem(30);
+$introTitle-mob : rem(26);
 
 
 //new-section
@@ -226,18 +226,18 @@ $cardImg-mob: rem(190);
 
 
 //pick 이미지
-$pickImgWidth-des: rem(675);
-$pickImgWidth-pc: rem(580);
-$pickImgWidth-lap: rem(480);
-$pickImgWidth-tab: rem(356);
+$pickImgWidth-des: rem(620);
+$pickImgWidth-pc: rem(540);
+$pickImgWidth-lap: rem(460);
+$pickImgWidth-tab: rem(340);
 $pickImgWidth-mob: rem(440);
 
 //pick, about 카드 간격
-$cardGap-des : rem(40);
-$cardGap-pc : rem(30);
-$cardGap-lap : rem(25);
-$cardGap-tab : rem(15);
-$cardGap-mob : rem(20);
+$cardGap-des : rem(32);
+$cardGap-pc : rem(26);
+$cardGap-lap : rem(22);
+$cardGap-tab : rem(14);
+$cardGap-mob : rem(18);
 
 
 

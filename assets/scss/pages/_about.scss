@@ -80,7 +80,7 @@
 
     &__title {
         @include m.title-des;
-        padding-bottom: rem(40);
+        padding-bottom: rem(20);
     }
 
     &__desc {
@@ -146,6 +146,7 @@
         display: flex;
         align-items: center;
         gap: rem(50);
+
     }
 
     &__card img {
@@ -154,6 +155,7 @@
         object-fit: cover;
         display: block;
         flex-shrink: 0;
+        border-radius: rem(20);
     }
 
     &__right {
@@ -179,6 +181,10 @@
         font-size: rem(20);
         font-weight: 500;
         color: #444444;
+    }
+
+    &__card-desc-short {
+        display: none;
     }
 }
 
@@ -320,6 +326,7 @@
         font-size: rem(34);
         font-weight: 600;
         padding-bottom: rem(30);
+        color: v.$primaryColor;
     }
 
     &__vision-desc {
@@ -359,12 +366,13 @@
     }
 
 
+    //info
     .about-info {
         padding: v.$sp-p rem(20);
 
         &__title {
             font-size: rem(32);
-            padding-bottom: rem(28);
+            padding-bottom: rem(16);
         }
 
         &__desc {
@@ -374,6 +382,8 @@
     }
 
 
+
+    //special
     .special {
         padding: v.$sp-p rem(20);
 
@@ -406,6 +416,8 @@
     }
 
 
+
+    //role
     .role {
         padding: v.$sp-p rem(20);
 
@@ -494,7 +506,7 @@
 
         &__title {
             font-size: rem(28);
-            padding-bottom: rem(24);
+            padding-bottom: rem(16);
         }
 
         &__desc {
@@ -633,7 +645,7 @@
 
         &__title {
             font-size: rem(24);
-            padding-bottom: rem(28);
+            padding-bottom: rem(12);
         }
 
         &__desc {
@@ -658,52 +670,79 @@
         &__title {
             @include m.title-tab;
             padding-bottom: v.$secGap-tab;
+            text-align: center;
         }
 
         &__card-list {
+            display: flex;
+            flex-direction: column;
             gap: v.$cardGap-tab;
         }
 
         &__card {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: rem(16);
-            padding-inline: rem(20);
+            position: relative;
+            width: 100%;
+            border-radius: rem(20);
+            overflow: hidden;
+            display: block;
+            padding-inline: 0;
+            text-align: left;
         }
 
         &__card img {
             width: 100%;
-            max-width: rem(540);
-            height: auto;
+            max-width: 100%;
+            height: rem(240);
+            object-fit: cover;
+            display: block;
         }
 
-        &__right {
-            flex-direction: column;
+
+        &__card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
         }
 
+        &__card-txt,
         &__card-right-txt {
+            position: absolute;
+            left: rem(24);
+            bottom: rem(22);
+            z-index: 2;
+            width: min(60%, rem(320));
             text-align: left;
+            padding: rem(14) rem(16);
+
         }
 
         &__card-title {
-            font-size: rem(20);
-            line-height: 1.4;
-            padding-bottom: rem(10);
-            text-align: left;
-            width: 100%;
-            max-width: rem(540);
+            font-size: rem(22);
+            line-height: 1.3;
+            padding-bottom: rem(8);
+            color: v.$whiteColor;
         }
 
         &__card-desc {
-            font-size: rem(16);
-            line-height: 1.7;
-            text-align: left;
-            width: 100%;
-            max-width: rem(540);
-            margin: 0 auto;
+            font-size: rem(14);
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.92);
+            margin: 0;
+        }
+
+        &__right {
+            flex-direction: initial;
+        }
+
+        &__card-desc {
+            display: none;
+        }
+
+        &__card-desc-short {
+            display: block;
         }
     }
+
 
 
     .role {
@@ -742,34 +781,52 @@
 
 
     .vision {
+
         padding: v.$sp-t rem(20);
+
+
+        &__txt {
+            text-align: center;
+            margin-bottom: rem(20);
+        }
 
         &__title {
             @include m.title-tab;
-            padding-bottom: v.$secGap-tab;
         }
 
         &__card-wrap {
-            grid-template-columns: 1fr;
-            gap: rem(20);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(24);
         }
 
         &__vision-crad {
-            padding: rem(36) rem(24);
-        }
-
-        &__axis {
-            display: none;
+            padding: rem(24) rem(20);
+            width: 100%;
+            max-width: rem(560);
+            text-align: center;
         }
 
         &__vision-title {
             font-size: rem(24);
-            padding-bottom: rem(18);
+            font-weight: 700;
+            margin-bottom: rem(5);
         }
 
         &__vision-desc {
             font-size: rem(16);
             line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        &__axis {
+            width: 100%;
+            max-width: rem(420);
+            height: rem(1);
+            background: rgba(0, 0, 0, 0.08);
+            transform: none;
+            margin: rem(4) 0;
         }
     }
 }
@@ -797,7 +854,7 @@
 
         &__title {
             font-size: rem(22);
-            padding-bottom: rem(22);
+            padding-bottom: rem(12);
         }
 
         &__desc {
@@ -821,23 +878,62 @@
         &__title {
             font-size: rem(22);
             padding-bottom: rem(22);
+            text-align: center;
         }
 
         &__card-list {
-            gap: rem(22);
+            gap: rem(20);
         }
 
         &__card {
-            padding-inline: rem(10);
+            position: relative;
+            width: 100%;
+            border-radius: rem(18);
+            overflow: hidden;
+            display: block;
+            padding-inline: 0;
+            text-align: left;
+        }
+
+        &__card img {
+            width: 100%;
+            max-width: 100%;
+            height: rem(220);
+            object-fit: cover;
+            display: block;
+        }
+
+        &__card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0) 30%,
+                    rgba(0, 0, 0, 0.55) 100%);
+            z-index: 1;
+        }
+
+        &__card-txt,
+        &__card-right-txt {
+            position: absolute;
+            left: rem(18);
+            bottom: rem(16);
+            z-index: 2;
+            width: min(70%, rem(260));
+            padding: rem(10) rem(12);
+            text-align: left;
         }
 
         &__card-title {
             font-size: rem(20);
-            padding-bottom: rem(8);
+            line-height: 1.3;
+            padding-bottom: 0;
+            color: v.$whiteColor;
         }
 
-        &__card-desc {
-            font-size: rem(14);
+        &__card-desc,
+        &__card-desc-short {
+            display: none;
         }
     }
 
@@ -879,23 +975,62 @@
 
 
     .vision {
-        padding: v.$sp-m rem(16);
 
-        &__title {
-            font-size: rem(22);
-            padding-bottom: rem(22);
+        padding: v.$sp-m rem(20);
+
+
+
+        &__txt {
+            margin-bottom: rem(16);
+            text-align: center;
+            padding: 0 rem(12);
         }
 
+
+        &__eyebrow {
+            font-size: rem(12);
+            letter-spacing: rem(1);
+        }
+
+        &__title {
+            font-size: rem(26);
+            line-height: 1.25;
+            word-break: keep-all;
+            padding: 0 rem(6);
+        }
+
+        &__card-wrap {
+            gap: rem(18);
+            align-items: center;
+        }
+
+
         &__vision-crad {
-            padding: rem(28) rem(20);
+            width: 100%;
+            max-width: rem(420);
+            padding: rem(20) rem(18);
+            text-align: center;
+            border-radius: rem(14);
         }
 
         &__vision-title {
-            font-size: rem(22);
+            font-size: rem(20);
+            margin-bottom: rem(5);
         }
 
         &__vision-desc {
-            font-size: rem(16);
+            font-size: rem(14);
+            line-height: 1.55;
+            opacity: 0.9;
+            word-break: keep-all;
+        }
+
+        &__axis {
+            width: 100%;
+            max-width: rem(220);
+            height: rem(1);
+            margin: rem(4) 0;
+            background: rgba(0, 0, 0, 0.08);
         }
     }
 }

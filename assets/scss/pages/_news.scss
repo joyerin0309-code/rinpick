@@ -3,6 +3,28 @@
 @use '../utils/function' as *;
 
 
+.news-hero {
+    height: v.$aboutHeroH-des;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../img/news-hero-img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #f3f4f8;
+}
+
+.news-hero-wrap {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$whiteColor;
+}
+
+
 .news-page {
     padding: v.$sp-d rem(20);
 

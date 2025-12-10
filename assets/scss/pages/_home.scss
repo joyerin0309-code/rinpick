@@ -8,7 +8,7 @@
 .hero {
     position: relative;
     height: v.$heroH-des;
-    overflow: hidden;
+
 
 
     &__bg {
@@ -34,6 +34,7 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
+
     }
 
 
@@ -133,7 +134,7 @@
     &__sub-title {
         font-size: rem(24);
         font-weight: 500;
-        padding-bottom: rem(14);
+        padding-bottom: rem(12);
     }
 
     &__desc {
@@ -149,10 +150,10 @@
     }
 
 
-    &__btn {
+    .btn.intro__btn {
         background-color: v.$blackColor;
         display: inline-flex;
-
+        transition: all 0.3s ease;
 
         &:hover {
             background-color: v.$primaryColor;
@@ -160,8 +161,9 @@
     }
 
 
-
 }
+
+
 
 .intro-wrap {
     display: flex;
@@ -292,17 +294,18 @@
 }
 
 .pick-top-card .pick-img {
-    border-radius: rem(0);
+    border-radius: rem(20);
 }
 
 
 .pick-img-wrap {
     height: 100%;
+
 }
 
 .pick-img {
 
-    width: v.$pickImgWidth-des;
+
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -346,7 +349,7 @@
 }
 
 .pick-bottom-card .pick-img {
-    border-radius: 0;
+    border-radius: rem(20);
 }
 
 .pick-bottom-txt {
@@ -697,13 +700,13 @@
 
         &__title {
             font-size: v.$introTitle-pc;
-            padding-bottom: rem(14);
+            padding-bottom: rem(16);
 
         }
 
         &__sub-title {
             font-size: rem(22);
-            padding-bottom: rem(16);
+            padding-bottom: rem(12);
 
         }
 
@@ -1261,7 +1264,7 @@
 
         &__sub-title {
             font-size: rem(18);
-            padding-bottom: rem(10);
+            padding-bottom: rem(12);
 
         }
 
@@ -1271,6 +1274,7 @@
 
 
         }
+
 
     }
 
@@ -1603,7 +1607,7 @@
 
         &__title {
             font-size: v.$introTitle-mob;
-            padding-bottom: rem(10);
+            padding-bottom: rem(12);
 
         }
 
@@ -1740,20 +1744,18 @@
 
             &__title {
                 @include m.title-mob;
-                // 왼쪽 정렬
                 text-align: left;
             }
 
             &__sub-title {
                 font-size: v.$subTitle-mob;
                 padding-bottom: v.$secGap-mob;
-                // 왼쪽 정렬
                 text-align: left;
             }
         }
     }
 
-    // ✅ 1열 세로 카드
+
     .run-style-list {
         width: 100%;
         display: flex;
@@ -1761,12 +1763,11 @@
         gap: rem(14);
     }
 
-    // ✅ 카드 높이 고정 + 클릭해도 안 늘어나게 락
     .run-style-card {
         position: relative;
         height: rem(220);
         max-height: rem(220);
-        flex: 0 0 auto; // ✅ flex로 늘어나는 거 방지
+        flex: 0 0 auto;
         border-radius: rem(18);
         overflow: hidden;
 
@@ -1774,7 +1775,7 @@
             transform: scale(0.99);
         }
 
-        // ✅ 하단 가독성용 소프트 그라데이션
+
         &::before {
             content: "";
             position: absolute;
@@ -1787,7 +1788,7 @@
             pointer-events: none;
         }
 
-        // ✅ “눌러보세요” 텍스트 없이 선 힌트
+
         &::after {
             content: "";
             position: absolute;
@@ -1805,14 +1806,14 @@
         }
     }
 
-    // ✅ 이미지는 꽉 채우기
+
     .run-style-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    // ✅ 기본 텍스트(하단 노출)
+
     .run-style-overlay {
         position: absolute;
         inset: 0;
@@ -1842,7 +1843,7 @@
         opacity: 0.95;
     }
 
-    // ✅ “텍스트 올라오는” 기존 효과 구조 유지(hover 텍스트)
+
     .run-style-hover {
         position: absolute;
         inset: 0;
@@ -1860,7 +1861,7 @@
         padding: rem(14);
         text-align: center;
         opacity: 0;
-        transform: translateY(rem(50)); // ✅ 데스크톱과 동일한 “올라오는 시작점”
+        transform: translateY(rem(50));
         transition:
             opacity 0.4s ease 0.08s,
             transform 0.4s ease 0.08s;
@@ -1880,19 +1881,19 @@
         opacity: 0.95;
     }
 
-    // ✅ 모바일에서 “탭하면 hover처럼 고정되는 문제” 원천 차단
+
     .run-style-list:hover .run-style-card,
     .run-style-list:hover .run-style-card:hover {
         flex: 0 0 auto;
     }
 
-    // ✅ 혹시 is-open 같은 클래스가 붙어도 높이 절대 변하지 않게 락
+
     .run-style-card.is-open {
         height: rem(220);
         max-height: rem(220);
     }
 
-    // ✅ 힌트 애니메이션
+
     @keyframes hint-pulse {
 
         0%,

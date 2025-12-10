@@ -2,9 +2,26 @@
 @use '../utils/mixin' as m;
 @use '../utils/function' as *;
 
-.sub-page-hero .contact-hero {}
+.contact-hero {
+    height: v.$aboutHeroH-des;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../img/about-hero-img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #f3f4f8;
+}
 
-
+.contact-wrap {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$whiteColor;
+}
 
 .contact-sec {
     padding: v.$sp-d rem(20);

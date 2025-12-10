@@ -6,13 +6,11 @@
 //hero 섹션
 
 .about-hero {
-    height: v.$aboutHeroH-des;
+
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("../img/about-hero-img.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     background-attachment: fixed;
 }
 
@@ -352,9 +350,6 @@
 //1280
 @media (max-width: v.$pc) {
 
-    .about-hero {
-        height: v.$aboutHeroH-pc;
-    }
 
     .hero-title {
         font-size: v.$heroTitle-pc;
@@ -487,9 +482,7 @@
 //1024
 @media (max-width: v.$laptop) {
 
-    .about-hero {
-        height: v.$aboutHeroH-lap;
-    }
+
 
     .hero-title {
         font-size: v.$heroTitle-lap;
@@ -617,7 +610,7 @@
 @media (max-width: v.$tablet) {
 
     .about-hero {
-        height: v.$aboutHeroH-tab;
+
         background-attachment: scroll;
     }
 
@@ -835,9 +828,7 @@
 //480
 @media (max-width: v.$mobile) {
 
-    .about-hero {
-        height: v.$aboutHeroH-mob;
-    }
+
 
     .hero-title {
         font-size: v.$heroTitle-mob;
@@ -872,35 +863,10 @@
     }
 
 
+
     .special {
-        padding: v.$sp-m rem(16);
-
-        &__title {
-            font-size: rem(22);
-            padding-bottom: rem(22);
-            text-align: center;
-        }
-
-        &__card-list {
-            gap: rem(20);
-        }
-
-        &__card {
-            position: relative;
-            width: 100%;
-            border-radius: rem(18);
-            overflow: hidden;
-            display: block;
-            padding-inline: 0;
-            text-align: left;
-        }
-
         &__card img {
-            width: 100%;
-            max-width: 100%;
-            height: rem(220);
-            object-fit: cover;
-            display: block;
+            height: rem(280);
         }
 
         &__card::after {
@@ -908,34 +874,46 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg,
-                    rgba(0, 0, 0, 0) 30%,
-                    rgba(0, 0, 0, 0.55) 100%);
+                    rgba(0, 0, 0, 0) 25%,
+                    rgba(0, 0, 0, 0.65) 100%);
             z-index: 1;
         }
 
         &__card-txt,
         &__card-right-txt {
-            position: absolute;
-            left: rem(18);
+            left: rem(16);
             bottom: rem(16);
             z-index: 2;
-            width: min(70%, rem(260));
-            padding: rem(10) rem(12);
+            width: min(85%, rem(300));
+            padding: 0; // 박스 느낌 제거
             text-align: left;
         }
 
         &__card-title {
-            font-size: rem(20);
+            font-size: rem(22);
+            font-weight: 500;
             line-height: 1.3;
-            padding-bottom: 0;
             color: v.$whiteColor;
+            text-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.5);
         }
 
-        &__card-desc,
         &__card-desc-short {
-            display: none;
+            display: block;
+            font-size: rem(14);
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 rem(2) rem(6) rgba(0, 0, 0, 0.4);
         }
+
+
+
+        // &__card-desc,
+        // &__card-desc-short {
+        //     display: none;
+        // }
     }
+
+
+
 
 
     .role {

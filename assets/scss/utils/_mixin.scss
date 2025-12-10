@@ -127,7 +127,85 @@
 }
 
 
-.sub-page-hero {
+.collection-hero.sub-page-hero {
+    width: 100%;
+    height: v.$aboutHeroH-des;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media (max-width: v.$pc) {
+        height: v.$aboutHeroH-pc;
+    }
+
+    @media (max-width: v.$laptop) {
+        height: v.$aboutHeroH-lap;
+    }
+
+    @media (max-width: v.$tablet) {
+        height: v.$aboutHeroH-tab;
+        background-attachment: scroll;
+    }
+
+    @media (max-width: v.$mobile) {
+        height: v.$aboutHeroH-mob;
+    }
+}
+
+.about-hero.sub-page-hero {
+    width: 100%;
+    height: v.$aboutHeroH-des;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media (max-width: v.$pc) {
+        height: v.$aboutHeroH-pc;
+    }
+
+    @media (max-width: v.$laptop) {
+        height: v.$aboutHeroH-lap;
+    }
+
+    @media (max-width: v.$tablet) {
+        height: v.$aboutHeroH-tab;
+        background-attachment: scroll;
+    }
+
+    @media (max-width: v.$mobile) {
+        height: v.$aboutHeroH-mob;
+    }
+}
+
+.news-hero.sub-page-hero {
+    width: 100%;
+    height: v.$aboutHeroH-des;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media (max-width: v.$pc) {
+        height: v.$aboutHeroH-pc;
+    }
+
+    @media (max-width: v.$laptop) {
+        height: v.$aboutHeroH-lap;
+    }
+
+    @media (max-width: v.$tablet) {
+        height: v.$aboutHeroH-tab;
+        background-attachment: scroll;
+    }
+
+    @media (max-width: v.$mobile) {
+        height: v.$aboutHeroH-mob;
+    }
+}
+
+.contact-hero.sub-page-hero {
     width: 100%;
     height: v.$aboutHeroH-des;
     background-position: center;

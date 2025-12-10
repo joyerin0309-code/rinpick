@@ -3,15 +3,18 @@
 @use '../utils/function' as *;
 
 
-.sub-page-hero {
-    width: 100%;
-    height: 48vh;
-    background-color: #f3f4f8;
+.collection-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../img/collection-hero1.jpg");
+
+    background-attachment: fixed;
 }
 
 .sub-page-hero-wrap {
     display: flex;
     justify-content: center;
+    color: v.$whiteColor;
 }
 
 .collections {

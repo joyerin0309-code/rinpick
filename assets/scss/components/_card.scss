@@ -12,8 +12,12 @@
     border-radius: rem(20);
     overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
+    a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
 
     &__thumb {
         position: relative;
@@ -74,6 +78,9 @@
 
         &__place {
             font-size: rem(18);
+            font-family: v.$font-desc;
+            font-weight: 600;
+            margin-bottom: rem(5);
         }
 
         &__date {
@@ -123,7 +130,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            padding: rem(10) rem(20);
+            padding: rem(15) rem(20);
         }
     }
 
@@ -133,7 +140,7 @@
 
 
     &__meta {
-        height: rem(110);
+
         padding: rem(15) rem(20);
 
 
@@ -147,6 +154,8 @@
 
         &__title {
             font-size: rem(18);
+            font-weight: 500;
+            font-family: v.$font-desc;
 
         }
     }
@@ -205,80 +214,85 @@
             }
         }
     }
-}
 
 
 
 
 
+    // 뉴스 섹션
+
+    .news-list {
+        height: v.$newsCardH-pc;
+
+        &__card {
 
 
-// 뉴스 섹션
-
-.news-list {
-    height: v.$newsCardH-pc;
-
-    &__card {
+            img {
+                height: v.$newsImg-pc;
+            }
 
 
-        img {
-            height: v.$newsImg-pc;
+            &__source {
+                font-size: rem(14);
+                padding: rem(10) rem(20);
+            }
         }
 
 
-        &__source {
-            font-size: rem(14);
-            padding: rem(10) rem(20);
+
+        &__meta {
+            height: rem(100);
+            padding: rem(15) rem(20);
+
+
+
+            &__date {
+                font-size: rem(12);
+                padding-bottom: rem(5);
+            }
+
+
+            &__title {
+                font-size: rem(16);
+
+            }
         }
+
     }
 
-
-
-    &__meta {
-        height: rem(100);
-        padding: rem(15) rem(20);
-
-
-
-        &__date {
-            font-size: rem(12);
-            padding-bottom: rem(5);
-        }
-
-
-        &__title {
-            font-size: rem(16);
-
-        }
-    }
-
-}
-
-.pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: rem(42);
-    padding-bottom: rem(120);
-
-
-    &__page,
-    &__arrow {
-        color: #555;
-        display: inline-flex;
+    .pagination {
+        display: flex;
         align-items: center;
         justify-content: center;
-        font-size: rem(18);
-        transition: 0.2s all ease;
+        gap: rem(42);
+        padding-bottom: rem(120);
+
+
+        &__page,
+        &__arrow {
+            color: #555;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: rem(18);
+            transition: 0.2s all ease;
+        }
+
+        &__page-active {
+            font-weight: 400;
+            color: #222;
+        }
+
+
     }
-
-    &__page-active {
-        font-weight: 400;
-        color: #222;
-    }
-
-
 }
+
+
+
+
+
+
+
 
 
 
@@ -358,48 +372,52 @@
         }
 
     }
+
+
+
+    // 뉴스 섹션
+
+    .news-list {
+        height: v.$newsCardH-lap;
+
+        &__card {
+
+
+            img {
+                height: v.$newsImg-lap;
+            }
+
+
+            &__source {
+                font-size: rem(14);
+                padding: rem(10) rem(20);
+            }
+        }
+
+
+
+        &__meta {
+            height: rem(110);
+            padding: rem(15) rem(20);
+
+
+
+            &__date {
+                font-size: rem(12);
+                padding-bottom: rem(5);
+            }
+
+
+            &__title {
+                font-size: rem(16);
+
+            }
+        }
+    }
 }
 
 
-// 뉴스 섹션
 
-.news-list {
-    height: v.$newsCardH-lap;
-
-    &__card {
-
-
-        img {
-            height: v.$newsImg-lap;
-        }
-
-
-        &__source {
-            font-size: rem(14);
-            padding: rem(10) rem(20);
-        }
-    }
-
-
-
-    &__meta {
-        height: rem(110);
-        padding: rem(15) rem(20);
-
-
-
-        &__date {
-            font-size: rem(12);
-            padding-bottom: rem(5);
-        }
-
-
-        &__title {
-            font-size: rem(16);
-
-        }
-    }
-}
 
 
 
@@ -509,135 +527,137 @@
 
 
 
-    //480
-    @media (max-width : v.$mobile) {
+
+}
+
+//480
+@media (max-width : v.$mobile) {
 
 
-        .new {
-            &__top {
-                align-items: center;
-            }
-
-            &__sub-title {
-
-                padding-bottom: rem(8);
-            }
-
-            &__more {
-                font-size: rem(16); // ✅ 18 → 16로 가볍게
-                bottom: rem(-32); // ✅ -45/-35/-20 이런 값이면 약간 과함
-            }
+    .new {
+        &__top {
+            align-items: center;
         }
 
-        .new-card {
-            height: v.$newCardH-mob;
-            border-radius: rem(10);
+        &__sub-title {
 
-
-            &__thumb {
-
-
-                img {
-
-                    height: v.$cardImg-mob;
-
-                }
-            }
-
-
-
-            // New 캡슐
-            &__capsule {
-                font-size: rem(8);
-                top: 0;
-                left: rem(12);
-                padding: rem(6) rem(12);
-            }
-
-            &__info {
-                padding: rem(12);
-
-
-                &__title {
-                    font-size: rem(18);
-
-                }
-
-
-                &__desc {
-                    font-size: rem(12);
-
-                }
-            }
-
-
-            &__meta {
-
-                padding: rem(10) rem(12);
-
-
-                &__place {
-                    font-size: rem(12);
-                }
-
-
-                &__date {
-                    font-size: rem(10);
-                }
-            }
-
-
+            padding-bottom: rem(8);
         }
 
-        .mySwiper .swiper-pagination-bullet {
-            width: rem(6);
-            height: rem(6);
-            margin: 0 rem(3);
+        &__more {
+            font-size: rem(16); // ✅ 18 → 16로 가볍게
+            bottom: rem(-32); // ✅ -45/-35/-20 이런 값이면 약간 과함
         }
+    }
 
-        .mySwiper .swiper-pagination-bullet-active {
-            transform: scale(1.2);
+    .new-card {
+        height: v.$newCardH-mob;
+        border-radius: rem(10);
+
+
+        &__thumb {
+
+
+            img {
+
+                height: v.$cardImg-mob;
+
+            }
         }
 
 
 
-        // 뉴스 섹션
+        // New 캡슐
+        &__capsule {
+            font-size: rem(8);
+            top: 0;
+            left: rem(12);
+            padding: rem(6) rem(12);
+        }
 
-        .news-list {
-            height: v.$newsCardH-mob;
-
-            &__card {
+        &__info {
+            padding: rem(12);
 
 
-                img {
-                    height: v.$newsImg-mob;
-                }
+            &__title {
+                font-size: rem(18);
 
-
-                &__source {
-                    font-size: rem(10);
-                    padding: rem(10) rem(20);
-                }
             }
 
 
+            &__desc {
+                font-size: rem(12);
 
-            &__meta {
-                // height: rem(120);
-                padding: rem(15) rem(20);
-
-
-
-                &__date {
-                    font-size: rem(10);
-                    padding-bottom: rem(2);
-                }
+            }
+        }
 
 
-                &__title {
-                    font-size: rem(16);
+        &__meta {
 
-                }
+            padding: rem(10) rem(12);
+
+
+            &__place {
+                font-size: rem(12);
+            }
+
+
+            &__date {
+                font-size: rem(10);
+            }
+        }
+
+
+    }
+
+    .mySwiper .swiper-pagination-bullet {
+        width: rem(6);
+        height: rem(6);
+        margin: 0 rem(3);
+    }
+
+    .mySwiper .swiper-pagination-bullet-active {
+        transform: scale(1.2);
+    }
+
+
+
+    // 뉴스 섹션
+
+    .news-list {
+        height: v.$newsCardH-mob;
+
+        &__card {
+
+
+            img {
+                height: v.$newsImg-mob;
+            }
+
+
+            &__source {
+                font-size: rem(10);
+                padding: rem(10) rem(20);
+            }
+        }
+
+
+
+        &__meta {
+            // height: rem(120);
+            padding: rem(15) rem(20);
+
+
+
+            &__date {
+                font-size: rem(10);
+                padding-bottom: rem(2);
+            }
+
+
+            &__title {
+                font-size: rem(14);
+
             }
         }
     }

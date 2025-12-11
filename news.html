@@ -43,7 +43,7 @@
     <main>
         <section class="news-hero sub-page-hero ">
             <div class="container news-hero-wrap">
-                <div class="hero-txt" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-quart">
+                <div class="hero-txt" data-aos="fade-up">
                     <h2 class="hero-title">News</h2>
                 </div>
             </div>
@@ -210,26 +210,23 @@
 
 
         <nav class="pagination" aria-label="페이지 이동">
-            <button class="pagination__arrow pagination__arrow-first" type="button">
-                |&lt;
-            </button>
-            <button class="pagination__arrow pagination__arrow-prev" type="button">
-                &lt;
-            </button>
-            <div class="pagination__pages"></div>
-            <button class="pagination__arrow pagination__arrow-next" type="button">
-                &gt;
-            </button>
-            <button class="pagination__arrow pagination__arrow-last" type="button">
-                &gt;|
-            </button>
+            <button class="pagination__arrow pagination__arrow--first" type="button">|&lt;</button>
+            <button class="pagination__arrow pagination__arrow--prev" type="button">&lt;</button>
+
+            <button class="pagination__page pagination__page--active" type="button">1</button>
+            <!-- 페이지가 더 생기면 이런 식으로 추가 -->
+            <!-- <button class="pagination__page" type="button">2</button> -->
+
+            <button class="pagination__arrow pagination__arrow--next" type="button">&gt;</button>
+            <button class="pagination__arrow pagination__arrow--last" type="button">&gt;|</button>
         </nav>
+
     </main>
 
     <footer class="footer footer-dark">
         <div class="container footer-wrap">
             <div class="footer-left">
-                <h1 class="footer-logo">RUNPICK</h1>
+                <h1 class="footer-logo"><a href="./index.html">RUNPICK</a></h1>
                 <div class="footer-info">
                     <p>런픽 주식회사 대표이사 : 홍길동 | 사업자등록번호 : 123-45-67890</p>
                     <p>사업장주소 : 인천광역시 남동구 인주대로 593 | 대표번호 : 010-1234-5678</p>

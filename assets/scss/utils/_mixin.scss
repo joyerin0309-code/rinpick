@@ -230,3 +230,40 @@
         height: v.$aboutHeroH-mob;
     }
 }
+
+
+@mixin hoverable {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}
+
+@media (max-width: v.$mobile) {
+    .header__menu>li::before {
+        transform: none;
+    }
+}
+
+@media (max-width: v.$mobile) {
+
+    .run-style-card img,
+    .news-card img,
+    .pick-img,
+    .new-card img {
+        transform: none;
+        transition: none;
+    }
+
+    // hover/active/focus로 걸린 확대도 같이 차단
+    .run-style-card:hover img,
+    .run-style-card:active img,
+    .run-style-card:focus-within img,
+    .news-card:hover img,
+    .news-card:active img,
+    .news-card:focus-within img,
+    .new-card:hover img,
+    .new-card:active img,
+    .new-card:focus-within img {
+        transform: none;
+    }
+}

@@ -4,7 +4,7 @@
 //컬러 변수
 $primaryColor: #2463E0;
 $whiteColor: #fff;
-$blackColor : #000;
+$blackColor : #333;
 $surfaceAltColor :#F4F6FC;
 $capsuleColor : #FF6F5E;
 
@@ -139,14 +139,14 @@ $heroTitle-des : rem(50);
 $heroTitle-pc : rem(46);
 $heroTitle-lap : rem(38);
 $heroTitle-tab : rem(32);
-$heroTitle-mob : rem(26);
+$heroTitle-mob : rem(28);
 
 
 $heroDesc-des : rem(30);
 $heroDesc-pc : rem(28);
 $heroDesc-lap : rem(24);
 $heroDesc-tab : rem(18);
-$heroDesc-mob : rem(14);
+$heroDesc-mob : rem(16);
 
 $arrow-des : rem(410);
 $arrow-pc : rem(300);
@@ -173,11 +173,11 @@ $btnFont-lap: rem(14);
 
 $btnH-tab: rem(36);
 $btnPadX-tab: rem(34);
-$btnFont-tab: rem(12);
+$btnFont-tab: rem(14);
 
-$btnH-mob: rem(30);
-$btnPadX-mob: rem(26);
-$btnFont-mob: rem(12);
+$btnH-mob: rem(32);
+$btnPadX-mob: rem(30);
+$btnFont-mob: rem(14);
 
 
 
@@ -297,8 +297,8 @@ $partnerTitle-mob: rem(20);
 $infoSize-des : rem(16);
 $infoSize-pc : rem(14);
 $infoSize-lap : rem(12);
-$infoSize-tab : rem(10);
-$infoSize-mob : rem(8);
+$infoSize-tab : rem(12);
+$infoSize-mob : rem(10);
 
 
 //푸터 패딩

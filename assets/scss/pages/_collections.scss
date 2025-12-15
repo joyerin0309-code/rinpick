@@ -74,6 +74,17 @@
         border-radius: rem(20) 0 0 rem(20);
         overflow: hidden;
 
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0) 45%,
+                    rgba(0, 0, 0, 0.62) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         img {
             display: block;
             width: 100%;
@@ -92,7 +103,7 @@
         position: absolute;
         left: rem(20);
         bottom: rem(15);
-        z-index: 1;
+        z-index: 2;
         color: v.$whiteColor;
         display: flex;
         flex-direction: column;
@@ -170,11 +181,9 @@
     font-size: rem(22);
     font-family: v.$font-desc;
     font-weight: 600;
-    border-radius: rem(999);
+    border-radius: rem(50);
     text-align: center;
-
-    color: #111;
-
+    color: v.$blackColor;
     transition: background-color .2s ease,
         color .2s ease,
         box-shadow .2s ease,
@@ -183,48 +192,58 @@
     &.on {
         background-color: v.$primaryColor;
         color: v.$whiteColor;
-
-        border: rem(1) solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 0 rem(12) rgba(0, 0, 0, 0.08);
+        border: rem(1) solid rgba(3, 3, 3, 0.06);
     }
 }
 
+.is-closed {
+    background-color: #9CA3AF;
+}
+
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: rem(8);
+    @include m.flex(center, center, rem(20));
     width: 100%;
-    margin: rem(40) 0 rem(80);
+    padding-bottom: rem(140);
 }
 
-
-.pagination__arrow,
-.pagination__page {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 rem(8);
-    min-width: auto;
-    height: auto;
-    font-size: rem(14);
+.page-btn {
+    border: 0;
+    padding: 0;
+    font-family: v.$font-desc;
     line-height: 1;
-    color: #333;
+    min-width: rem(30);
+    min-height: rem(30);
+    @include m.flex(center, center);
+    transition: opacity .15s ease;
 
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:focus-visible {
+        outline: none;
+        opacity: 0.8;
+    }
+}
+
+.page-btn-icon {
+    font-size: rem(24);
+    font-weight: 500;
+    color: rgba(3, 3, 3, 0.28);
+}
+
+.page-btn-number {
+    font-size: rem(22);
+    color: rgba(3, 3, 3, 0.92);
+    font-weight: 500;
+    opacity: 1;
 }
 
 
-.pagination__page--active {
-    color: v.$primaryColor;
-    font-weight: 600;
-    position: relative;
+.page-btn:disabled {
+    opacity: 0.35;
 }
 
-
-.pagination__arrow:disabled {
-    opacity: .4;
-    cursor: default;
-}
 
 
 
@@ -268,6 +287,12 @@
     .sub-page-hero {
         height: 42vh;
     }
+
+    .pagination {
+        padding-bottom: rem(120px);
+    }
+
+
 }
 
 
@@ -321,14 +346,21 @@
     }
 
     .pagination {
-        margin: rem(32) 0 rem(56);
-        gap: rem(6);
+        gap: rem(18);
+        padding-bottom: rem(100);
     }
 
-    .pagination__arrow,
-    .pagination__page {
-        font-size: rem(12);
-        padding: 0 rem(6);
+    .page-btn {
+        min-width: rem(28);
+        min-height: rem(28);
+    }
+
+    .page-btn-icon {
+        font-size: rem(22);
+    }
+
+    .page-btn-number {
+        font-size: rem(20);
     }
 
 }
@@ -379,7 +411,26 @@
     .sub-page-hero {
         height: 32vh;
     }
+
+    .pagination {
+        gap: rem(16);
+        padding-bottom: rem(80);
+    }
+
+    .page-btn {
+        min-width: rem(26);
+        min-height: rem(26);
+    }
+
+    .page-btn-icon {
+        font-size: rem(20);
+    }
+
+    .page-btn-number {
+        font-size: rem(18);
+    }
 }
+
 
 //480
 @media (max-width: 480px) {
@@ -460,13 +511,20 @@
     }
 
     .pagination {
-        margin: rem(24) 0 rem(40);
-        gap: rem(4);
+        gap: rem(12);
+        padding-bottom: rem(60);
     }
 
-    .pagination__arrow,
-    .pagination__page {
-        font-size: rem(12);
-        padding: 0 rem(4);
+    .page-btn {
+        min-width: rem(20);
+        min-height: rem(20);
+    }
+
+    .page-btn-icon {
+        font-size: rem(18);
+    }
+
+    .page-btn-number {
+        font-size: rem(16);
     }
 }

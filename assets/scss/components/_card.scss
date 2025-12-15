@@ -25,6 +25,17 @@
         overflow: hidden;
     }
 
+    &__thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0) 40%,
+                rgba(0, 0, 0, 0.55) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
     &__thumb img {
         display: block;
         width: 100%;
@@ -60,6 +71,7 @@
         width: 100%;
         padding: rem(18);
         color: v.$whiteColor;
+        z-index: 2;
 
         &__title {
             font-size: rem(24);

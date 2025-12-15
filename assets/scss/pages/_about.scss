@@ -228,8 +228,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        background: linear-gradient(135deg, #3A78F5, #5A93FF);
-        color: #fff;
+        background: #F5F5F7;
+        color: v.$blackColor;
         border-radius: rem(24);
         padding: rem(50) rem(50);
         width: 100%;
@@ -885,7 +885,7 @@
             bottom: rem(16);
             z-index: 2;
             width: min(85%, rem(300));
-            padding: 0; // 박스 느낌 제거
+            padding: 0;
             text-align: left;
         }
 

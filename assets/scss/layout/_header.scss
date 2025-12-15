@@ -287,6 +287,22 @@
 
 @media (max-width : v.$mobile) {
 
+
+    a:active,
+    button:active {
+        opacity: 1;
+        transform: none;
+    }
+
+    a:focus,
+    button:focus {
+        outline: none;
+    }
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
     //헤더
     .header {
         height: v.$headerHeight-mobile;
